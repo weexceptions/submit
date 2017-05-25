@@ -7,19 +7,35 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    <head>
+   <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Disease</title>
+         <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
     </head>
     <body>
-        <h1>Hello World!</h1
-        <script type="text/javascript" src="jquery.js"></script>
-<input type="text" name="txtUsername" id="username">@gmail.com
-<div id="status"></div>
-<script type="text/javascript" src="js/check_user.js"></script>
-<span id="errorMissingUserName" style="display:none;"><font color="red">*Please provide your username.</font></span>
-<span id="errorUserNameInvalid" style="display:none;"><font color="red">*Please provide a valid username.Username can contain only alphabets numbers and periods</font></span>
-<span class="status"></span>
+        <div class="container">
+        <form>
+            <div class="form-group">
+                <legend><i class="glyphicon glyphicon-question-sign"></i>  Forgot Your Password </legend>
+                </div><br>
+                 <div class="form-group">
+                <label for="userid">User Id :  </label>
+                <input type="text" class="form-control" id="txt" name="txtuid" >
+            </div>
+                 <div class="form-group">
+                <label for="email">Email address :  </label>
+                <input type="email" class="form-control" id="email" name="txtemail" >
+            </div>
+                 <div class="form-group">
+                <label for="contactno">Contact Number :  </label>
+                <input type="number" class="form-control" id="mobile" name="txtphone" >
+                </div><br><br>
+                 <button type="submit" class="btn btn-success"> SUBMIT </button>
+                <button type="reset" class="btn btn-warning"> RESET </button>
+            
+                
     </body>
 </html>
 <%--
