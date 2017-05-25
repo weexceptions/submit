@@ -9,9 +9,29 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <script type="text/javascript" src="js/signup.js"></script>
+        <title>New Password Page</title>
     </head>
     <body>
         <h1>Enter new password</h1>
+        <form action="updatepass.do" method="post" class="form" id="fileForm" role="form" >
+           
+            <div class="form-group">
+                <label for="password"><span class="req">* </span> Password: </label>
+                <input required name="txtpass" type="password" class="form-control inputpass" minlength="4" maxlength="16"  id="pass1" /> </p>
+
+                <label for="password"><span class="req">* </span> Password Confirm: </label>
+                <input required name="txtpass2" type="password" class="form-control inputpass" minlength="4" maxlength="16" placeholder="Enter again to validate"  id="pass2" onkeyup="checkPass(); return false;" />
+                <span id="confirmMessage" class="confirmMessage"></span>
+            </div>
+            
+                <input type="checkbox" required name="terms" id="field_terms">   <label for="terms">Logout From all devices</label>
+            </div>
+
+            <div class="form-group">
+                <input class="btn btn-success" type="submit" name="submit_reg" value="Register">
+            </div>
+ 
+            </form>
     </body>
 </html>

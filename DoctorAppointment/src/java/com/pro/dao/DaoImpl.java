@@ -170,4 +170,20 @@ public class DaoImpl implements UserDAO{
         return r;
     }
 
+    @Override
+    public boolean updatePassword(String pass) {
+        boolean r=false;
+        String sql =("Insert into USERDETAIL (PASSWORD) Values (?) ");
+         PreparedStatement ps;
+        try {
+            ps = con.prepareStatement("Insert into USERDETAIL (PASSWORD) Values (?) ");
+            ps.setString(1, pass);
+            ps.execute();
+            r=true;
+        } catch (SQLException ex) {
+            System.out.println("INSERT FAILED");
+        }
+            System.out.println("Insert Successfull in USERSDETAILS");
+       return r;
+    }
 }
