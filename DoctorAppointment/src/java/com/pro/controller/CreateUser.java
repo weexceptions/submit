@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.pro.controller;
+package com.pro.Controller;
 
 import com.pro.model.*;
 import com.pro.dao.UserDAO;
