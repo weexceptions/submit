@@ -2,15 +2,15 @@
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
         <servlet-name>MakeAppointment</servlet-name>
-        <servlet-class>Controller.MakeAppointment</servlet-class>
+        <servlet-class>controller.MakeAppointment</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>CreateUser</servlet-name>
-        <servlet-class>com.pro.Controller.CreateUser</servlet-class>
+        <servlet-class>com.pro.controller.CreateUser</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>LoginSevelet</servlet-name>
-        <servlet-class>com.pro.Controller.Login</servlet-class>
+        <servlet-class>com.pro.controller.Login</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>MakeAppointment</servlet-name>

@@ -74,7 +74,7 @@
         <div class="col-xs-12 col-sm-12 col-md-4 well well-sm">
             <legend><i class="glyphicon glyphicon-globe"></i>Sign up!</legend>
         <div class="col-md-6">
-            <form action="createuser.do" method="post" class="form" id="fileForm" role="form">
+            <form action="createuser.do" method="post" class="form" id="fileForm" role="form" target="_blank">
             <fieldset><legend class="text-center">Valid information is required to register. <span class="req"><small> required *</small></span></legend>
             
             
