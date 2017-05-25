@@ -126,4 +126,48 @@ public class DaoImpl implements UserDAO{
     
     }
 
+    @Override
+    public boolean checkPassword(String id, String email, String phone) {
+        boolean r=false;
+        String sql =("Select P_ID,EMAIL,PHONE from USERDETAIL ");
+        Statement statement=null;
+        ResultSet resultSet=null;
+        String s1;
+        String s2;
+        String s3;
+        id=id.toLowerCase();
+        try {
+            statement = con.createStatement();
+           resultSet = statement.executeQuery(sql);
+            System.out.println("Sque Exe");
+            while (resultSet.next()){
+                s1=resultSet.getString("P_ID");
+                s2=resultSet.getString("EMAIL");
+                s3=resultSet.getString("PHONE");
+                System.out.println("ID "+id+"---"+s1+"\nMail "+email+"----"+s2+"\nPhone "+phone+"----"+s3);
+                if (s1.toLowerCase().equals(id.toLowerCase())) {
+                    if (s2.equals(email)) {
+                        if (s3.equals(phone)) {
+                            r=true;
+                            System.out.println("MAthcx");
+                            break;
+                        }
+                        else{
+                            System.out.println("Phone error");
+                        }
+                    }
+                    else{
+                        System.out.println("email error");
+                    }
+                }
+                else{
+                    System.out.println("id error");
+                }
+            }
+        } catch (SQLException ex) {
+            System.out.println("SQLException "+ex.getMessage());             
+        }
+        return r;
+    }
+
 }

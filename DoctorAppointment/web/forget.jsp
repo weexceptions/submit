@@ -9,33 +9,32 @@
 <html>
    <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Disease</title>
+        <title>ForgetPassword</title>
          <link rel="stylesheet" href="css/bootstrap.min.css"/>
         <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
     </head>
     <body>
         <div class="container">
-        <form>
+        <form action="forget.do"  method="post" class="form" role="form">
             <div class="form-group">
                 <legend><i class="glyphicon glyphicon-question-sign"></i>  Forgot Your Password </legend>
                 </div><br>
                  <div class="form-group">
-                <label for="userid">User Id :  </label>
-                <input type="text" class="form-control" id="txt" name="txtuid" >
+                <label for="userid">*User Id :  </label>
+                <input type="text" class="form-control" id="txt" name="txtuid" required>
             </div>
                  <div class="form-group">
                 <label for="email">Email address :  </label>
-                <input type="email" class="form-control" id="email" name="txtemail" >
+                <input type="email" class="form-control" id="email" name="txtemail" required >
             </div>
                  <div class="form-group">
-                <label for="contactno">Contact Number :  </label>
-                <input type="number" class="form-control" id="mobile" name="txtphone" >
+                <label for="contactno">*Contact Number :  </label>
+                <input type="number" class="form-control" id="mobile" name="txtphone" required>
                 </div><br><br>
                  <button type="submit" class="btn btn-success"> SUBMIT </button>
                 <button type="reset" class="btn btn-warning"> RESET </button>
             
-                
     </body>
 </html>
 <%--
