@@ -43,7 +43,7 @@ public class Login extends HttpServlet {
             UserDAO userdao = new DaoImpl();
              if (userdao.getLogin(id, pass)) {
                 RequestDispatcher rd = request.getRequestDispatcher("userhome.jsp");
-                request.setAttribute("auser", id);
+                request.setAttribute("auser", id.toUpperCase());
                 rd.forward(request, response);
              }
              else
