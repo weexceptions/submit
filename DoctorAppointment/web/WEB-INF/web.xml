@@ -14,7 +14,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>MakeAppointment</servlet-name>
-        <url-pattern>/MakeAppointment</url-pattern>
+        <url-pattern>/makeAppointment.do</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>CreateUser</servlet-name>

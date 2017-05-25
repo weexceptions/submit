@@ -15,24 +15,37 @@
         <link rel="stylesheet" href="css/homestylesheet.css">
         <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        
     </head>
     <body>
         <div class="container">
-            <form action="" method="" >
+            <form action="makeAppointment.do" method="post" >
+    
+                <div style="padding-top: 15px;" class="form-group">
+                    <legend><i class="glyphicon glyphicon-user"></i>&nbsp;&nbsp;Appoint Doctor</legend>
+                </div><br/>
+                
                 <div class="form-group">
                     <input type="text" class="form-control" name="" placeholder="Patient Name" required>
                 </div>
                 
                 <div class="form-group">
+                    <label for="patient id">Patient Id:</label>
                     <input type="text" class="form-control" name="" placeholder="Patient id" required>
                 </div>
                 <div class="form-group">
-                    <label class="col-lg-3" for="sel1">Appointment Date:</label>
+                    <label for="appt date">Appointment Date:</label>
                     <div class="col-lg-7"><input type="date" class="form-control" name="" placeholder="Date" required></div>
-                </div><br>
+                </div>
                 <div class="form-group">
-                    <label for="sel1">Appointment Time:</label>
-                    <input type="time" class="form-control" name="" placeholder="Time" required>
+                    <label for="appt timeslot">Appointment Time:</label>
+                    <select type="text" class="form-control" name="" placeholder="Time" required>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                    </select>
                 </div>    
                 <div class="form-group">
                     <label for="sel1">Select Doctor:</label>

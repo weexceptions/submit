@@ -37,7 +37,7 @@
  border: 1px solid black; margin-right: 1px; float:right; margin-top: 0px
 }
 body{
- background-color: #404040;
+ background-color: #46b8da;
 }
 </style>
     </head>
@@ -65,13 +65,13 @@ body{
         <ul class="nav navbar-nav navbar-left">
           <li class="active"><a href="#" target="ContentFrame">Home</a></li>
           <li><a href="#" target="ContentFrame" >Notification</a></li>
-          <li><a  href="#" target="ContentFrame">Make Appointment</a></li>
+          <li><a  href="appointment.jsp" target="ContentFrame">Make Appointment</a></li>
           <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Help Desk<span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-                <li><a target="ContentFrame" href="#">FAQs</a></li>
-              <li><a target="ContentFrame" href="#">Enquiry Desk</a></li>
-              <li><a target="ContentFrame" href="#">Doctor's  Help</a></li>
+                <li><a target="ContentFrame" href="#">Appt Details</a></li>
+              <li><a target="ContentFrame" href="#"></a></li>
+              <li><a target="ContentFrame" href="#"></a></li>
                </ul>
           </li>
                     <li><a target="ContentFrame" href="#">Log Out</a></li>
