@@ -171,19 +171,22 @@ public class DaoImpl implements UserDAO{
     }
 
     @Override
-    public boolean updatePassword(String pass) {
+    public boolean updatePassword(String pass,String id) {
         boolean r=false;
-        String sql =("Insert into USERDETAIL (PASSWORD) Values (?) ");
          PreparedStatement ps;
         try {
-            ps = con.prepareStatement("Insert into USERDETAIL (PASSWORD) Values (?) ");
+            System.out.println("Update wala id "+id);
+            System.out.println("Update wala pass "+pass);
+            ps = con.prepareStatement("UPDATE USERDETAIL SET PASSWORD = ? WHERE P_ID = ?");
             ps.setString(1, pass);
+            ps.setString(2, id);
             ps.execute();
+            System.out.println("Update hogaya");
             r=true;
         } catch (SQLException ex) {
-            System.out.println("INSERT FAILED");
+            System.out.println("UPDATE FAILED");
         }
-            System.out.println("Insert Successfull in USERSDETAILS");
+            System.out.println("UPDATE Successfull in USERSDETAILS");
        return r;
     }
 }

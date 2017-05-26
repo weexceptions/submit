@@ -46,7 +46,9 @@ public class UpdatePass extends HttpServlet {
 //            out.println("</html>");
             UserDAO userdao = new DaoImpl();
             String pass = request.getParameter("txtpass");
-             if (userdao.updatePassword(pass)) {
+            String id = request.getParameter("id");
+                         System.out.println("id is for  update "+id);
+             if (userdao.updatePassword(pass,id.toLowerCase())) {
                 out.println("<script type=\"text/javascript\">");
                 out.println("alert('User or password incorrect');");
                 out.println("location='new.jsp';");
