@@ -1,0 +1,6 @@
+INSERT INTO AKSH.DOCTOR (D_ID, LOCATION, SPECIALIST) 
+	VALUES ('mbhai', 'Mumbai', 'BoneBreake')
+
+
+INSERT INTO AKSH.USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) 
+	VALUES ('maidr', 'Munna', 'Bhai', '1995-08-15', 'munnabhai@gmail.com', 'Borivali-West', '8888888888', NULL, 'mbhai')
