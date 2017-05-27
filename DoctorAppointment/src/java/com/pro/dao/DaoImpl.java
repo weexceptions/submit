@@ -177,10 +177,11 @@ public class DaoImpl implements UserDAO{
         try {
             System.out.println("Update wala id "+id);
             System.out.println("Update wala pass "+pass);
-            ps = con.prepareStatement("UPDATE USERDETAIL SET PASSWORD = ? WHERE P_ID = ?");
+            ps = con.prepareStatement("UPDATE AKSH.USERDETAIL SET PASSWORD = ? WHERE P_ID like ?");
+            ps.setString(2,id.trim());
             ps.setString(1, pass);
-            ps.setString(2, id);
-            ps.execute();
+            int rec = ps.executeUpdate();
+            System.out.println("records updated : " + rec);
             System.out.println("Update hogaya");
             r=true;
         } catch (SQLException ex) {

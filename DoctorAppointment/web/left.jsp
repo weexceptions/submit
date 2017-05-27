@@ -4,7 +4,9 @@
     Author     : Akshay
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8" %>
+
+<%@ page import="com.pro.dao.DaoImpl" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -44,29 +46,11 @@
         <div class="container-fluid" >
             <marquee  direction="up" width="100%" height="400" scrollamount="5" loop="true" onmouseover="this.stop()" onmouseout="this.start()">
         <div class="col-lg-12 col-sm-12">
-       
-        <h3 align="center">Cosmetic Surgeon</h3>
-        <h4 align="center" class="text-justify">
-           Dr. Aamod Rao(Plastic Surgery)<br/><br/>
-           Dr. Kapil Agrawal(Aesthetic Plastic Surgery)<br/><br/>
-           Dr. Milind Wagh(Plastic Surgeon)<br/><br/>
-           Dr. Gautam Datta(Cardiologists)<br/><br/>
-        </h4>
-        <h3 align="center">Dental Procedures</h3>
-        <h4 align="center" class="text-justify" >
-           Dr. Ashni Choksey(Cosmetic Dentist)<br/><br/>
-           Dr. Gaurav Walia(Dental Surgeon)<br/><br/>
-           Dr. Suchetan Pradhan(Implant Dentist)<br/><br/>
-           Dr. Vinod Naraynan(Dental Implant)<br/><br/>
-        </h4>
-        <h3 align="center">Gynecology</h3>
-          <h4 align="center" class="text-justify">
-           Dr. Pranay R.Shah(Endoscopic surgery)<br/><br/>
-           Dr. Laila Dave(OBSTETRICS)<br/><br/>
-           Dr. Gautam Datta(Urogynecology)<br/><br/>
-           Dr. Sohel Ali(Laparoscopic)<br/><br/>
-          </h4>
-          
+            
+            <%
+            
+            %>
+            
         </div>
     </marquee>
             </div>
