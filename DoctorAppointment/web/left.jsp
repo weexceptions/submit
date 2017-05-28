@@ -60,6 +60,8 @@
                 {
                     DoctorInfo product = (DoctorInfo)productItr.next();
             %>
+            <div class="text-justify" >
+                <center>
             <%out.print("Dr.");%>
             <%=product.getFname()%> 
             <%=product.getLname()%> <br/>
@@ -67,7 +69,8 @@
             <%=product.getLocation()%> <br/>
             <%out.print("Specialist:");%>
             <%=product.getSpecialist()%> <br/><br/>
-            <%}%>
+            <%}%></center>
+            </div>
         </div>
     </marquee>
             </div>
