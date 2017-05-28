@@ -236,5 +236,47 @@ public class DaoImpl implements UserDAO{
      }
      return drlist;
     }
+
+    @Override
+    public boolean getLoginDr(String id, String pass) {
+        
+        boolean r=false;
+        id.toLowerCase();
+        pass.toLowerCase();
+        String sql =("Select D_ID,password from USERDETAIL where D_ID is NOT NULL");
+        Statement statement=null;
+        ResultSet resultSet=null;
+        String s1;
+        String s2;
+        try {
+            statement = con.createStatement();
+            System.out.println("Create Stttttttt");
+           resultSet = statement.executeQuery(sql);
+            System.out.println("Sque Exe");
+            while (resultSet.next()){
+            s1=resultSet.getString("D_ID");
+            s2=resultSet.getString("password");
+            s1.toLowerCase();
+            s2.toLowerCase();
+                System.out.println("...........next user: "+id+" pass: "+pass+"__ DB:__"+s1+" & "+s2);
+                if (id.equals(s1.toLowerCase())) {
+                    System.out.println("Correct ID.............");
+           
+                      if(pass.equals(s2)){
+                          System.out.println("Login pass*****");
+                          r=true;
+                          break;
+                        }   
+                }
+            else{
+                System.out.println("Not matchs");
+            }
+        }
+        } catch (SQLException ex) {
+            System.out.println("Exception ");             
+        }
+        return r;
+    
+    }
 }
     

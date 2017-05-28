@@ -50,7 +50,7 @@
         </h1></div>
         <div class="container-fluid" >
             <marquee  direction="up" width="100%" height="600" scrollamount="5" loop="true" onmouseover="this.stop()" onmouseout="this.start()">
-        <div class="col-lg-12 col-sm-12" >
+        <div class="col-lg-12 col-sm-12" ><h4>
             
             <%
                 UserDAO productDAO = new DaoImpl();
@@ -63,14 +63,14 @@
             <div class="text-justify" >
                 <center>
             <%out.print("Dr.");%>
-            <%=product.getFname()%> 
-            <%=product.getLname()%> <br/>
+            <%=product.getFname().toUpperCase()%> 
+            <%=product.getLname().toUpperCase()%> <br/>
             <%out.print("From:");%>
-            <%=product.getLocation()%> <br/>
+            <%=product.getLocation().toUpperCase()%> <br/>
             <%out.print("Specialist:");%>
-            <%=product.getSpecialist()%> <br/><br/>
+            <%=product.getSpecialist().toUpperCase()%> <br/><br/><br/>
             <%}%></center>
-            </div>
+            </div></h4>
         </div>
     </marquee>
             </div>

@@ -20,6 +20,10 @@
         <servlet-name>UpdatePassServlet</servlet-name>
         <servlet-class>com.pro.controller.UpdatePass</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>dLoginServlet</servlet-name>
+        <servlet-class>com.pro.controller.dLogin</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>MakeAppointment</servlet-name>
         <url-pattern>/makeAppointment.do</url-pattern>
@@ -39,6 +43,10 @@
     <servlet-mapping>
         <servlet-name>UpdatePassServlet</servlet-name>
         <url-pattern>/updatepass.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>dLoginServlet</servlet-name>
+        <url-pattern>/dlogin.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
