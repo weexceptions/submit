@@ -4,8 +4,13 @@
     Author     : Akshay
 --%>
 
+<%@page import="com.pro.model.DoctorInfo"%>
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 
+<%@page import="java.util.Iterator"%>
+<%@page import="java.util.List"%>
+<%@page import="com.pro.controller.*;"%>
+<%@page import="com.pro.dao.*;"%>
 <%@ page import="com.pro.dao.DaoImpl" %>
 <!DOCTYPE html>
 <html>
@@ -44,13 +49,25 @@
                     List of Doctors:</center>
         </h1></div>
         <div class="container-fluid" >
-            <marquee  direction="up" width="100%" height="400" scrollamount="5" loop="true" onmouseover="this.stop()" onmouseout="this.start()">
-        <div class="col-lg-12 col-sm-12">
+            <marquee  direction="up" width="100%" height="600" scrollamount="5" loop="true" onmouseover="this.stop()" onmouseout="this.start()">
+        <div class="col-lg-12 col-sm-12" >
             
             <%
-            
+                UserDAO productDAO = new DaoImpl();
+                List<DoctorInfo> productList = productDAO.getAllDrDetails();
+                Iterator productItr = productList.iterator();
+                while(productItr.hasNext())
+                {
+                    DoctorInfo product = (DoctorInfo)productItr.next();
             %>
-            
+            <%out.print("Dr.");%>
+            <%=product.getFname()%> 
+            <%=product.getLname()%> <br/>
+            <%out.print("From:");%>
+            <%=product.getLocation()%> <br/>
+            <%out.print("Specialist:");%>
+            <%=product.getSpecialist()%> <br/><br/>
+            <%}%>
         </div>
     </marquee>
             </div>
