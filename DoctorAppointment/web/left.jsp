@@ -11,7 +11,6 @@
 <%@page import="java.util.List"%>
 <%@page import="com.pro.controller.*;"%>
 <%@page import="com.pro.dao.*;"%>
-<%@ page import="com.pro.dao.DaoImpl" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -53,12 +52,12 @@
         <div class="col-lg-12 col-sm-12" ><h4>
             
             <%
-                UserDAO productDAO = new DaoImpl();
-                List<DoctorInfo> productList = productDAO.getAllDrDetails();
-                Iterator productItr = productList.iterator();
-                while(productItr.hasNext())
+                UserDAO doctorDAO = new DaoImpl();
+                List<DoctorInfo> doctorList = doctorDAO.getAllDrDetails();
+                Iterator doctorItr = doctorList.iterator();
+                while(doctorItr.hasNext())
                 {
-                    DoctorInfo product = (DoctorInfo)productItr.next();
+                    DoctorInfo product = (DoctorInfo)doctorItr.next();
             %>
             <div class="text-justify" >
                 <center>

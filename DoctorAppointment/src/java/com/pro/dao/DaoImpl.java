@@ -278,5 +278,32 @@ public class DaoImpl implements UserDAO{
         return r;
     
     }
+
+    @Override
+    public List<AllDoctor> getAllDoctor() {
+        List<AllDoctor> allDr = new ArrayList<AllDoctor>();
+     try {
+         
+         PreparedStatement pstmt = con.prepareStatement("select FNAME,LNAME from USERDETAIL where D_ID IS NOT NULL");
+         System.out.println("Stmt");
+         ResultSet rs = pstmt.executeQuery();
+         System.out.println("Exe hua");
+         String fname,lname;
+         while(rs.next())
+         {
+             fname=rs.getString(1);
+             lname=rs.getString(2);
+             System.out.println("Fname - "+fname+"  lname - "+lname);
+             AllDoctor dr=new AllDoctor(fname+" "+lname) ;
+             allDr.add(dr);
+         }        
+         
+     } catch (SQLException ex) {
+         System.out.println("Errrrrrrrrr:\n"+ex.getMessage()+"Ennnnnnnnnnnnnn\n\n");
+         java.util.logging.Logger.getLogger(DaoImpl.class.getName()).log(Level.SEVERE, null, ex);
+     }
+     return allDr;
+    }
+
 }
     

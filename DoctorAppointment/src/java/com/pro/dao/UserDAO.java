@@ -21,5 +21,6 @@ public interface UserDAO {
     boolean getLoginDr(String id,String pass);
     boolean checkPassword(String id,String email,String phone);
     boolean updatePassword(String pass,String id);
+    List<AllDoctor> getAllDoctor();
     List<DoctorInfo> getAllDrDetails();
 }

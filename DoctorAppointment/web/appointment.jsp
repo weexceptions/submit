@@ -4,12 +4,18 @@
     Author     : Akshay
 --%>
 
+<%@page import="com.pro.model.AllDoctor"%>
+<%@page import="java.util.Iterator"%>
+<%@page import="java.util.List"%>
+<%@page import="com.pro.model.DoctorInfo"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="com.pro.controller.*;"%>
+<%@page import="com.pro.dao.*;"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Apointment Page</title>
 
         <link rel="stylesheet" href="css/bootstrap.min.css"/>
         <link rel="stylesheet" href="css/homestylesheet.css">
@@ -62,21 +68,16 @@
                 <div class="form-group">
                     <label for="sel1">Select Doctor:</label>
                     <select class="form-control">
-                        <option id="" value="">1</option>
-                        <option id="" value="">3</option>
-                        <option id="" value="">4</option>
-                        <option id="" value=""></option>
-                        <option id="" value=""></option>
-                        <option id="" value=""></option>
-                        <option id="" value=""></option>
-                        <option id="" value=""></option>
-                        <option id="" value=""></option>
-                        <option id="" value=""></option>
-                        <option id="" value=""></option>
-                        <option id="" value=""></option>
-                        <option id="" value=""></option>
-                        <option id="" value=""></option>
-                        <option id="" value=""></option>
+                       <%/*String dr;
+                        UserDAO allDrDAO = new DaoImpl();
+                        //List<AllDoctor> allDrList = allDrDAO.getAllDoctor();
+                        List<AllDoctor> allDrList=allDrDAO.getAllDoctor();
+                Iterator allDRItr = allDrList.iterator();
+                while(allDRItr.hasNext())
+                {
+                    AllDoctor allDr = (AllDoctor)allDRItr.next();*/
+            %>
+                        <%//=out.println(allDr.getDrName())%><%//}%>
                         <option id="" value=""></option>
                         
                     </select>
