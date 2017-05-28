@@ -69,8 +69,8 @@ body{
           <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Help Desk<span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-                <li><a target="ContentFrame" href="#">Appt Details</a></li>
-              <li><a target="ContentFrame" href="#"></a></li>
+                <li><a target="ContentFrame" href="#">Appointments</a></li>
+              <li><a target="ContentFrame" href="#">My Profile</a></li>
               <li><a target="ContentFrame" href="#"></a></li>
                </ul>
           </li>
