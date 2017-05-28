@@ -105,7 +105,7 @@ public class DaoImpl implements UserDAO{
             s2=resultSet.getString("password");
             s1.toLowerCase();
             s2.toLowerCase();
-                System.out.println("...........next user: "+id+" pass: "+pass+"__ String__"+s1+" & "+s2);
+                System.out.println("...........next user: "+id+" pass: "+pass+"__ DB:__"+s1+" & "+s2);
                 if (id.equals(s1.toLowerCase())) {
                     System.out.println("Correct ID.............");
            
