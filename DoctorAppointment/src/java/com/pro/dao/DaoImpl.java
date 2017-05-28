@@ -13,6 +13,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 
 /**
@@ -190,4 +192,51 @@ public class DaoImpl implements UserDAO{
             System.out.println("UPDATE Successfull in USERSDETAILS");
        return r;
     }
+
+    @Override
+    public List<DoctorInfo> getAllDrDetails() {
+        List<DoctorInfo> drlist = new ArrayList<DoctorInfo>();
+     try {
+         
+         PreparedStatement pstmt = con.prepareStatement("select D_ID from USERDETAIL where D_ID IS NOT NULL");
+         System.out.println("Stmt");
+         ResultSet rs = pstmt.executeQuery();
+         System.out.println("Exe hua");
+         String fname,lname,location,specialist;
+         while(rs.next())
+         {
+             String dId=rs.getString(1);
+             System.out.println("\n"+dId);
+             PreparedStatement ps1 = con.prepareStatement("SELECT FNAME,LNAME FROM USERDETAIL WHERE D_ID = ?");
+             ps1.setString(1, dId);
+             ResultSet rs1 = ps1.executeQuery();
+             PreparedStatement ps2 = con.prepareStatement("SELECT LOCATION,SPECIALIST FROM DOCTOR WHERE D_ID = ?");
+             ps2.setString(1, dId);
+             ResultSet rs2 = ps2.executeQuery();
+             while (rs1.next()) {
+                 boolean q=rs2.next();
+                 if (q) { }
+                 else
+                      break;
+                 fname=rs1.getString(1);
+                 lname=rs1.getString(2);
+                 location=rs2.getString(1);
+                 specialist=rs2.getString(2);
+                 
+                 System.out.println("Fname - "+fname+"  lname - "+lname);
+                 System.out.println("Location - "+location+"  Spec - "+specialist);
+             
+             DoctorInfo dr= new DoctorInfo(fname, lname, location, specialist);
+             drlist.add(dr);
+             }
+         }
+         
+         
+     } catch (SQLException ex) {
+         System.out.println("Errrrrrrrrr:\n"+ex.getMessage()+"Ennnnnnnnnnnnnn\n\n");
+         java.util.logging.Logger.getLogger(DaoImpl.class.getName()).log(Level.SEVERE, null, ex);
+     }
+     return drlist;
+    }
 }
+    

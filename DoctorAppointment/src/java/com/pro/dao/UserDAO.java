@@ -6,6 +6,7 @@
 package com.pro.dao;
 
 import com.pro.model.*;
+import java.util.List;
 /**
  *
  * @author Akshay
@@ -19,4 +20,5 @@ public interface UserDAO {
     boolean getLogin(String id,String pass);
     boolean checkPassword(String id,String email,String phone);
     boolean updatePassword(String pass,String id);
+    List<DoctorInfo> getAllDrDetails();
 }
