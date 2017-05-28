@@ -90,7 +90,7 @@ public class DaoImpl implements UserDAO{
         boolean r=false;
         id.toLowerCase();
         pass.toLowerCase();
-        String sql =("Select P_ID,password from USERDETAIL ");
+        String sql =("Select P_ID,password from USERDETAIL where P_ID is NOT NULL");
         Statement statement=null;
         ResultSet resultSet=null;
         String s1;
@@ -105,17 +105,15 @@ public class DaoImpl implements UserDAO{
             s2=resultSet.getString("password");
             s1.toLowerCase();
             s2.toLowerCase();
-                System.out.println(s1+"---"+s2);
-                System.out.println(id+"===="+pass);
-            
+                System.out.println("...........next user: "+id+" pass: "+pass+"__ DB:__"+s1+" & "+s2);
                 if (id.equals(s1.toLowerCase())) {
                     System.out.println("Correct ID.............");
            
-            if(pass.equals(s2)){
-                System.out.println("Login pass*****");
-                r=true;
-                break;
-            }
+                      if(pass.equals(s2)){
+                          System.out.println("Login pass*****");
+                          r=true;
+                          break;
+                        }   
                 }
             else{
                 System.out.println("Not matchs");

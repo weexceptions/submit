@@ -41,7 +41,7 @@ public class Login extends HttpServlet {
 //                out.println("Failed to Create User ");
 //            } 
             UserDAO userdao = new DaoImpl();
-             if (userdao.getLogin(id, pass)) {
+             if (userdao.getLogin(id.trim(), pass.trim())) {
                 RequestDispatcher rd = request.getRequestDispatcher("userhome.jsp");
                 request.setAttribute("auser", id.toLowerCase());
                 rd.forward(request, response);
