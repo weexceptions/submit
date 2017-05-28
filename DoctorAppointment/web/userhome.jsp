@@ -57,7 +57,7 @@ body{
         <a class="navbar-brand">
              <h4 style="float: right; color: #ffffff">Contact No.: 9876543210</h4>
              <img src="Images/logo2.png" width="20%" height="100%"  alt="StayHealthy">
-             <p style="float: right" class="text-info">Welcome <%out.print(request.getAttribute("auser"));%></p>
+             <p style="float: right; color:#ff0; size: auto" class="text-danger">Welcome <%out.print(request.getAttribute("auser"));%></p>
         </a>
          
       </div>
