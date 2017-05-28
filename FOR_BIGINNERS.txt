@@ -1,5 +1,4 @@
 --************UserDetail Table****************
-
 CREATE TABLE USERDETAIL (
 UID INT GENERATED ALWAYS AS IDENTITY,
 PASSWORD VARCHAR(30),
@@ -13,7 +12,7 @@ P_ID VARCHAR(20),
 D_ID VARCHAR(20),
 PRIMARY KEY(UID),
 UNIQUE (EMAIL)
-)
+);
 
 
 --**************Patient********************
@@ -23,7 +22,7 @@ P_ID VARCHAR(20),
 AGEGROUP VARCHAR(10),
 GENDER VARCHAR(8),
 PRIMARY KEY(P_ID)
-)
+);
 
 --*************Doctor***********************
 
@@ -32,7 +31,7 @@ D_ID VARCHAR(20),
 LOCATION VARCHAR(10),
 SPECIALIST VARCHAR(100),
 PRIMARY KEY(D_ID)
-)
+);
 
 --**********APPOINTMENT**********************
 
@@ -46,7 +45,7 @@ A_TIME TIME,
 LOCATION VARCHAR(10),
 STATUS VARCHAR(10),
 PRIMARY KEY(A_ID)
-)
+);
 
 --**************DISEASE DETAILS**************************
 
@@ -56,7 +55,7 @@ DISEASE_NAME VARCHAR(15),
 SYMPTOMS varchar(100),
 PREVENTION varchar(100),
 CURE varchar(50)
-)
+);
 
 --*********FORIGNKEY**********************
 
