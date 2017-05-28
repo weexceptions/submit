@@ -24,8 +24,6 @@
             
         </div>
         
-        
-        
         <div class="container">
             <aside id="sticky-social">
     <ul>
