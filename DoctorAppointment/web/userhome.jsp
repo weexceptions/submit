@@ -74,7 +74,7 @@ body{
               <li><a target="ContentFrame" href="#"></a></li>
                </ul>
           </li>
-                    <li><a target="ContentFrame" href="#">Log Out</a></li>
+                    <li><a target="_blank" href="logout.jsp">Log Out</a></li>
         </ul>
       </div>
       <!--/.nav-collapse -->
@@ -83,7 +83,7 @@ body{
   </nav>
             </div>
             <div class="row" id="container">
-            <IFRAME seamless="seamless" scrolling="no" src="" id="frame1" scrollig="no" name="NavigationFrame" width="19%" height="800" > </IFRAME>
+                <IFRAME seamless="seamless" scrolling="no" src="left2.jsp" id="frame1" scrollig="no" name="NavigationFrame" width="19%" height="800" > </IFRAME>
             <IFRAME seamless="seamless" scrolling="yes" src="home.jsp" id="frame2" name="ContentFrame" width="80%" height="800" ><h1>Content</h1></IFRAME>
             </div>
             
