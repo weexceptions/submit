@@ -41,11 +41,12 @@ P_ID VARCHAR(20) references Patient(P_ID),
 D_ID VARCHAR(20) references DOCTOR(D_ID),
 DESCRIPTION VARCHAR(100),
 A_DATE DATE,
-A_TIME TIME,
+A_TIME INT DEFAULT 0,
 LOCATION VARCHAR(10),
 STATUS VARCHAR(10),
 PRIMARY KEY(A_ID)
 );
+
 
 --**************DISEASE DETAILS**************************
 
@@ -160,5 +161,17 @@ INSERT INTO AKSH.USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE,
 INSERT INTO AKSH.USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) 
 	VALUES ('sohel1234', 'SOHEL', 'ALI', '1989-12-23', 'sohelali@gmail.com', 'BADLAPUR', '9098765456', NULL, 'SOALI');
 
+INSERT INTO AKSH.APPOINTMENT (P_ID, D_ID, DESCRIPTION, A_DATE, LOCATION, STATUS) 
+	VALUES ('aksh', 'mbhai', 'Description of appoint ', '2017-05-29', 'Borivali', 'Booked');
 
+
+--Default time slot will be 0
+--1=9to10
+--2=10to11 
+--3=11to12
+--4=12to1
+--5=2to3
+--6=3to4
+--7=5to6
+--8=7to8
 --45 errors occurred. As an output
