@@ -16,6 +16,12 @@
 <!--        <link rel="stylesheet" href="css/homestylesheet.css">-->
         <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" >
+            logoutAlert()
+            {
+                alert ("This is a warning message!");
+            }
+        </script>
         <style>            
         
 .navbar-brand {
@@ -74,7 +80,7 @@ body{
               <li><a target="ContentFrame" href="#"></a></li>
                </ul>
           </li>
-                    <li><a target="_blank" href="logout.jsp">Log Out</a></li>
+          <li><a target="_blank" href="index.jsp" onclick="logoutAlert()">LogOut</a></li>
         </ul>
       </div>
       <!--/.nav-collapse -->
