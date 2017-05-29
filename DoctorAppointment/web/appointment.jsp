@@ -4,6 +4,11 @@
     Author     : Akshay
 --%>
 
+<%@page import="java.sql.SQLException"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.Connection"%>
 <%@page import="com.pro.model.AllDoctor"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.List"%>
@@ -67,7 +72,7 @@
                 </div>    
                 <div class="form-group">
                     <label for="sel1">Select Doctor:</label>
-                    <select class="form-control">
+<!--                    <select class="form-control">
                        <%/*String dr;
                         UserDAO allDrDAO = new DaoImpl();
                         //List<AllDoctor> allDrList = allDrDAO.getAllDoctor();
@@ -80,7 +85,49 @@
                         <%//=out.println(allDr.getDrName())%><%//}%>
                         <option id="" value=""></option>
                         
-                    </select>
+                    </select>-->
+                    
+                        
+                        <%! String driverName = "com.mysql.jdbc.Driver";%>
+                        <%!String url = "jdbc:derby://localhost:1527/DocAppointDB";%>
+                        <%!String user = "aksh";%>
+                        <%!String psw = "aksh123";%>
+                        
+                        <%
+                           // Connection con = DBconnection.getConnection();
+                        Connection con = null;
+                        PreparedStatement ps = null;
+                        try
+                        {
+                        //Class.forName(driverName);
+                       // con = DriverManager.getConnection(url,user,psw);
+                             con = DBconnection.getConnection();
+                        String sql = "SELECT fname,lname FROM USERDETAIL where D_ID IS NOT NULL";
+                        ps = con.prepareStatement(sql);
+                        ResultSet rs = ps.executeQuery(); 
+                        %>
+                        <p>Select Name :
+                        <select>
+                        <%
+                        while(rs.next())
+                        {
+                        String fname = rs.getString("fname").toUpperCase(); 
+                        String lname = rs.getString("lname".toUpperCase()); 
+                        String fullname = fname+" "+lname; 
+                        %>
+                        <option value="<%=fullname %>"><%=fullname %></option>
+                        <%
+                        }
+                        %>
+                        </select>
+                        </p>
+                        <%
+                        }
+                        catch(SQLException sqe)
+                        { 
+                        out.println(sqe);
+                        }
+                        %>
                 </div>
                 <div class="form-group">
                     <input type="" class="form-control" value="" name="" placeholder="">
