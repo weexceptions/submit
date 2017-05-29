@@ -41,7 +41,11 @@ public class dLogin extends HttpServlet {
                 System.out.println("Userlogin Successfully");
                 System.out.println(id+"\n\n"+pass);
             UserDAO userdao = new DaoImpl();
-             if (userdao.getLoginDr(id.trim(), pass.trim())) {
+            if (id.equals("Admin")&&pass.equals("admin")) {
+                RequestDispatcher rd = request.getRequestDispatcher("adminhome.jsp");
+                request.setAttribute("auser", id.toLowerCase());
+                rd.forward(request, response);
+            }else if (userdao.getLoginDr(id.trim(), pass.trim())) {
                 RequestDispatcher rd = request.getRequestDispatcher("drhome.jsp");
                 request.setAttribute("auser", id.toLowerCase());
                 rd.forward(request, response);

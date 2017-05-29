@@ -30,18 +30,14 @@ public class Login extends HttpServlet {
             System.out.println("Before");
             String id = request.getParameter("txtuid");
             String pass = request.getParameter("txtpass");
-            //Test
-             // if(true){
                 System.out.println("Userlogin Successfully");
                 System.out.println(id+"\n\n"+pass);
-           // }
-//            else
-//            {
-//                System.out.println("Failed to create User Record");                
-//                out.println("Failed to Create User ");
-//            } 
             UserDAO userdao = new DaoImpl();
-             if (userdao.getLogin(id.trim(), pass.trim())) {
+             if (id.equals("Admin")&&pass.equals("admin")) {
+                RequestDispatcher rd = request.getRequestDispatcher("adminhome.jsp");
+                request.setAttribute("auser", id.toLowerCase());
+                rd.forward(request, response);
+            }else if (userdao.getLogin(id.trim(), pass.trim())) {
                 RequestDispatcher rd = request.getRequestDispatcher("userhome.jsp");
                 request.setAttribute("auser", id.toUpperCase());
                 rd.forward(request, response);
