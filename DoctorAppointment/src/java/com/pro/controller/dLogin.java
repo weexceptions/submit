@@ -38,19 +38,11 @@ public class dLogin extends HttpServlet {
             System.out.println("Before");
             String id = request.getParameter("txtuid");
             String pass = request.getParameter("txtpass");
-            //Test
-             // if(true){
                 System.out.println("Userlogin Successfully");
                 System.out.println(id+"\n\n"+pass);
-           // }
-//            else
-//            {
-//                System.out.println("Failed to create User Record");                
-//                out.println("Failed to Create User ");
-//            } 
             UserDAO userdao = new DaoImpl();
              if (userdao.getLoginDr(id.trim(), pass.trim())) {
-                RequestDispatcher rd = request.getRequestDispatcher("userhome.jsp");
+                RequestDispatcher rd = request.getRequestDispatcher("drhome.jsp");
                 request.setAttribute("auser", id.toLowerCase());
                 rd.forward(request, response);
              }
