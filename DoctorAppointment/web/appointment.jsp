@@ -47,67 +47,22 @@
                 <div class="form-group">
                     <label for="appt date">Appointment Date:</label>
                     <input type="date" class="form-control" name="" placeholder="Date" required></div>
-                
+                  
                 <div class="form-group">
-                    <label for="appt timeslot">Appointment Time:</label>
-                    <select type="text" class="form-control" name=""  required>
-                        <option disabled selected id="Time">Select Time Slot</option>
-                        <option>9.am - 9:30am</option>
-                        <option>9:30am - 10am</option>
-                        <option>10am - 10:30am</option>
-                        <option>10:30am - 11am</option>
-                        <option>11am - 11:30am</option>
-                        <option>11:30am - 12am</option>
-                        <option>12pm - 12.30pm</option>
-                        <option>12.30pm - 1pm</option>
-                        <option>1pm - 1:30pm</option>
-                        <option>1:30pm - 2pm</option>
-                        <option>4pm - 4:30pm</option>
-                        <option>4:30pm - 5pm</option>
-                        <option>5pm - 5:30pm</option>
-                        <option>5:30pm - 6pm</option>
-                        <option>6pm - 6:30pm</option>
-                        <option>6:30pm - 7pm</option>
-                    </select>
-                </div>    
-                <div class="form-group">
-                    <label for="sel1">Select Doctor:</label>
-<!--                    <select class="form-control">
-                       <%/*String dr;
-                        UserDAO allDrDAO = new DaoImpl();
-                        //List<AllDoctor> allDrList = allDrDAO.getAllDoctor();
-                        List<AllDoctor> allDrList=allDrDAO.getAllDoctor();
-                Iterator allDRItr = allDrList.iterator();
-                while(allDRItr.hasNext())
-                {
-                    AllDoctor allDr = (AllDoctor)allDRItr.next();*/
-            %>
-                        <%//=out.println(allDr.getDrName())%><%//}%>
-                        <option id="" value=""></option>
-                        
-                    </select>-->
-                    
-                        
-                        <%! String driverName = "com.mysql.jdbc.Driver";%>
-                        <%!String url = "jdbc:derby://localhost:1527/DocAppointDB";%>
-                        <%!String user = "aksh";%>
-                        <%!String psw = "aksh123";%>
-                        
+                    <label for="sel1">Select Doctor:</label>                                   
                         <%
-                           // Connection con = DBconnection.getConnection();
                         Connection con = null;
                         PreparedStatement ps = null;
                         try
                         {
-                        //Class.forName(driverName);
-                       // con = DriverManager.getConnection(url,user,psw);
-                             con = DBconnection.getConnection();
+                        con = DBconnection.getConnection();
                         String sql = "SELECT fname,lname FROM USERDETAIL where D_ID IS NOT NULL";
                         ps = con.prepareStatement(sql);
                         ResultSet rs = ps.executeQuery(); 
                         %>
-                        <p>Select Name :
-                        <select>
+                       
+                         <select type="text" class="form-control" name=""  required>
+                            <option disabled selected id="Date">Select Doctor</option>
                         <%
                         while(rs.next())
                         {
@@ -120,7 +75,6 @@
                         }
                         %>
                         </select>
-                        </p>
                         <%
                         }
                         catch(SQLException sqe)
@@ -129,9 +83,82 @@
                         }
                         %>
                 </div>
+               
                 <div class="form-group">
-                    <input type="" class="form-control" value="" name="" placeholder="">
-                </div>
+                    <label for="appt timeslot">Appointment Time:</label>
+                    <select type="text" class="form-control" name=""  required>
+                        
+                         <%
+                       
+                        try
+                        {
+                        con = DBconnection.getConnection();
+                        String sql = "SELECT A_TIME FROM APPOINTMENT WHERE D_ID IS NOT NULL";
+                        ps = con.prepareStatement(sql);
+                        ResultSet rs = ps.executeQuery(); 
+                        %>
+                        <p>Select Name :
+                       
+                            <option disabled selected id="Time">Select Time</option>
+                        <%
+                            rs.next();
+                        int btime=rs.getInt(1);
+                        String TimeBooked;
+                        String dselect=null;
+                        String atime="Select";
+                        for (int i = 1; i < 9; i++) {
+                         if (btime==i) {
+                                 atime="Booked";
+                                 dselect="disabled selected";
+                             }
+                         else{
+                             dselect=null;
+                             switch (i) {
+                                     case 1:
+                                         atime="9 to 10";
+                                         break;
+                                     case 2:
+                                         atime="10 to 11";
+                                         break;
+                                     case 3:
+                                         atime="11 to 12";
+                                         break;
+                                     case 4:
+                                         atime="12 to 1";
+                                         break;
+                                     case 5:
+                                         atime="2 to 3";
+                                         break;
+                                     case 6:
+                                         atime="3 to 4";
+                                         break;
+                                     case 7:
+                                         atime="5 to 6";
+                                         break;
+                                     case 8:
+                                         atime="6 to 7";
+                                         break;
+                                     default:
+                                         atime="Booked";
+                                 }
+                        }
+                         
+                        %>
+                        <option <%=dselect%> value="1"><%=atime %></option>
+                        <%
+                        }
+                        %>
+                        </select>
+                        </p>
+                        <%
+                        }
+                        catch(SQLException sqe)
+                        { 
+                        out.println(sqe);
+                        }
+                        %>
+                
+                </div>  
                    
             </form>
             
