@@ -113,7 +113,7 @@
                         {
                         String fname = rs.getString("fname").toUpperCase(); 
                         String lname = rs.getString("lname".toUpperCase()); 
-                        String fullname = fname+" "+lname; 
+                        String fullname = fname+" "+lname.toUpperCase(); 
                         %>
                         <option value="<%=fullname %>"><%=fullname %></option>
                         <%
