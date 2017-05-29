@@ -14,5 +14,8 @@
     <body>
         <h1>Admin ka Page banao</h1>
         <h2>Create Dr---Delete Dr----All or remove Patient</h2>
+        <h1>Remove user k liya  <a href="#">"removeuser.jsp"</a> iss par link karna hai and <a href="#">"deleteuser.do"</a> on submit</h1>
+        
+        <a href="deleteuser.do">Delete user</a>
     </body>
 </html>
