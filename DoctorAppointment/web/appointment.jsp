@@ -36,19 +36,19 @@
                     <legend><i class="glyphicon glyphicon-user"></i>&nbsp;&nbsp;Appoint Doctor</legend>
                 </div>
                 <div class="form-group">
-                <label class="control-label col-sm-4" for="patientname">Patient Name:</label>
+                <label class="control-label" for="patientname">Patient Name:</label>
                <label for="id" class="text-info">ABCD</label>                    
                 
                 </div>
                  <div class="form-group">
-                    <label for="patient id">Patient Id:</label><label for="id" class="text-info"><%out.print(request.getAttribute("auser"));%></label>                    
+                    <label class="control-label" for="patient id">Patient Id:</label><label for="id" class="text-info"><%out.print(request.getAttribute("auser"));%></label>                    
                 </div>
                 <div class="form-group">
-                    <label for="appt date">Appointment Date:</label>
+                    <label class="control-label" for="appt date">Appointment Date:</label>
                     <input type="date" class="form-control" name="" placeholder="Date" required></div>
                   
                 <div class="form-group">
-                    <label for="sel1">Select Doctor:</label>                                   
+                    <label class="control-label" for="sel1">Select Doctor:</label>                                   
                         <%
                         Connection con = null;
                         PreparedStatement ps = null;

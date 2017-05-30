@@ -18,7 +18,11 @@
     </head>
     <body>
         <form action="makeAppointment.do" method="post" >
-                <div <%
+              <label class="control-label" for="patientname">Doctor Name:</label>
+<!--              here u insert setAtribute code in input text below -->
+              <input type="text" class="input-sm" disabled="true" value="Akshay Soni"><br/><br/>
+            
+            <div <%
                     String dtime="hidden";
                         Connection con = null;
                         PreparedStatement ps = null; 
