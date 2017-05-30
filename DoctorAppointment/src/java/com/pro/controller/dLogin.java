@@ -47,7 +47,7 @@ public class dLogin extends HttpServlet {
                 rd.forward(request, response);
             }else if (userdao.getLoginDr(id.trim(), pass.trim())) {
                 RequestDispatcher rd = request.getRequestDispatcher("drhome.jsp");
-                request.setAttribute("auser", id.toLowerCase());
+                request.setAttribute("auser", id.toUpperCase());
                 rd.forward(request, response);
              }
              else

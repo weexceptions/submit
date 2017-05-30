@@ -66,7 +66,7 @@ body{
         <ul class="nav navbar-nav navbar-left">
           <li class="active"><a href="home.jsp" target="ContentFrame">Home</a></li>
           <li><a href="#" target="ContentFrame" >Notification</a></li>
-          <li><a  href="appointment.jsp" target="ContentFrame">Make Appointment</a></li>
+          <li><a  href="confirmid.jsp" target="ContentFrame">Make Appointment</a></li>
           <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Help Desk<span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
