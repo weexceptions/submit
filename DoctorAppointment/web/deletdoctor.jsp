@@ -16,6 +16,35 @@
         
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <div class="container">
+            <form action="makeAppointment.do" method="post" >
+    
+            <div class="form-control">
+                <input type="text" class="form-control" placeholder="Enter Doctorid" name="txtuid"> <button type="submit" class="btn btn-danger">Delete</button>       
+            </div> 
+            </form>
+        </div>
+        <div class="container-fluid">
+            <h1>Doctor Detail</h1>
+        <table border="1">
+            <thead>
+                <th>er Id</th>
+                <th>User Name</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Phone</th>
+                
+            </thead>
+            <tr>
+                <td><%=product.getProductId() %> </td>
+                <td><%=product.getProductName() %> </td>
+                <td><%=product.getPrice() %> </td>
+                <td><%=product.getStock() %> </td>
+                <td><%=product.getProductImage() %> </td>
+                
+                </tr>
+            </table>
+        </div>
+  
     </body>
 </html>
