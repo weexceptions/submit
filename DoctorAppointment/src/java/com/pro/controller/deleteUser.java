@@ -5,12 +5,10 @@
  */
 package com.pro.controller;
 
-import com.pro.dao.DBconnection;
-import com.pro.dao.UserDAO;
 import com.pro.dao.DaoImpl;
+import com.pro.dao.UserDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Connection;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -19,35 +17,46 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Akshay
+ * @author Sunny
  */
-public class Login extends HttpServlet {
+public class deleteUser extends HttpServlet {
+
+    /**
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
+     * methods.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            System.out.println("Before");
+//            out.println("<!DOCTYPE html>");
+//            out.println("<html>");
+//            out.println("<head>");
+//            out.println("<title>Servlet deleteUser</title>");            
+//            out.println("</head>");
+//            out.println("<body>");
+//            out.println("<h1>Servlet deleteUser at " + request.getContextPath() + "</h1>");
+//            out.println("</body>");
+//            out.println("</html>");
             String id = request.getParameter("txtuid");
-            String pass = request.getParameter("txtpass");
-                System.out.println("Userlogin Successfully");
-                System.out.println(id+"\n\n"+pass);
             UserDAO userdao = new DaoImpl();
-             if (id.equals("Admin")&&pass.equals("admin")) {
+            id="aksh";
+            if (userdao.deleteUser(id)) {
                 RequestDispatcher rd = request.getRequestDispatcher("adminhome.jsp");
-                request.setAttribute("auser", id.toLowerCase());
-                rd.forward(request, response);
-            }else if (userdao.getLogin(id.trim(), pass.trim())) {
-                RequestDispatcher rd = request.getRequestDispatcher("userhome.jsp");
-                request.setAttribute("auser", id.toUpperCase());
                 rd.forward(request, response);
              }
              else
             {
                 System.out.println("Failed to Login");  
                 out.println("<script type=\"text/javascript\">");
-                out.println("alert('User or password incorrect');");
-                out.println("location='login.jsp';");
+                out.println("alert('Incorrect User');");
+                out.println("location='removeuser.jsp';");
                 out.println("</script>");
             }  
         }
