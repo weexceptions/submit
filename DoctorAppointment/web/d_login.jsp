@@ -1,7 +1,7 @@
 <%-- 
     Document   : d_login
     Created on : May 24, 2017, 3:37:18 PM
-    Author     : Akshay
+    Author     : Priyanka Workspace
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
