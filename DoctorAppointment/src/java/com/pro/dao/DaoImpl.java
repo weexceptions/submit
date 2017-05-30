@@ -78,9 +78,23 @@ public class DaoImpl implements UserDAO{
     }
 
     @Override
-    public boolean deleteUser(int userId) {
+    public boolean deleteUser(String userId) {
     boolean flag=false;
-    //insert code to delete
+        PreparedStatement ps=null;
+        PreparedStatement ps2=null;
+        try {
+            ps = con.prepareStatement("DELETE FROM USERDETAIL WHERE P_ID = ?");
+            ps2 = con.prepareStatement("DELETE FROM PATIENT WHERE P_ID = ?");
+            ps.setString(1, userId);
+            ps2.setString(1, userId);
+            System.out.println("First ps "+ps.executeUpdate());
+            System.out.println("Second ps2 "+ps2.executeUpdate());
+            flag=true;
+            
+        } catch (SQLException ex) {
+            System.out.println("Failed To Delete");
+        }
+          
         return flag;   
     
     }
@@ -137,7 +151,7 @@ public class DaoImpl implements UserDAO{
         String s3;
         id=id.toLowerCase();
         try {
-            statement = con.createStatement();
+           statement = con.createStatement();
            resultSet = statement.executeQuery(sql);
             System.out.println("Sque Exe");
             while (resultSet.next()){

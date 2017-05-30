@@ -1,8 +1,7 @@
-
 <%-- 
-    Document   : index
-    Created on : May 4, 2017, 10:53:29 AM
-    Author     : Akshay
+    Document   : drhome
+    Created on : May 29, 2017, 9:11:24 PM
+    Author     : Sunny
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -13,7 +12,6 @@
         <title>Home</title>
         
         <link rel="stylesheet" href="css/bootstrap.min.css"/>
-<!--        <link rel="stylesheet" href="css/homestylesheet.css">-->
         <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
         
@@ -64,13 +62,13 @@ body{
       </div>
       <div id="navbar3" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-left">
-          <li class="active"><a href="home.jsp" target="ContentFrame">Home</a></li>
-          <li><a href="#" target="ContentFrame" >Notification</a></li>
-          <li><a  href="confirmid.jsp" target="ContentFrame">Make Appointment</a></li>
+          <li class="active"><a href="#" target="ContentFrame">Home</a></li>
+          <li><a href="drnotification.jsp" target="ContentFrame" >Notification</a></li>
+          <li><a  href="drviewappoint.jsp" target="ContentFrame">View Appointment</a></li>
           <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Help Desk<span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-                <li><a target="ContentFrame" href="viewappoint.jsp">Appointments</a></li>
+                <li><a target="ContentFrame" href="drviewappoint.jsp">Appointments</a></li>
               <li><a target="ContentFrame" href="#">My Profile</a></li>
               <li><a target="ContentFrame" href="#"></a></li>
                </ul>
