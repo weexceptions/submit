@@ -12,6 +12,11 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <div class="container">
+            <form action="confirm.do" method="post">
+            <h1 class="text-justify">Confirm Your User Id</h1>
+        <input type="text" name="txtuid" placeholder="Userid">
+        <button type="submit" value="Submit">Submit</button>
+        </form></div>
     </body>
 </html>

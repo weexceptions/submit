@@ -41,8 +41,7 @@
                 </div>
                 
                 <div class="form-group">
-                    <label for="patient id">Patient Id:</label>
-                    <input type="text" class="form-control" name="" placeholder="Patient id" required>
+                    <label for="patient id">Patient Id:</label><label for="id"><%out.print(request.getAttribute("auser"));%></label>                    
                 </div>
                 <div class="form-group">
                     <label for="appt date">Appointment Date:</label>
