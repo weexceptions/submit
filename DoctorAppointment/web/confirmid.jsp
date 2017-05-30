@@ -9,14 +9,18 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>confirm id</title>
+            <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    
     </head>
-    <body>
+    <body class="bg-info" >
         <div class="container">
             <form action="takeid.do" method="post">
-            <h1 class="text-justify">Confirm Your User Id</h1>
-        <input type="text" name="txtuid" placeholder="Userid">
-        <button type="submit" value="MakeAppointent">Submit</button>
+            <h3 class="text-center text-justify">Confirm User Id</h3>
+            <input type="text" class="form-control" name="txtuid" placeholder="Userid"><br/>
+            <button type="submit" class="btn btn-success" value="MakeAppointent">Submit</button>
         </form></div>
     </body>
 </html>

@@ -34,14 +34,14 @@
     
                 <div style="padding-top: 15px;" class="form-group">
                     <legend><i class="glyphicon glyphicon-user"></i>&nbsp;&nbsp;Appoint Doctor</legend>
-                </div><br/>
-                
-                <div class="form-group">
-                    <input type="text" class="form-control" name="" placeholder="Patient Name" required>
                 </div>
-                
                 <div class="form-group">
-                    <label for="patient id">Patient Id:</label><label for="id"><%out.print(request.getAttribute("auser"));%></label>                    
+                <label class="control-label col-sm-4" for="patientname">Patient Name:</label>
+               <label for="id" class="text-info">ABCD</label>                    
+                
+                </div>
+                 <div class="form-group">
+                    <label for="patient id">Patient Id:</label><label for="id" class="text-info"><%out.print(request.getAttribute("auser"));%></label>                    
                 </div>
                 <div class="form-group">
                     <label for="appt date">Appointment Date:</label>
@@ -50,8 +50,10 @@
                 <div class="form-group">
                     <label for="sel1">Select Doctor:</label>                                   
                         <%
+                         String dtime="hidden";
                         Connection con = null;
                         PreparedStatement ps = null;
+                        //dtime="";
                         try
                         {
                         con = DBconnection.getConnection();
@@ -60,7 +62,7 @@
                         ResultSet rs = ps.executeQuery(); 
                         %>
                        
-                         <select type="text" class="form-control" name=""  required>
+                         <select type="text" class="form-control" name="txtdr"  required>
                             <option disabled selected id="Date">Select Doctor</option>
                         <%
                         while(rs.next())
@@ -72,6 +74,7 @@
                         <option value="<%=fullname %>"><%=fullname %></option>
                         <%
                         }
+
                         %>
                         </select>
                         <%
@@ -83,9 +86,9 @@
                         %>
                 </div>
                
-                <div class="form-group">
+                <div <%out.println(dtime);%> class="form-group">
                     <label for="appt timeslot">Appointment Time:</label>
-                    <select type="text" class="form-control" name=""  required>
+                    <select  type="text" class="form-control" name=""  required>
                         
                          <%
                        
