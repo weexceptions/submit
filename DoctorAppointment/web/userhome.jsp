@@ -69,7 +69,7 @@ body{
       </div>
       <div id="navbar3" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-left">
-          <li class="active"><a href="#" target="ContentFrame">Home</a></li>
+          <li class="active"><a href="home.jsp" target="ContentFrame">Home</a></li>
           <li><a href="#" target="ContentFrame" >Notification</a></li>
           <li><a  href="appointment.jsp" target="ContentFrame">Make Appointment</a></li>
           <li class="dropdown">

@@ -75,8 +75,7 @@
                 Iterator allDRItr = allDrList.iterator();
                 while(allDRItr.hasNext())
                 {
-                    AllDoctor allDr = (AllDoctor)allDRItr.next();*/
-            %>
+                    AllDoctor allDr = (AllDoctor)allDRItr.next();*/%>
                         <%//=out.println(allDr.getDrName())%><%//}%>
                         <option id="" value=""></option>
                         
@@ -86,8 +85,20 @@
                     <input type="" class="form-control" value="" name="" placeholder="">
                 </div>
                    
+                <div class="form-group">
+                    <button type="submit" class="form-control btn-success" placeholder="">SUBMIT</button>
+                </div>
             </form>
             
         </div>
+<!--                        <div class="jumbotron">
+  <h1>Bootstrap Tutorial</h1> 
+  <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive,
+  mobile-first projects on the web.</p> 
+</div>
+<div class="container">
+  <p>This is some text.</p> 
+  <p>This is another text.</p> 
+</div>-->
     </body>
 </html>
