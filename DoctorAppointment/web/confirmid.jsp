@@ -13,10 +13,10 @@
     </head>
     <body>
         <div class="container">
-            <form action="confirm.do" method="post">
+            <form action="takeid.do" method="post">
             <h1 class="text-justify">Confirm Your User Id</h1>
         <input type="text" name="txtuid" placeholder="Userid">
-        <button type="submit" value="Submit">Submit</button>
+        <button type="submit" value="MakeAppointent">Submit</button>
         </form></div>
     </body>
 </html>

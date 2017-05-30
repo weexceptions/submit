@@ -28,6 +28,10 @@
         <servlet-name>deleteUserServlet</servlet-name>
         <servlet-class>com.pro.controller.deleteUser</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>takeIdServlet</servlet-name>
+        <servlet-class>com.pro.controller.takeId</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>MakeAppointment</servlet-name>
         <url-pattern>/makeAppointment.do</url-pattern>
@@ -55,6 +59,10 @@
     <servlet-mapping>
         <servlet-name>deleteUserServlet</servlet-name>
         <url-pattern>/deleteuser.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>takeIdServlet</servlet-name>
+        <url-pattern>/takeid.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
