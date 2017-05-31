@@ -34,7 +34,7 @@
                 <label class="col-lg-5">User Id :</label><input type="text" class="input-sm col-lg-7" disabled="true" value="<%out.print(request.getAttribute("uid"));%>"><br/><br/>
                 <label class="col-lg-5">First Name :</label><input type="text" class="input-sm col-lg-7" disabled="true" value="<%out.print(request.getAttribute("fname"));%>"><br/><br/>
                 <label class="col-lg-5">DOB :</label><input type="text" class="input-sm col-lg-7" disabled="true" value="<%out.print(request.getAttribute("dob"));%>"><br/><br/>
-                <label class="col-lg-5">Email Id :</label><input type="text" class="input-sm col-lg-7" disabled="true" value="<%out.print(request.getAttribute("email"));%>"><br/><br/>
+                <label class="col-lg-5">Email :</label><input type="text" class="input-sm col-lg-7" disabled="true" value="<%out.print(request.getAttribute("email"));%>"><br/><br/>
                 <label class="col-lg-5">Address :</label><input type="text" class="input-sm col-lg-7" disabled="true" value="<%out.print(request.getAttribute("addr"));%>"><br/><br/>
                     </td>
                     <td class="col-lg-6 col-sm-6">
