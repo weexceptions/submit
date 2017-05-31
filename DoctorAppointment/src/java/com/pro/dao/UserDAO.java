@@ -23,5 +23,5 @@ public interface UserDAO {
     boolean updatePassword(String pass,String id);
     List<AllDoctor> getAllDoctor();
     List<DoctorInfo> getAllDrDetails();
-    boolean viewProfile(String utype,String id);
+    String[]  viewProfile(String id);
 }

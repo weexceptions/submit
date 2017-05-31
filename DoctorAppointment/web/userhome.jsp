@@ -71,7 +71,7 @@ body{
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Help Desk<span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
                 <li><a target="ContentFrame" href="viewappoint.jsp">Appointments</a></li>
-              <li><a target="ContentFrame" href="userprofile.jsp">My Profile</a></li>
+              <li><a target="ContentFrame" href="viewuser.do">My Profile</a></li>
               
                </ul>
           </li>
