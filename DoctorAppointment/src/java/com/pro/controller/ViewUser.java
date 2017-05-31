@@ -36,22 +36,12 @@ public class ViewUser extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             UserDAO userdao = new DaoImpl();
-            String pass = request.getParameter("txtpass");
-            String id = request.getParameter("id");
-                         System.out.println("id is for  update "+id);
-             if (userdao.updatePassword(pass,id.toLowerCase())) {
-              
-                RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
-                request.setAttribute("password", pass.toUpperCase());
+//            String pass = request.getParameter("txtpass");
+            String details[]=userdao.viewProfile("sona");
+            RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+                request.setAttribute("password", "");
                 rd.forward(request, response);
-             }
-             else{ 
-                out.println("<script type=\"text/javascript\">");
-                out.println("alert('User or password incorrect');");
-                out.println("location='new.jsp';");
-                out.println("</script>");
-                 System.out.println("Update FAils");
-             }
+            
         }
     }
 

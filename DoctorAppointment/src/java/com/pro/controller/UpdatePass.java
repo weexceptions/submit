@@ -49,16 +49,17 @@ public class UpdatePass extends HttpServlet {
             String id = request.getParameter("id");
                          System.out.println("id is for  update "+id);
              if (userdao.updatePassword(pass,id.toLowerCase())) {
-                out.println("<script type=\"text/javascript\">");
-                out.println("alert('User or password incorrect');");
-                out.println("location='new.jsp';");
-                out.println("</script>");
+                
                 RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
                 request.setAttribute("password", pass.toUpperCase());
                 rd.forward(request, response);
              }
              else{
-                 System.out.println("Update FAils");
+//                 out.println("<script type=\"text/javascript\">");
+//                out.println("alert('Cannot get it');");
+//                out.println("location='new.jsp';");
+//                out.println("</script>");
+                 System.out.println("View FAils");
              }
         }
     }
