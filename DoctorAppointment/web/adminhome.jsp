@@ -18,8 +18,10 @@
     <body>
         <h1>Admin ka Page banao</h1>
         <div class="container">
+            
+        
     <a target="ContentFrame" href="createdr.jsp"><button type="button" class="btn btn-default">Create Doctor</button></a>        
-    <center><a target="ContentFrame" href="deletdoctor.jsp"><button type="button" class="btn btn-danger">Delete Doctor</button></a></center>
+    <center><a target="ContentFrame" href="deletedoctor.jsp"><button type="button" class="btn btn-danger">Delete Doctor</button></a></center>
         </div> <hr> 
         <div class="container"> 
     <center><a target="ContentFrame" href="deleteUser.jsp"><button type="button" class="btn btn-danger">Delete Patient</button></a></center>

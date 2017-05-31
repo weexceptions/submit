@@ -36,7 +36,7 @@
                     <legend><i class="glyphicon glyphicon-user"></i>&nbsp;&nbsp;Appoint Doctor</legend>
                 </div>
                 <div class="form-group">
-                <label class="control-label col-sm-4" for="patientname">Patient Name:</label>
+                <label class="control-label" for="patientname">Patient Name:</label>
                <label for="id" class="text-info">ABCD</label>                    
                 
                 </div>

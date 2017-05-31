@@ -18,18 +18,27 @@
 <link rel="stylesheet" href="css/bootstrap.min.css"/>
 <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
-        
+<style>
+    form{
+        padding-top: 100px;
+    }
+</style>
     </head>
     <body>
+        <div class="container">
               <form action="makeAppointment.do" method="post" >
-         
-              <label class="control-label" for="patientname">Doctor Name:</label>
-<!--              here u insert setAtribute code in input text below -->
-              <input type="text" class="input-sm" disabled="true" value="Doctor GetAttribute"><br/>
-             <label class="control-label" for="patientname">Doctor Name:</label>
-              <input type="date" class="input-sm" disabled="true" value="Date GetAttribute"><br/>
-                  
-                       
+                  <table border="0">
+                      <tr class="row">
+                          <td class="col-lg-6"><label class="control-label" for="patientname">Doctor Name:</label></td>
+                          <!--here u insert setAtribute code in input text below -->
+                          <td class="col-lg-6"><input type="text" class="input-sm" disabled="true" value="Doctor GetAttribute"><br/></td>
+                      </tr>
+                      <tr class="row">
+                          <td class="col-lg-6"><label class="control-label" for="patientname">Date :</label></td>
+                          <td class="col-lg-6"><input type="date" class="input-sm" disabled="true" value="Date GetAttribute"><br/></td>
+                      </tr>
+                      <tr class="row">
+                          <td class="col-lg-12">   
             <div <%
                     String dtime="hidden";
                         Connection con = null;
@@ -107,8 +116,15 @@
                         out.println(sqe);
                         }
                         %>
-                
-                </div>
+                  
+            </div>
+                          </td>
+                      </tr>
+                        <tr>
+                            <td colspan="2"> <button type="submit" class="btn btn-success" >Submit</button></td>
+                        </tr>
+              </table>
               </form>
+        </div>
     </body>
 </html>
