@@ -95,7 +95,9 @@
     </div>
         <div class="well">
        <p style="font-weight: bolder ; font-size: large" > Early morning sun is rich source of vitamin-D <p>
-       <p style="font-size: medium"> We get vitamin d not only from sun but also different</p><a href="blog.jsp"></a>
+
+       <p style="font-size: medium"> We get vitamin d not only from sun but also different sources.......</p>
+
     </div>
     </div>  
         <div class="container">

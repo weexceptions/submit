@@ -22,7 +22,7 @@
             <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-4 well well-sm">
             <legend><i class="glyphicon glyphicon-globe"></i>LogIn!</legend>
-            <form action="dlogin.do"  method="post" class="form" role="form" target="_blank">
+            <form action="dlogin.do"  method="post" class="form" role="form" >
                 <a href="left.jsp"></a>
             <div class="row">
                 <div class="col-lg-4 col-sm-4">
@@ -40,11 +40,11 @@
                
             <div class="row">
                 <div class="col-lg-12 col-sm-12">
-                    <center><button type="submit" class="btn btn-primary">LogIn</button></center>      
+                    <center><button type="submit" class="btn btn-primary" target="_blank" onclick=window.close() >LogIn</button></center>      
                 </div>
                 <br/>
-                
             </div>
+            
             </form>
         </div>
         </div>
