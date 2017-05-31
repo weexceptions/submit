@@ -28,13 +28,16 @@
             <th>A_TIME</th>
             <th>LOCATION</th>
             <th>STATUS</th>
+            <th>link</th>
         <%
             Connection con = null;
             PreparedStatement ps = null;
             try
             {
             con = DBconnection.getConnection();
-            String sql = "SELECT A_ID,P_ID,D_ID,DESCRIPTION,A_DATE,A_TIME,LOCATION,STATUS FROM APPOINTMENT";
+            String id=request.getParameter("userId");
+            System.out.println("User id in viewappointment is "+id);
+            String sql = "SELECT A_ID,P_ID,D_ID,DESCRIPTION,A_DATE,A_TIME,LOCATION,STATUS FROM APPOINTMENT WHERE D_ID = '"+id.toLowerCase()+"' ORDER BY A_DATE,A_TIME";
             
             ps = con.prepareStatement(sql);
             ResultSet rs = ps.executeQuery(); 
@@ -61,6 +64,11 @@
             <td><%out.println(atime);%> </td>
             <td><%out.println(loc);%> </td>
             <td><%out.println(status);%> </td>
+            <td> <form action="viewuser.do" method="post" class="form" id="fileForm" role="form">
+                    <input type="hidden" value="<%out.println(pid);%>" name="txtid" />
+                    <button type="submit" class="btn btn-info">View</button>
+                </form>
+            </td>
             </tr>
             <%
             }

@@ -4,16 +4,16 @@
  * and open the template in the editor.
  */
 package com.pro.controller;
-
-import com.pro.dao.*;
-
+import com.pro.dao.DBconnection;
+import com.pro.dao.UserDAO;
+import com.pro.dao.DaoImpl;
 /**
  *
  * @author Sunny
  */
-public class TestAllDr {
+public class TestMain  {
 //    public static void main(String[] args) {
-//        UserDAO userdao = new DaoImpl();
-//        userdao.getAllDoctor();
-//    }
+//        
+//    UserDAO userdao = new DaoImpl();
+//    }    
 }

@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="css/homestylesheet.css">
         <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <a href="login.jsp"></a>
+    <a href="login.jsp" ></a>
        
     </head>
     <body>
@@ -43,7 +43,7 @@
                
             <div class="row">
                 <div class="col-lg-12 col-sm-12">
-                    <center><button type="submit" target='_blank' class="btn btn-primary">LogIn</button></center>      
+                    <center><button type="submit" target="_blank" onclick=window.close() class="btn btn-primary" >LogIn</button></center>      
                 </div>
                 <br>
                 

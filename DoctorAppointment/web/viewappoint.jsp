@@ -21,7 +21,7 @@
 
     </head>
     <body>
-        <h1>Your Appoints!</h1>
+        <h1>Your Appointments!</h1>
         <div class="container">
             <table border="1">
                 <thead><th>A_ID</th>
@@ -39,7 +39,9 @@
             try
             {
             con = DBconnection.getConnection();
-            String sql = "SELECT A_ID,P_ID,D_ID,DESCRIPTION,A_DATE,A_TIME,LOCATION,STATUS FROM APPOINTMENT";
+            String id=request.getParameter("userId");
+            System.out.println("User id in viewappointment is "+id);
+            String sql = "SELECT A_ID,P_ID,D_ID,DESCRIPTION,A_DATE,A_TIME,LOCATION,STATUS FROM APPOINTMENT  ORDER BY A_DATE,A_TIME";
             ps = con.prepareStatement(sql);
             ResultSet rs = ps.executeQuery(); 
             String aid,pid,did,desc,adate,atime,loc,status;
