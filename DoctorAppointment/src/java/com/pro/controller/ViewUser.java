@@ -36,9 +36,9 @@ public class ViewUser extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             UserDAO userdao = new DaoImpl();
-//            String pass = request.getParameter("txtpass");
-            String details[]=userdao.viewProfile("sona");
-            RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+            String id = request.getParameter("txtid");
+            String details[]=userdao.viewProfile(id);
+            RequestDispatcher rd = request.getRequestDispatcher("userprofile.jsp");
                 request.setAttribute("password", "");
                 rd.forward(request, response);
             

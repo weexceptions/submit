@@ -64,11 +64,13 @@ body{
         <ul class="nav navbar-nav navbar-left">
           <li class="active"><a href="#" target="ContentFrame">Home</a></li>
           <li><a href="drnotification.jsp" target="ContentFrame" >Notification</a></li>
-          <li><a  href="drviewappoint.jsp" target="ContentFrame">View Appointment</a></li>
+          <li><form target="ContentFrame" method="post" action="drviewappoint.jsp">  
+                    <input type="hidden" name="userId" value="<%out.print(request.getAttribute("auser"));%>">
+                    <button class="btn btn-link" type="submit">View Appointment</button>  </li></form>
           <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Help Desk<span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-                <li><a target="ContentFrame" href="drviewappoint.jsp">Appointments</a></li>
+                
               <li><a target="ContentFrame" href="userprofile.jsp">My Profile</a></li>
                </ul>
           </li>

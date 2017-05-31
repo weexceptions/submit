@@ -34,7 +34,9 @@
             try
             {
             con = DBconnection.getConnection();
-            String sql = "SELECT A_ID,P_ID,D_ID,DESCRIPTION,A_DATE,A_TIME,LOCATION,STATUS FROM APPOINTMENT";
+            String id=request.getParameter("userId");
+            System.out.println("User id in viewappointment is "+id);
+            String sql = "SELECT A_ID,P_ID,D_ID,DESCRIPTION,A_DATE,A_TIME,LOCATION,STATUS FROM APPOINTMENT WHERE D_ID = '"+id.toLowerCase()+"' ORDER BY A_DATE,A_TIME";
             
             ps = con.prepareStatement(sql);
             ResultSet rs = ps.executeQuery(); 

@@ -57,7 +57,6 @@ public class DaoImpl implements UserDAO{
             flag=false;
             System.out.println("Insert Failed in USERSDETAILS");
             System.out.println(e.getMessage());
-            //Logger.getLogger(daoImpl.class.getName()).log(Level.SEVERE,null,e);
         }
         
         return flag;
