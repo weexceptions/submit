@@ -14,11 +14,23 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Time Slot</title>
+<link rel="stylesheet" href="css/bootstrap.min.css"/>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+        
     </head>
     <body>
-        <form action="makeAppointment.do" method="post" >
-                <div <%
+              <form action="makeAppointment.do" method="post" >
+         
+              <label class="control-label" for="patientname">Doctor Name:</label>
+<!--              here u insert setAtribute code in input text below -->
+              <input type="text" class="input-sm" disabled="true" value="Doctor GetAttribute"><br/>
+             <label class="control-label" for="patientname">Doctor Name:</label>
+              <input type="date" class="input-sm" disabled="true" value="Date GetAttribute"><br/>
+                  
+                       
+            <div <%
                     String dtime="hidden";
                         Connection con = null;
                         PreparedStatement ps = null; 
@@ -96,8 +108,7 @@
                         }
                         %>
                 
-                </div>  
-                        <button type="submit" class="" >Submit</button>
-                   </form>
+                </div>
+              </form>
     </body>
 </html>

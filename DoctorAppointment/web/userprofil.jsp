@@ -27,15 +27,18 @@
 </div><hr>
 
         </div>
-        <div class="container">
+        <div class="container-f">
             <div class="text-justify">
+                <div class="row">
                 <label class="col-lg-3">Name :</label><input type="text" class="input-sm" disabled="true" value="Akshay Soni"><br/><br/>
                 <label class="col-lg-3">DOB :</label><input type="text" class="input-sm" disabled="true" value=""><br/><br/>
                 <label class="col-lg-3">Gender :</label><input type="text" class="input-sm" disabled="true" value=""><br/><br/>
                 <label class="col-lg-3">Email ID :</label><input type="text" class="input-sm" disabled="true" value=""><br/><br/>
+                
                 <label class="col-lg-3">Address :</label><input type="text" class="input-sm" disabled="true" value=""><br/><br/>
                 <label class="col-lg-3">Phone :</label><input type="text" class="input-sm" disabled="true" value=""><br/><br/>
                 <label class="col-lg-3">Age :</label><input type="text" class="input-sm" disabled="true" value=""><br/><br/>
+                </div>
             </div>
         </div>
     </body>

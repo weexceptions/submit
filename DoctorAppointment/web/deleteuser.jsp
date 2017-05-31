@@ -16,7 +16,7 @@
         </head>
     <body>
         <div class="container">
-            <form action="makeAppointment.do" method="post" >
+            <form action="deleteuser.do" method="post" >
     
             <div class="form-control">
                 <input type="text" class="form-control" placeholder="Enter Userid" name="txtuid"> <button type="submit" class="btn btn-danger">Delete</button>       

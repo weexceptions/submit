@@ -14,7 +14,29 @@
         <link rel="stylesheet" href="css/homestylesheet.css">
         <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
-       
+        <style>
+            .carousel {
+  height: 500px;
+  margin-bottom: 60px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 500px;
+  background-color: #777;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 500px;
+}
+        </style>
     </head>
     <body>
          <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -69,11 +91,11 @@
     <div class="container">
     <div class="well">
        <p style="font-weight: bolder ; font-size: large" > An apple a day keeps the doctor away..............<p>
-       <p style="font-size: medium"> This is the very common fact that we know but how does this helps us in our body do you know that</p>
+       <p style="font-size: medium"> This is the very common fact that we know but how does this helps us in our body do you know that</p><a href="Blog.jsp">Read More</a>
     </div>
         <div class="well">
        <p style="font-weight: bolder ; font-size: large" > Early morning sun is rich source of vitamin-D <p>
-       <p style="font-size: medium"> We get vitamin d not only from sun but also different</p>
+       <p style="font-size: medium"> We get vitamin d not only from sun but also different</p><a href="blog.jsp"></a>
     </div>
     </div>  
         <div class="container">
