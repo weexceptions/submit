@@ -16,7 +16,6 @@
         
     </head>
     <body>
-        <h1>Admin ka Page banao</h1>
         <div class="container">
             
         
