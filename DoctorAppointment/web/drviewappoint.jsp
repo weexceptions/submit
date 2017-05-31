@@ -28,6 +28,7 @@
             <th>A_TIME</th>
             <th>LOCATION</th>
             <th>STATUS</th>
+            <th>link</th>
         <%
             Connection con = null;
             PreparedStatement ps = null;
@@ -63,6 +64,11 @@
             <td><%out.println(atime);%> </td>
             <td><%out.println(loc);%> </td>
             <td><%out.println(status);%> </td>
+            <td> <form action="viewuser.do" method="post" class="form" id="fileForm" role="form">
+                    <input type="hidden" value="<%out.println(pid);%>" name="txtid" />
+                    <button type="submit" class="btn btn-info">View</button>
+                </form>
+            </td>
             </tr>
             <%
             }

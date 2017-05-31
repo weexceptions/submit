@@ -323,7 +323,7 @@ public class DaoImpl implements UserDAO{
         String details[] = new String [10];
         try {
          PreparedStatement pstmt = con.prepareStatement("Select * from USERDETAIL where P_ID = ?");
-         pstmt.setString(1, id.trim());
+         pstmt.setString(1, id.trim().toLowerCase());
          System.out.println("Stmt Hogaya");
          ResultSet rs = pstmt.executeQuery();
          System.out.println("Excute hua");
