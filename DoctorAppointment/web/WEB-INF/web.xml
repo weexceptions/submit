@@ -33,8 +33,8 @@
         <servlet-class>com.pro.controller.takeId</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>SelectSlotServlet</servlet-name>
-        <servlet-class>com.pro.controller.SelectSlot</servlet-class>
+        <servlet-name>timeSelectServlet</servlet-name>
+        <servlet-class>com.pro.controller.timeSelect</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>MakeAppointment</servlet-name>
@@ -69,8 +69,8 @@
         <url-pattern>/takeid.do</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>SelectSlotServlet</servlet-name>
-        <url-pattern>/selectslot.do</url-pattern>
+        <servlet-name>timeSelectServlet</servlet-name>
+        <url-pattern>/timeselect.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

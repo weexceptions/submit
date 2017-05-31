@@ -30,7 +30,7 @@
     </head>
     <body>
         <div class="container">
-            <form action="selectslot.do" method="post" >
+            <form action="timeselect.do" method="post" >
     
                 <div style="padding-top: 15px;" class="form-group">
                     <legend><i class="glyphicon glyphicon-user"></i>&nbsp;&nbsp;Appoint Doctor</legend>
@@ -41,8 +41,8 @@
                 
                 </div>
                  <div class="form-group">
-                     <label for="patient id">Patient Id:</label><label for="id" class="text-info" name="txtid" ng-value="<%out.print(request.getAttribute("auser"));%>"><%out.print(request.getAttribute("auser"));%></label>                    
-                </div>
+                     <label for="patient id">Patient Id:</label><label for="id" class="text-info" name="" ><%out.print(request.getAttribute("auser"));%></label>                    
+                </div><input type="hidden" value="<%out.print(request.getAttribute("auser"));%>" name="txtid" />
                 <div class="form-group">
                     <label for="appt date">Appointment Date:</label>
                     <input type="date" class="form-control" name="txtdate" placeholder="Date" required></div>

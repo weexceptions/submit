@@ -10,6 +10,8 @@ import java.io.PrintWriter;
 import java.sql.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -20,7 +22,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Sunny
  */
-public class SelectSlot extends HttpServlet {
+public class timeSelect extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,26 +34,21 @@ public class SelectSlot extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException, ParseException {
+            throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-//            out.println("<!DOCTYPE html>");
-//            out.println("<html>");
-//            out.println("<head>");
-//            out.println("<title>Servlet SelectSlot</title>");            
-//            out.println("</head>");
-//            out.println("<body>");
-//            out.println("<h1>Servlet SelectSlot at " + request.getContextPath() + "</h1>");
-//            out.println("</body>");
-//            out.println("</html>");
-                //String id = request.getParameter("");
-                String id=request.getAttribute("id").toString();
-                Date d = (Date) new SimpleDateFormat("dd/MM/yyyy").parse(request.getAttribute("txtdate").toString());
+            System.out.println("Startttttttt");
+            String id=request.getParameter("txtid");
+            String da=request.getParameter("txtdate");
+            String dr = request.getParameter("txtdr");
                 System.out.println("id is : "+id);
-                System.out.println("Date is "+d);
+                System.out.println("Date is "+da);
+                System.out.println("Dr is "+dr);
                 RequestDispatcher rd = request.getRequestDispatcher("timeselect.jsp");
-                request.setAttribute("auser", "Test");
+                request.setAttribute("id", id);
+                request.setAttribute("date", da);
+                request.setAttribute("dr", dr);
                 rd.forward(request, response);
         }
     }
