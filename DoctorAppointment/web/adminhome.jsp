@@ -16,8 +16,9 @@
         
     </head>
     <body>
+        
+        
         <div class="container">
-            
         
     <a target="ContentFrame" href="createdr.jsp"><button type="button" class="btn btn-default">Create Doctor</button></a>        
     <center><a target="ContentFrame" href="deletedoctor.jsp"><button type="button" class="btn btn-danger">Delete Doctor</button></a></center>

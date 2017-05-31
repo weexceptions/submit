@@ -27,19 +27,24 @@
 </div><hr>
 
         </div>
-        <div class="container-f">
-            <div class="text-justify">
-                <div class="row">
-                <label class="col-lg-3">Name :</label><input type="text" class="input-sm" disabled="true" value="Akshay Soni"><br/><br/>
-                <label class="col-lg-3">DOB :</label><input type="text" class="input-sm" disabled="true" value=""><br/><br/>
-                <label class="col-lg-3">Gender :</label><input type="text" class="input-sm" disabled="true" value=""><br/><br/>
-                <label class="col-lg-3">Email ID :</label><input type="text" class="input-sm" disabled="true" value=""><br/><br/>
-                
-                <label class="col-lg-3">Address :</label><input type="text" class="input-sm" disabled="true" value=""><br/><br/>
-                <label class="col-lg-3">Phone :</label><input type="text" class="input-sm" disabled="true" value=""><br/><br/>
-                <label class="col-lg-3">Age :</label><input type="text" class="input-sm" disabled="true" value=""><br/><br/>
-                </div>
+        <div class="container">
+            <table class="text-justify">
+                <tr class="row">
+                    <td class="col-lg-6 col-sm-6">
+                <label class="col-lg-5">User Id :</label><input type="text" class="input-sm col-lg-7" disabled="true" value="Aksh"><br/><br/>
+                <label class="col-lg-5">First Name :</label><input type="text" class="input-sm col-lg-7" disabled="true" value="Akshay"><br/><br/>
+                <label class="col-lg-5">DOB :</label><input type="text" class="input-sm col-lg-7" disabled="true" value="22/02/2017"><br/><br/>
+                <label class="col-lg-5">Email Id :</label><input type="text" class="input-sm col-lg-7" disabled="true" value="akshaysoni@gmail.com"><br/><br/>
+                <label class="col-lg-5">Address :</label><input type="text" class="input-sm col-lg-7" disabled="true" value="Borivali(East)"><br/><br/>
+                    </td>
+                    <td class="col-lg-6 col-sm-6">
+                <label class="col-lg-5">Last Name :</label><input type="text" class="input-sm col-lg-7" disabled="true" value="Soni"><br/><br/>
+                <label class="col-lg-5">Gender :</label><input type="text" class="input-sm col-lg-7" disabled="true" value="Male"><br/><br/>
+                <label class="col-lg-5">Age Group:</label><input type="text" class="input-sm col-lg-7" disabled="true" value="23"><br/><br/>
+                <label class="col-lg-5">Phone No.:</label><input type="text" class="input-sm col-lg-7" disabled="true" value="9820679772"><br/><br/>
+                    </td>
+                </tr>
             </div>
-        </div>
+        
     </body>
 </html>
