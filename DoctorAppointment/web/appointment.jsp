@@ -41,11 +41,11 @@
                 
                 </div>
                  <div class="form-group">
-                    <label for="patient id">Patient Id:</label><label for="id" class="text-info"><%out.print(request.getAttribute("auser"));%></label>                    
+                     <label for="patient id">Patient Id:</label><label for="id" class="text-info" name="txtid" ng-value="<%out.print(request.getAttribute("auser"));%>"><%out.print(request.getAttribute("auser"));%></label>                    
                 </div>
                 <div class="form-group">
                     <label for="appt date">Appointment Date:</label>
-                    <input type="date" class="form-control" name="" placeholder="Date" required></div>
+                    <input type="date" class="form-control" name="txtdate" placeholder="Date" required></div>
                   
                 <div class="form-group">
                     <label for="sel1">Select Doctor:</label>                                   
@@ -93,14 +93,5 @@
             </form>
             
         </div>
-<!--                        <div class="jumbotron">
-  <h1>Bootstrap Tutorial</h1> 
-  <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive,
-  mobile-first projects on the web.</p> 
-</div>
-<div class="container">
-  <p>This is some text.</p> 
-  <p>This is another text.</p> 
-</div>-->
     </body>
 </html>
