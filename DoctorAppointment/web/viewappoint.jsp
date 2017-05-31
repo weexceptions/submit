@@ -15,11 +15,16 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Appointment JSP Page</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
     </head>
     <body>
         <h1>Your Appoints!</h1>
-        <table border="1">
-            <th>A_ID</th>
+        <div class="container">
+            <table border="1">
+                <thead><th>A_ID</th>
             <th>P_ID</th>
             <th>D_ID</th>
             <th>DESCRIPTION</th>
@@ -27,6 +32,7 @@
             <th>A_TIME</th>
             <th>LOCATION</th>
             <th>STATUS</th>
+            <th>link</th></thead>
         <%
             Connection con = null;
             PreparedStatement ps = null;
@@ -61,6 +67,12 @@
             <td><%out.println(atime);%> </td>
             <td><%out.println(loc);%> </td>
             <td><%out.println(status);%> </td>
+            <td> <form action="viewuser.do" method="post" class="form" id="fileForm" role="form">
+                    <input type="hidden" value="<%out.println(aid);%>" name="txtid" />
+                    <button type="submit" class="btn btn-info">View</button>
+                </form>
+            </td> 
+                
             </tr>
             <%
             }
@@ -72,6 +84,7 @@
             { 
             out.println(sqe);
             }
-        %>
+%>
+        </div>
     </body>
 </html>

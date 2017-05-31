@@ -1,6 +1,6 @@
 <%-- 
-    Document   : deleteuser
-    Created on : May 30, 2017, 2:46:43 PM
+    Document   : deletdoctor
+    Created on : May 30, 2017, 2:46:24 PM
     Author     : Akshay
 --%>
 
@@ -13,21 +13,22 @@
         <link rel="stylesheet" href="css/bootstrap.min.css"/>
         <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
-        </head>
+        
+    </head>
     <body>
         <div class="container">
-            <form action="deleteuser.do" method="post" >
+            <form action="makeAppointment.do" method="post" >
     
             <div class="form-control">
-                <input type="text" class="form-control" placeholder="Enter Userid" name="txtuid"> <button type="submit" class="btn btn-danger">Delete</button>       
+                <input type="text" class="form-control" placeholder="Enter Doctorid" name="txtuid"> <button type="submit" class="btn btn-danger">Delete</button>       
             </div> 
             </form>
         </div>
         <div class="container-fluid">
-            <h1>User Detail</h1>
+            <h1>Doctor Detail</h1>
         <table border="1">
             <thead>
-                <th>User Id</th>
+                <th>er Id</th>
                 <th>User Name</th>
                 <th>Email</th>
                 <th>Address</th>
@@ -44,6 +45,6 @@
                 </tr>
             </table>
         </div>
-            
+  
     </body>
 </html>

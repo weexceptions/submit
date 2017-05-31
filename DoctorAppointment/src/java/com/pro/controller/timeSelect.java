@@ -5,10 +5,13 @@
  */
 package com.pro.controller;
 
-import com.pro.dao.DaoImpl;
-import com.pro.dao.UserDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -19,7 +22,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Sunny
  */
-public class UpdatePass extends HttpServlet {
+public class timeSelect extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -35,32 +38,19 @@ public class UpdatePass extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-//            out.println("<!DOCTYPE html>");
-//            out.println("<html>");
-//            out.println("<head>");
-//            out.println("<title>Servlet UpdatePass</title>");            
-//            out.println("</head>");
-//            out.println("<body>");
-//            out.println("<h1>Servlet UpdatePass at " + request.getContextPath() + "</h1>");
-//            out.println("</body>");
-//            out.println("</html>");
-            UserDAO userdao = new DaoImpl();
-            String pass = request.getParameter("txtpass");
-            String id = request.getParameter("id");
-                         System.out.println("id is for  update "+id);
-             if (userdao.updatePassword(pass,id.toLowerCase())) {
-                
-                RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
-                request.setAttribute("password", pass.toUpperCase());
+            System.out.println("Startttttttt");
+            String id=request.getParameter("txtid");
+            String da=request.getParameter("txtdate");
+            String dr = request.getParameter("txtdr");
+                System.out.println("id is : "+id);
+                System.out.println("Date is "+da);
+                System.out.println("Dr is "+dr);
+                RequestDispatcher rd = request.getRequestDispatcher("timeselect.jsp");
+                request.setAttribute("id", id);
+                request.setAttribute("date", da);
+                request.setAttribute("dr", dr);
+                System.out.println("Enddddddd");
                 rd.forward(request, response);
-             }
-             else{
-//                 out.println("<script type=\"text/javascript\">");
-//                out.println("alert('Cannot get it');");
-//                out.println("location='new.jsp';");
-//                out.println("</script>");
-                 System.out.println("View FAils");
-             }
         }
     }
 

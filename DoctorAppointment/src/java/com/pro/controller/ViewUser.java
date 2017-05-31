@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Sunny
  */
-public class UpdatePass extends HttpServlet {
+public class ViewUser extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -35,32 +35,13 @@ public class UpdatePass extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-//            out.println("<!DOCTYPE html>");
-//            out.println("<html>");
-//            out.println("<head>");
-//            out.println("<title>Servlet UpdatePass</title>");            
-//            out.println("</head>");
-//            out.println("<body>");
-//            out.println("<h1>Servlet UpdatePass at " + request.getContextPath() + "</h1>");
-//            out.println("</body>");
-//            out.println("</html>");
             UserDAO userdao = new DaoImpl();
-            String pass = request.getParameter("txtpass");
-            String id = request.getParameter("id");
-                         System.out.println("id is for  update "+id);
-             if (userdao.updatePassword(pass,id.toLowerCase())) {
-                
-                RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
-                request.setAttribute("password", pass.toUpperCase());
+//            String pass = request.getParameter("txtpass");
+            String details[]=userdao.viewProfile("sona");
+            RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+                request.setAttribute("password", "");
                 rd.forward(request, response);
-             }
-             else{
-//                 out.println("<script type=\"text/javascript\">");
-//                out.println("alert('Cannot get it');");
-//                out.println("location='new.jsp';");
-//                out.println("</script>");
-                 System.out.println("View FAils");
-             }
+            
         }
     }
 

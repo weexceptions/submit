@@ -32,6 +32,14 @@
         <servlet-name>takeIdServlet</servlet-name>
         <servlet-class>com.pro.controller.takeId</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>timeSelectServlet</servlet-name>
+        <servlet-class>com.pro.controller.timeSelect</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ViewUserServlet</servlet-name>
+        <servlet-class>com.pro.controller.ViewUser</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>MakeAppointment</servlet-name>
         <url-pattern>/makeAppointment.do</url-pattern>
@@ -64,9 +72,17 @@
         <servlet-name>takeIdServlet</servlet-name>
         <url-pattern>/takeid.do</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>timeSelectServlet</servlet-name>
+        <url-pattern>/timeselect.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewUserServlet</servlet-name>
+        <url-pattern>/viewuser.do</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
-            30
+            3000
         </session-timeout>
     </session-config>
 </web-app>

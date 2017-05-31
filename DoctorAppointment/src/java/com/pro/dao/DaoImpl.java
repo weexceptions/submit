@@ -319,5 +319,42 @@ public class DaoImpl implements UserDAO{
      return allDr;
     }
 
+    @Override
+    public String[] viewProfile( String id) {
+        String details[] = new String [10];
+        try {
+         PreparedStatement pstmt = con.prepareStatement("Select * from USERDETAIL where P_ID = ?");
+         pstmt.setString(1, id.trim());
+         System.out.println("Stmt Hogaya");
+         ResultSet rs = pstmt.executeQuery();
+         System.out.println("Excute hua");
+         int i=1;
+         rs.next();
+         while(i<9)
+         {
+             details[i-1]=rs.getString(i);
+             i++;
+         }  
+         PreparedStatement pstmt2 = con.prepareStatement("Select * from PATIENT where P_ID = ?");
+         pstmt2.setString(1, id.trim());
+         System.out.println("Stmt2 Hogaya");
+         ResultSet rs2 = pstmt2.executeQuery();
+         System.out.println("Excute2 hua");
+         rs2.next();
+         details[8]=rs2.getString(2);
+         details[9]=rs2.getString(3).toUpperCase();
+         
+         
+            System.out.println("Array data are");
+            for (int j = 0; j < 10; j++) {
+                System.out.println("index "+j+" "+details[j]);
+            }
+     } catch (SQLException ex) {
+         System.out.println("Errrrrrrrrr:\n"+ex.getMessage()+"Ennnnnnnnnnnnnn\n\n");
+         java.util.logging.Logger.getLogger(DaoImpl.class.getName()).log(Level.SEVERE, null, ex);
+     }
+        return details;
+    }
+
 }
     

@@ -71,11 +71,11 @@ body{
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Help Desk<span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
                 <li><a target="ContentFrame" href="viewappoint.jsp">Appointments</a></li>
-              <li><a target="ContentFrame" href="#">My Profile</a></li>
-              <li><a target="ContentFrame" href="#"></a></li>
+              <li><a target="ContentFrame" href="viewuser.do">My Profile</a></li>
+              
                </ul>
           </li>
-          <li><a target="_blank" href="index.jsp">LogOut</a></li>
+          <li><a target="_blank" href="index.jsp" onclick=window.close()>LogOut</a></li>
         </ul>
       </div>
       <!--/.nav-collapse -->
@@ -84,8 +84,8 @@ body{
   </nav>
             </div>
             <div class="row" id="container">
-                <IFRAME seamless="seamless" scrolling="no" src="left2.jsp" id="frame1" scrollig="no" name="NavigationFrame" width="19%" height="800" > </IFRAME>
-            <IFRAME seamless="seamless" scrolling="yes" src="home.jsp" id="frame2" name="ContentFrame" width="80%" height="800" ><h1>Content</h1></IFRAME>
+                <IFRAME seamless="seamless" scrolling="no" src="left2.jsp" id="frame1" scrollig="no" name="NavigationFrame" width="29%" height="800" > </IFRAME>
+            <IFRAME seamless="seamless" scrolling="yes" src="home.jsp" id="frame2" name="ContentFrame" width="70%" height="800" ><h1>Content</h1></IFRAME>
             </div>
             
         <footer>
