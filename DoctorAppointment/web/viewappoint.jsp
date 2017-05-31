@@ -67,7 +67,7 @@
             <td><%out.println(atime);%> </td>
             <td><%out.println(loc);%> </td>
             <td><%out.println(status);%> </td>
-            <td> <form action="faqs.jsp" method="post" class="form" id="fileForm" role="form">
+            <td> <form action="viewuser.do" method="post" class="form" id="fileForm" role="form">
                     <input type="hidden" value="<%out.println(aid);%>" name="txtid" />
                     <button type="submit" class="btn btn-info">View</button>
                 </form>

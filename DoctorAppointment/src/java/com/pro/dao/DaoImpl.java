@@ -319,5 +319,10 @@ public class DaoImpl implements UserDAO{
      return allDr;
     }
 
+    @Override
+    public boolean viewProfile(String utype, String id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }
     
