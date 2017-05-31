@@ -31,7 +31,8 @@
             <th>A_DATE</th>
             <th>A_TIME</th>
             <th>LOCATION</th>
-            <th>STATUS</th></thead>
+            <th>STATUS</th>
+            <th>link</th></thead>
         <%
             Connection con = null;
             PreparedStatement ps = null;
@@ -66,6 +67,12 @@
             <td><%out.println(atime);%> </td>
             <td><%out.println(loc);%> </td>
             <td><%out.println(status);%> </td>
+            <td> <form action="faqs.jsp" method="post" class="form" id="fileForm" role="form">
+                    <input type="hidden" value="<%out.println(aid);%>" name="txtid" />
+                    <button type="submit" class="btn btn-info">View</button>
+                </form>
+            </td> 
+                
             </tr>
             <%
             }
