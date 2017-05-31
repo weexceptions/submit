@@ -49,6 +49,7 @@ public class timeSelect extends HttpServlet {
                 request.setAttribute("id", id);
                 request.setAttribute("date", da);
                 request.setAttribute("dr", dr);
+                System.out.println("Enddddddd");
                 rd.forward(request, response);
         }
     }
