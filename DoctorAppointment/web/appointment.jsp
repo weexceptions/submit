@@ -37,13 +37,30 @@
                 </div>
                 <div class="form-group">
                 <label class="control-label" for="patientname">Patient Name:</label>
-               <label for="id" class="text-info">ABCD</label>                    
+               <label for="id" class="text-info">
+                   <%
+                       
+                        Connection con = null;
+                        PreparedStatement ps,ps2 = null;
+                        con = DBconnection.getConnection();
+                        String sql2 = "SELECT fname,lname FROM USERDETAIL where P_ID ='"+request.getAttribute("auser").toString().toLowerCase()+"'";
+                        ps2 = con.prepareStatement(sql2);
+                        ResultSet rs2 = ps2.executeQuery(); 
+                        rs2.next();
+                        String f,l;
+                        f=rs2.getString(1);
+                        l=rs2.getString(2);
+                        out.print(f+" "+l);
+                        
+                   %>
+               </label>                    
                 
                 </div>
                  <div class="form-group">
                      <label for="patient id">Patient Id:</label><label for="id" class="text-info" name="" ><%out.print(request.getAttribute("auser"));%></label>                    
                 </div>
                 <input type="hidden" value="<%out.print(request.getAttribute("auser"));%>" name="txtid" />
+                <input type="hidden" value="<%out.print(f+" "+l);%>" name="txtname" />
                 <div class="form-group">
                     <label for="appt date">Appointment Date:</label>
                     <input type="date" class="form-control" name="txtdate" placeholder="Date" required></div>
@@ -51,9 +68,6 @@
                 <div class="form-group">
                     <label for="sel1">Select Doctor:</label>                                   
                         <%
-                        Connection con = null;
-                        PreparedStatement ps = null;
-                        //dtime="";
                         try
                         {
                         con = DBconnection.getConnection();

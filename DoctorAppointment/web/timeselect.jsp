@@ -29,15 +29,21 @@
               <form action="makeAppointment.do" method="post" >
                   <table border="0">
                       <tr class="row">
+                          <td class="col-lg-6"><label class="control-label" for="patientname">Patient name :</label></td>
+                          <td class="col-lg-6"><input type="txt" class="input-sm" disabled="true" value="<%out.print(request.getAttribute("name"));%>"><br/></td>
+                      </tr>
+                      <tr class="row">
                           <td class="col-lg-6"><label class="control-label" for="patientname">Doctor Name:</label></td>
                           <!--here u insert setAtribute code in input text below -->
-                          <td class="col-lg-6"><input type="text" class="input-sm" disabled="true" value="Doctor GetAttribute"><br/></td>
+                          <td class="col-lg-6"><input type="text" class="input-sm" disabled="true" value="<%out.print(request.getAttribute("dr"));%>"><br/></td>
                       </tr>
                       <tr class="row">
                           <td class="col-lg-6"><label class="control-label" for="patientname">Date :</label></td>
-                          <td class="col-lg-6"><input type="date" class="input-sm" disabled="true" value="Date GetAttribute"><br/></td>
+                          <td class="col-lg-6"><input type="date" class="input-sm" disabled="true" value="<%out.print(request.getAttribute("date"));%>"><br/></td>
                       </tr>
                       <tr class="row">
+                      <tr class="row">
+                     
                           <td class="col-lg-12">   
             <div <%
                     String dtime="hidden";
@@ -68,7 +74,7 @@
                         for (int i = 1; i < 9; i++) {
                          if (btime==i) {
                                  atime="Booked";
-                                 dselect="disabled selected";
+                                 dselect="disabled";
                              }
                          else{
                              dselect=null;

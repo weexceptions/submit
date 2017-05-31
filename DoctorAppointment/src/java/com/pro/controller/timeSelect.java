@@ -42,6 +42,7 @@ public class timeSelect extends HttpServlet {
             String id=request.getParameter("txtid");
             String da=request.getParameter("txtdate");
             String dr = request.getParameter("txtdr");
+            String name=request.getParameter("txtname");
                 System.out.println("id is : "+id);
                 System.out.println("Date is "+da);
                 System.out.println("Dr is "+dr);
@@ -49,6 +50,7 @@ public class timeSelect extends HttpServlet {
                 request.setAttribute("id", id);
                 request.setAttribute("date", da);
                 request.setAttribute("dr", dr);
+                request.setAttribute("name", name);
                 System.out.println("Enddddddd");
                 rd.forward(request, response);
         }
