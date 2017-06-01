@@ -27,22 +27,57 @@
     <body>
         <div class="container">
               <form action="makeAppointment.do" method="post" >
+                  
                   <table border="0">
+                      <tr class="row">
+                          <td class="col-lg-6"><label class="control-label" for="patientname">Patient name :</label></td>
+                          <td class="col-lg-6"><input type="txt" class="input-sm" disabled="true" value="<%out.print(request.getAttribute("name"));%>"><br/></td>
+                      </tr>
                       <tr class="row">
                           <td class="col-lg-6"><label class="control-label" for="patientname">Doctor Name:</label></td>
                           <!--here u insert setAtribute code in input text below -->
-                          <td class="col-lg-6"><input type="text" class="input-sm" disabled="true" value="Doctor GetAttribute"><br/></td>
+                          <td class="col-lg-6"><input type="text" class="input-sm" disabled="true" value="<%
+                        Connection con = null;
+                        PreparedStatement ps = null;
+                        String fullname;
+                  try
+                        {
+                        con = DBconnection.getConnection();
+                        String sql =  "SELECT D_ID,fname,lname FROM USERDETAIL where D_ID IS NOT NULL";           
+                        ps = con.prepareStatement(sql);
+                        String did;
+                        ResultSet rs = ps.executeQuery(); 
+                        while(rs.next())
+                        {
+                        did=rs.getString("D_ID");
+                        System.out.println(did);
+                        String fname = rs.getString("fname").toUpperCase(); 
+                        String lname = rs.getString("lname".toUpperCase()); 
+                        System.out.println("Id nof dr is "+request.getAttribute("dr"));
+                        if (did.equals(request.getAttribute("dr"))) {
+                        fullname= fname+" "+lname.toUpperCase(); 
+                        System.out.println("Fname "+fname+" lname "+lname);
+                        out.print(fullname);
+                        break;
+                        }
+                        }
+                        }
+                        catch(SQLException sqe)
+                        { 
+                        out.println(sqe);
+                        }
+                        %>"><br/></td>
                       </tr>
                       <tr class="row">
                           <td class="col-lg-6"><label class="control-label" for="patientname">Date :</label></td>
-                          <td class="col-lg-6"><input type="date" class="input-sm" disabled="true" value="Date GetAttribute"><br/></td>
+                          <td class="col-lg-6"><input type="date" class="input-sm" disabled="true" value="<%out.print(request.getAttribute("date"));%>"><br/></td>
                       </tr>
                       <tr class="row">
+                      <tr class="row">
+                     
                           <td class="col-lg-12">   
             <div <%
                     String dtime="hidden";
-                        Connection con = null;
-                        PreparedStatement ps = null; 
                     //out.println(dtime);%> class="form-group">
                     <label for="appt timeslot">Appointment Time:</label>
                     <select  type="text" class="form-control" name=""  required>
@@ -68,7 +103,7 @@
                         for (int i = 1; i < 9; i++) {
                          if (btime==i) {
                                  atime="Booked";
-                                 dselect="disabled selected";
+                                 dselect="disabled";
                              }
                          else{
                              dselect=null;
