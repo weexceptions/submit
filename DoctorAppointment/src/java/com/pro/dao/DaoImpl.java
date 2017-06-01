@@ -355,6 +355,29 @@ public class DaoImpl implements UserDAO{
         return details;
     }
 
+    @Override
+    public boolean bookAppointment(String pid, String did, String desc, String aDate, String aTime, String loc, String status) {
+        boolean flag=false;
+        try {
+            PreparedStatement ps = con.prepareStatement("insert into APPOINTMENT (P_ID,D_ID,DESCRIPTION,A_DATE,A_TIME,LOCATION,STATUS) values (?,?,?,?,?,?,?)");
+            ps.setString(1, pid.toLowerCase());
+            ps.setString(2, did.toLowerCase());
+            ps.setString(3, desc);
+            ps.setString(4, aDate);
+            ps.setString(5, aTime);
+            ps.setString(6, loc);
+            ps.setString(7, status);
+            ps.execute();
+            flag=true;
+            System.out.println("Insert Successfull in APPOINTMENT");
+        } catch (Exception e) {
+            flag=false;
+            System.out.println("Insert Failed in APPOINTMENT");
+            System.out.println(e.getMessage());
+        }
+        return flag;
+    }
+
    
 }
     
