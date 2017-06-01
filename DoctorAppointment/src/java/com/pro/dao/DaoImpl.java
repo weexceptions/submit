@@ -142,7 +142,7 @@ public class DaoImpl implements UserDAO{
     @Override
     public boolean checkPassword(String id, String email, String phone) {
         boolean r=false;
-        String sql =("Select P_ID,EMAIL,PHONE from USERDETAIL ");
+        String sql =("Select P_ID,EMAIL,PHONE from USERDETAIL where P_ID is not null");
         Statement statement=null;
         ResultSet resultSet=null;
         String s1;
