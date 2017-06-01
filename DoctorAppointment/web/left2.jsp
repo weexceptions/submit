@@ -1,7 +1,7 @@
 <%-- 
     Document   : left
     Created on : May 8, 2017, 12:59:25 PM
-    Author     : Akshay
+    Author     : Aksh
 --%>
 
 <%@page import="com.pro.model.DoctorInfo"%>

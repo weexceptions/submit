@@ -94,7 +94,7 @@
        <p style="font-size: medium"> This is the very common fact that we know but how does this helps us in our body do you know that</p><a href="Blog.jsp">Read More</a>
     </div>
         <div class="well">
-       <li><p style="font-weight: bolder ; font-size: large" > Early morning sun is rich source of vitamin-D <p></li>
+       <p style="font-weight: bolder ; font-size: large" > Early morning sun is rich source of vitamin-D <p>
 
        <p style="font-size: medium"> We get vitamin d not only from sun but also different sources.......</p>
 <a href="Blog.jsp">Read More</a>
