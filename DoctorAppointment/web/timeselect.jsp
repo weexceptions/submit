@@ -155,6 +155,12 @@
             </div>
                           </td>
                       </tr>
+                      <tr>
+                          <td>
+                              <td class="col-lg-6"><label class="control-label" for="patientname">Discription :</label></td>
+                              <td class="col-lg-6"><textarea type="text" class="form-control input-lg" placeholder="Enter your Problem"></textarea>
+                          </td>
+                      </tr>
                         <tr>
                             <td colspan="2"> <button type="submit" class="btn btn-success" >Submit</button></td>
                         </tr>
