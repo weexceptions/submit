@@ -38,7 +38,7 @@ public class CreateUser extends HttpServlet {
         String Address= request.getParameter("txtaddress");
         String Phone= request.getParameter("txtphone");
         String gender=request.getParameter("txtsex");
-        String pid=request.getParameter("txtpid");
+        String pid=request.getParameter("txtpid").toLowerCase();
         String agegroup= request.getParameter("txtage");
         
         User user = new User("",fname,lname,pass,dob,Phone,email,Address);

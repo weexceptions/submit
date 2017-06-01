@@ -355,5 +355,6 @@ public class DaoImpl implements UserDAO{
         return details;
     }
 
+   
 }
     
