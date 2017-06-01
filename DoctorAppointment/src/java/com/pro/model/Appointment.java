@@ -19,6 +19,34 @@ public class Appointment {
     private Date date;
     private String discription;
 
+    public Appointment(String userId, String status, int time, Date date, String discription) {
+        this.userId = userId;
+        this.status = status;
+        this.time = time;
+        this.date = date;
+        this.discription = discription;
+    }
+
+    public Appointment(String string) {
+        
+    return ;
+    }
+
+    @Override
+    public String toString() {
+        return "Appointment{" + "userId=" + userId + ", status=" + status + ", time=" + time + ", date=" + date + ", discription=" + discription + '}';
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    
+
     public String getStatus() {
         return status;
     }

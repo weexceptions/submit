@@ -83,7 +83,7 @@ body{
   </nav>
             </div>
             <div class="row" id="container">
-                <IFRAME seamless="seamless" scrolling="no" src="left2.jsp" id="frame1" scrollig="no" name="NavigationFrame" width="19%" height="800" > </IFRAME>
+                <IFRAME seamless="seamless" scrolling="no" src="left3.jsp" id="frame1" scrollig="no" name="NavigationFrame" width="19%" height="800" > </IFRAME>
             <IFRAME seamless="seamless" scrolling="yes" src="home.jsp" id="frame2" name="ContentFrame" width="80%" height="800" ><h1>Content</h1></IFRAME>
             </div>
             
