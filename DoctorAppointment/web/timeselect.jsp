@@ -157,7 +157,7 @@
                       </tr>
                       <tr>
                           <td>
-                              <td class="col-lg-6"><label class="control-label" for="patientname">Discription :</label></td>
+                              <td class="col-lg-6"><label class="control-label" for="patientname">Description :</label></td>
                               <td class="col-lg-6"><textarea type="text" class="form-control input-lg" placeholder="Enter your Problem"></textarea>
                           </td>
                       </tr>
