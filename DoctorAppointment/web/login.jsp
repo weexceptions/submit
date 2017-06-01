@@ -15,11 +15,18 @@
         <link rel="stylesheet" href="css/homestylesheet.css">
         <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <a href="login.jsp" ></a>
-       
+    <style>
+            h1{
+        font-family: cursive;
+        font-feature-settings: normal;
+        font-style: italic;
+        font-weight: bold;
+    }
+        </style>    
     </head>
     <body>
-            
+                   <h1 class="well text-center text-danger">Hello User!</h1></div>
+     
         
         <div class="container" >
             <div class="row">

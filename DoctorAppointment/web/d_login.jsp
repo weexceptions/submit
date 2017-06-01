@@ -14,10 +14,18 @@
         <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/login.js"></script>
+        <style>
+            h1{
+        font-family: cursive;
+        font-feature-settings: normal;
+        font-style: italic;
+        font-weight: bold;
+    }
+        </style>
     </head>
     <body>
         <div class="text-justify">
-            <h1>Hello Doctor!</h1></div>
+            <h1 class="well text-center text-danger">Hello Doctor!</h1></div>
         <div class="container" >
             <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-4 well well-sm">

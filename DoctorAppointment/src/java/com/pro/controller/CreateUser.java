@@ -48,7 +48,7 @@ public class CreateUser extends HttpServlet {
       //  userdao.createUser(user);
         if(userdao.createUser(user,patient)){
                 System.out.println("User Record Successfully Inserted");
-                RequestDispatcher rd = request.getRequestDispatcher("userhome.jsp");
+                RequestDispatcher rd = request.getRequestDispatcher("regsuccess.jsp");
                 request.setAttribute("auser", pid.toUpperCase());
                 
                 rd.forward(request, response);
