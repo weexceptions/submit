@@ -59,7 +59,7 @@
              atime=rs.getString(6);
              loc=rs.getString(7);
              status=rs.getString(8);
-             
+            
             %>
             <td><%out.println(aid);%> </td>
             <td><%out.println(pid);%> </td>
