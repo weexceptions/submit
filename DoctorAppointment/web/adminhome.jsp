@@ -25,8 +25,8 @@
            <h1 class="well text-center text-danger">Hello Admin!</h1></div>
         
         <div class="btn-group container">
-    <a target="Content2Frame" href="createdr.jsp"><button type="button" class="btn btn-danger">Create Doctor</button></a>        
-    <a target="Content2Frame" href="deletedoctor.jsp"><button type="button" class="btn btn-danger">Delete Doctor</button></a></center>
+    <a target="ContentFrame" href="createdr.jsp"><button type="button" class="btn btn-danger">Create Doctor</button></a>        
+    <a target="ContentFrame" href="deletedoctor.jsp"><button type="button" class="btn btn-danger">Delete Doctor</button></a></center>
         </div><hr>
         
         <div class="container"> 
