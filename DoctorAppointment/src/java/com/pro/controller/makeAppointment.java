@@ -9,6 +9,7 @@ import com.pro.dao.DaoImpl;
 import com.pro.dao.UserDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -38,13 +39,17 @@ public class makeAppointment extends HttpServlet {
             String did=request.getParameter("txtdid");
             String desc=request.getParameter("txtdesc");
             String aDate = request.getParameter("txtdate");
-            String aTime = request.getParameter("txtdr");
-            String Location="Location";
+            String aTime = request.getParameter("txttime");
+            String Location=request.getParameter("txtlocation");
             String status = "Requested";
             System.out.println("pid "+pid+" did "+did+" desc "+desc+" date "+aDate+" time "+aTime+" loc "+Location+" status "+status);
             UserDAO userdao = new DaoImpl();
-            if (userdao.bookAppointment(pid, did, desc, aDate, aTime, desc, status)) {
+            if (userdao.bookAppointment(pid, did, desc, aDate, aTime, Location, status)) {
                 System.out.println("Sucess if condition");
+                RequestDispatcher rd = request.getRequestDispatcher("appsuccess.jsp");
+                request.setAttribute("auser", pid.toUpperCase());
+                rd.forward(request, response);
+            
             }
             else{
                 System.out.println("Else block");

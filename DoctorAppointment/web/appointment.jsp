@@ -77,8 +77,8 @@
                         ResultSet rs = ps.executeQuery(); 
                         %>
                        
-                         <select type="text" class="form-control" name="txtdr"  required>
-                            <option disabled selected id="Date">Select Doctor</option>
+                        <select type="text" class="form-control" name="txtdr"  required>
+                        <option disabled selected id="Date">Select Doctor</option>
                         <%
                         while(rs.next())
                         {
@@ -101,8 +101,17 @@
                         }
                         %>
                 </div>
-               
-                <div class="form-group">
+                
+                    <label for="">Select Location:</label>                                   
+                     <select class="form-control" name="txtlocation" required>
+                     <option disabled selected id="Time">Select Location</option>
+                     <option id="loc" value="Mumbai">Mumbai</option>
+                     <option id="loc" value="Delhi">Delhi</option>
+                     <option id="loc" value="Kolkata">Kolkata</option>
+                     <option id="loc" value="Chennai">Chennai</option>
+                     </select>
+                <br/><br/>
+                    <div class="form-group">
                     <button type="submit" class="form-control btn-success" placeholder="">SUBMIT</button>
                 </div>
             </form>

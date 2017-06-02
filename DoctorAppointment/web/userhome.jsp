@@ -64,7 +64,7 @@ body{
       </div>
       <div id="navbar3" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-left">
-          <li class="active"><a href="home.jsp" target="ContentFrame">Home</a></li>
+          <li class="active"><a href="pat_home.jsp" target="ContentFrame">Home</a></li>
           <li><a href="#" target="ContentFrame" >Notification</a></li>
           <li><a  href="confirmid.jsp" target="ContentFrame">Make Appointment</a></li>
           <li class="dropdown">
@@ -87,7 +87,6 @@ body{
                 <IFRAME seamless="seamless" scrolling="no" src="left2.jsp" id="frame1" scrollig="no" name="NavigationFrame" width="29%" height="800" > </IFRAME>
             <IFRAME seamless="seamless" scrolling="yes" src="pat_home.jsp" id="frame2" name="ContentFrame" width="70%" height="800" ><h1>Content</h1></IFRAME>
             </div>
-            
         <footer>
         <div class="container-fluid" style="background-color: black">
     <div class="row">

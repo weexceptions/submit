@@ -30,6 +30,7 @@
                    <input type="hidden" value="<%out.print(request.getAttribute("id"));%>" name="txtpid" />
                    <input type="hidden" value="<%out.print(request.getAttribute("dr"));%>" name="txtdid" />
                    <input type="hidden" value="<%out.print(request.getAttribute("date"));%>" name="txtdate" />
+                   <input type="hidden" value="<%out.print(request.getAttribute("loc"));%>" name="txtlocation" />
                    
                   <table border="0">
                       <tr class="row">
@@ -95,8 +96,7 @@
                         ResultSet rs = ps.executeQuery(); 
                         %>
                         <p>Select Name :
-                       
-                            <option disabled selected id="Time">Select Time</option>
+                       <option disabled selected id="Time">Select Time</option>
                         <%
                             rs.next();
                         int btime=rs.getInt(1);
@@ -168,12 +168,10 @@
                           </td>
                       </tr>
                       <tr>
-                          <td>
                               <td class="col-lg-6"><label class="control-label"  for="patientname">Description :</label></td>
                               <td class="col-lg-6"><textarea type="text" class="form-control input-lg" name="txtdesc" placeholder="Enter your Problem"></textarea>
-                          </td>
-                      </tr>
-                        <tr>
+                       </tr>
+                       <tr>
                             <td colspan="2"> <button type="submit" class="btn btn-success" >Submit</button></td>
                         </tr>
               </table>
