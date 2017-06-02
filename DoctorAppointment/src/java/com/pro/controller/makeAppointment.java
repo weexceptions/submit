@@ -34,11 +34,12 @@ public class makeAppointment extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
+            System.out.println("makeAppointment.do exe");
             String pid=request.getParameter("txtpid");
             String did=request.getParameter("txtdid");
             String desc=request.getParameter("txtdesc");
             String aDate = request.getParameter("txtdate");
-            String aTime = request.getParameter("txtdr");
+            String aTime = request.getParameter("txttime");
             String Location="Location";
             String status = "Requested";
             System.out.println("pid "+pid+" did "+did+" desc "+desc+" date "+aDate+" time "+aTime+" loc "+Location+" status "+status);

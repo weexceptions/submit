@@ -42,6 +42,7 @@
                           <td class="col-lg-6"><input type="text" class="input-sm" disabled="true" value="<%
                         Connection con = null;
                         PreparedStatement ps = null;
+                        PreparedStatement ps2 = null;
                         String fullname;
                   try
                         {
@@ -79,38 +80,104 @@
                       <tr class="row">
                      
                           <td class="col-lg-12">   
-            <div <%
-                    String dtime="hidden";
-                    //out.println(dtime);%> class="form-group">
+            <div  class="form-group">
                     <label for="appt timeslot">Appointment Time:</label>
-                    <select class="form-control" name="txttime"  required>
+                    <select type="text" class="form-control" name="txttime"  required>
                         
-                         <%
-                       
-                        try
-                        {
-                        con = DBconnection.getConnection();
-                        String sql = "SELECT A_TIME FROM APPOINTMENT WHERE D_ID IS NOT NULL";
-                        ps = con.prepareStatement(sql);
-                        ResultSet rs = ps.executeQuery(); 
-                        %>
+                         
                         <p>Select Name :
                        
                             <option disabled selected id="Time">Select Time</option>
+                            <% String mDate="";
+                            try{
+                                String atime;
+                                String tval="0";
+                                String appDate;
+                                con = DBconnection.getConnection();
+                                String sql = "SELECT A_DATE,A_TIME FROM APPOINTMENT WHERE D_ID ='"+request.getParameter("txtdr").toLowerCase()+"'";
+                                ps = con.prepareStatement(sql);
+                                ResultSet rs = ps.executeQuery(); 
+                               
+                                boolean flag=false;
+                                while(rs.next()){
+                                     appDate=rs.getString(1);
+                                if (appDate.equals(request.getAttribute("date"))) {
+                                     System.out.println("True condition");
+                                     mDate=appDate;
+                                     flag=true;
+                                break;//date matches    
+                                }
+                                else if (!(appDate.equals(request.getAttribute("date")))) {
+                                        System.out.println("Else block");
+                                    }
+                                }
+                                System.out.println("flag is "+flag);//true matlab already hai koi appointment
+                                
+                                if (flag) {
+                                        System.out.println("Match hua date");
+                                        String sql2 = "SELECT A_DATE,A_TIME FROM APPOINTMENT WHERE D_ID ='"+request.getParameter("txtdr").toLowerCase()+"' AND A_DATE = '"+mDate+"'";
+                                        ps2 = con.prepareStatement(sql2);
+                                        ResultSet rs2 = ps2.executeQuery(); 
+                                        while(rs2.next()){
+                                            System.out.println("While loop");
+                                            int btime=rs2.getInt(2);
+                                        String dselect=null;
+                                        atime="Select";
+                                              for (int i = 1; i < 9; i++) {
+                                         if (btime==i) {
+                                                 atime="Booked";
+                                                 dselect="disabled";
+                                                 //rs2.next();
+                                             }
+                                         else{
+                                             dselect=null;
+                                             switch (i) {
+                                                     case 1:
+                                                         atime="9 to 10";
+                                                         tval="1";
+                                                         break;
+                                                     case 2:
+                                                         atime="10 to 11";
+                                                         tval="2";
+                                                         break;
+                                                     case 3:
+                                                         atime="11 to 12";
+                                                         tval="3";
+                                                         break;
+                                                     case 4:
+                                                         atime="12 to 1";
+                                                         tval="4";
+                                                         break;
+                                                     case 5:
+                                                         atime="2 to 3";
+                                                         tval="5";
+                                                         break;
+                                                     case 6:
+                                                         atime="3 to 4";
+                                                         tval="6";
+                                                         break;
+                                                     case 7:
+                                                         atime="5 to 6";
+                                                         tval="7";
+                                                         break;
+                                                     case 8:
+                                                         atime="6 to 7";
+                                                         tval="8";
+                                                         break;
+                                                     default:
+                                                         atime="Booked";
+                                                         tval="0";
+                                                 }}
+                                         %>
+                        <option <%=dselect%> value="<%=tval %>"><%=atime %></option>
                         <%
-                            rs.next();
-                        int btime=rs.getInt(1);
-                        String dselect=null;
-                        String tval="0";
-                        String atime="Select";
-                        for (int i = 1; i < 9; i++) {
-                         if (btime==i) {
-                                 atime="Booked";
-                                 dselect="disabled";
-                             }
-                         else{
-                             dselect=null;
-                             switch (i) {
+                                              }
+                                          }
+                                        }
+                                     
+                                else{
+                                    for (int i = 1; i < 9; i++) {
+                                     switch (i) {
                                      case 1:
                                          atime="9 to 10";
                                          tval="1";
@@ -146,23 +213,20 @@
                                      default:
                                          atime="Booked";
                                          tval="0";
-                                 }
-                        }
-                         
-                        %>
-                        <option <%=dselect%> value="1"><%=atime %></option>
-                        <%
-                        }
-                        %>
-                        </select>
-                        </p>
-                        <%
-                        }
-                        catch(SQLException sqe)
-                        { 
-                        out.println(sqe);
-                        }
-                        %>
+                                    }%>
+                                    <option value="<%=tval %>"><%=atime %></option>
+                                    <% }
+                                }
+                                
+                                
+
+                            }
+                            catch(Exception sqe)
+                            { 
+                            out.println(sqe);
+                            }
+                            %>
+                           
                   
             </div>
                           </td>

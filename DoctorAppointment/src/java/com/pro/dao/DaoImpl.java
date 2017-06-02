@@ -376,8 +376,5 @@ public class DaoImpl implements UserDAO{
             System.out.println(e.getMessage());
         }
         return flag;
-    }
-
-   
+    }  
 }
-    
