@@ -16,19 +16,37 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>View DR JSP Page</title>
-    </head>
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <style>
+    body{
+        background-image: url('Images/background.jpg');
+    }
+    h1{
+        font-family: cursive;
+        font-feature-settings: normal;
+        font-style: italic;
+        font-weight: bold;
+    }
+    .table-hover>tbody>tr:hover{background-color:  #00aced;}
+            
+        </style>
+    
+    </head>f
     <body>
-        <h1>Your Appoints!</h1>
-        <table border="1">
-            <th>A_ID</th>
-            <th>P_ID</th>
-            <th>D_ID</th>
-            <th>DESCRIPTION</th>
-            <th>A_DATE</th>
-            <th>A_TIME</th>
-            <th>LOCATION</th>
-            <th>STATUS</th>
-            <th>link</th>
+        <h1 class="well text-center text-success">Your Appoints!</h1>
+        <div class="container">
+        <table class="table-condensed table-hover" border="0">
+            <th class="col-lg-1">A_ID</th>
+            <th class="col-lg-1">P_ID</th>
+            <th class="col-lg-1">D_ID</th>
+            <th class="col-lg-1">DESCRIPTION</th>
+            <th class="col-lg-1">A_DATE</th>
+            <th class="col-lg-1">A_TIME</th>
+            <th class="col-lg-1">LOCATION</th>
+            <th class="col-lg-1">STATUS</th>
+            <th class="col-lg-1">link</th>
         <%
             Connection con = null;
             PreparedStatement ps = null;
@@ -56,15 +74,15 @@
              loc=rs.getString(7);
              status=rs.getString(8);
             %>
-            <td><%out.println(aid);%> </td>
-            <td><%out.println(pid);%> </td>
-            <td><%out.println(did);%> </td>
-            <td><%out.println(desc);%> </td>
-            <td><%out.println(adate);%> </td>
-            <td><%out.println(atime);%> </td>
-            <td><%out.println(loc);%> </td>
-            <td><%out.println(status);%> </td>
-            <td> <form action="viewuser.do" method="post" class="form" id="fileForm" role="form">
+            <td class="col-lg-1"><%out.println(aid);%> </td>
+            <td class="col-lg-1"><%out.println(pid);%> </td>
+            <td class="col-lg-1"><%out.println(did);%> </td>
+            <td class="col-lg-1"><%out.println(desc);%> </td>
+            <td class="col-lg-1"><%out.println(adate);%> </td>
+            <td class="col-lg-1"><%out.println(atime);%> </td>
+            <td class="col-lg-1"><%out.println(loc);%> </td>
+            <td class="col-lg-1"><%out.println(status);%> </td>
+            <td class="col-lg-1"> <form action="viewuser.do" method="post" class="form" id="fileForm" role="form">
                     <input type="hidden" value="<%out.println(pid);%>" name="txtid" />
                     <button type="submit" class="btn btn-info">View</button>
                 </form>
@@ -80,6 +98,7 @@
             { 
             out.println(sqe);
             }
-        %>
+            %>
+        </div>
     </body>
 </html>

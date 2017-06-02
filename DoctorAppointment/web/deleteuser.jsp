@@ -19,29 +19,29 @@
             <form action="deleteuser.do" method="post" >
     
             <div class="form-control">
-                <input type="text" class="form-control" placeholder="Enter Userid" name="txtuid"> <button type="submit" class="btn btn-danger">Delete</button>       
+                <input type="text" class="form-control" placeholder="Enter Userid" name="txtuid"> 
+                <button type="submit" class="btn btn-danger">Delete</button>       
             </div> 
             </form>
         </div>
         <div class="container-fluid">
             <h1>User Detail</h1>
-        <table border="1">
-            <thead>
-                <th>User Id</th>
-                <th>User Name</th>
-                <th>Email</th>
-                <th>Address</th>
-                <th>Phone</th>
+            <table class="table-condensed" border="1">
+                <thead class="row">
+                <th class="col-lg-2">User Id</th>
+                <th class="col-lg-2">User Name</th>
+                <th class="col-lg-2">Email</th>
+                <th class="col-lg-2">Address</th>
+                <th class="col-lg-2">Phone</th>
                 
             </thead>
-            <tr>
-                <td><%=product.getProductId() %> </td>
-                <td><%=product.getProductName() %> </td>
-                <td><%=product.getPrice() %> </td>
-                <td><%=product.getStock() %> </td>
-                <td><%=product.getProductImage() %> </td>
-                
-                </tr>
+            <tr class="row">
+                <td class="col-lg-2"></td>
+                <td class="col-lg-2"></td>
+                <td class="col-lg-2"></td>
+                <td class="col-lg-2"></td>
+                <td class="col-lg-2"></td>
+            </tr>
             </table>
         </div>
             

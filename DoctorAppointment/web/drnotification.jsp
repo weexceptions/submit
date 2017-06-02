@@ -16,16 +16,35 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>View DR Notification Page</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+<style>
+    body{
+        background-image: url('Images/background2.jpg');
+    }
+    h1{
+        font-family: cursive;
+        font-feature-settings: normal;
+        font-style: italic;
+        font-weight: bold;
+    }
+    .table-hover>tbody>tr:hover{background-color:  ivory;}
+    
+</style>    
     </head>
     <body>
-        <h1> Appoints Notifications!</h1>
-        <table border="1">
-            <th>P_ID</th>
-            <th>DESCRIPTION</th>
-            <th>A_DATE</th>
-            <th>A_TIME</th>
-            <th>LOCATION</th>
-            <th>Actions</th>
+        <h1 class="well text-center text-success"> Appoints Notifications!</h1>
+        <div class="container">
+            <table class="table-hover table-condensed" border="0">
+                
+            <th class="col-lg-2">P_ID</th>
+            <th class="col-lg-2">DESCRIPTION</th>
+            <th class="col-lg-2">A_DATE</th>
+            <th class="col-lg-2">A_TIME</th>
+            <th class="col-lg-2">LOCATION</th>
+            <th class="col-lg-2">Actions</th>
+                
         <%
             Connection con = null;
             PreparedStatement ps = null;
@@ -51,12 +70,12 @@
              loc=rs.getString(7);
              status=rs.getString(8);
             %>
-            <td><%out.println(pid);%> </td>
-            <td><%out.println(desc);%> </td>
-            <td><%out.println(adate);%> </td>
-            <td><%out.println(atime);%> </td>
-            <td><%out.println(loc);%> </td>
-            <td><a href="drviewappoint.jsp">View Details</a></td>
+            <td class="col-lg-2"><%out.println(pid);%> </td>
+            <td class="col-lg-2"><%out.println(desc);%> </td>
+            <td class="col-lg-2"><%out.println(adate);%> </td>
+            <td class="col-lg-2"><%out.println(atime);%> </td>
+            <td class="col-lg-2"><%out.println(loc);%> </td>
+            <td class="col-lg-2"><a href="drviewappoint.jsp">View Details</a></td>
             </tr>
             <%
             }
@@ -68,6 +87,7 @@
             { 
             out.println(sqe);
             }
-        %>
+            %>
+        </div>
     </body>
 </html>

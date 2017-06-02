@@ -13,18 +13,24 @@
 <link rel="stylesheet" href="css/bootstrap.min.css"/>
 <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
-        
+<style>   h1{
+        font-family: cursive;
+        font-feature-settings: normal;
+        font-style: italic;
+        font-weight: bold;
+    }
+</style>
     </head>
     <body>
+           <h1 class="well text-center text-danger">Hello Admin!</h1></div>
         
+        <div class="btn-group container">
+    <a target="ContentFrame" href="createdr.jsp"><button type="button" class="btn btn-danger">Create Doctor</button></a>        
+    <a target="ContentFrame" href="deletedoctor.jsp"><button type="button" class="btn btn-danger">Delete Doctor</button></a></center>
+        </div><hr>
         
-        <div class="container">
-        
-    <a target="ContentFrame" href="createdr.jsp"><button type="button" class="btn btn-default">Create Doctor</button></a>        
-    <center><a target="ContentFrame" href="deletedoctor.jsp"><button type="button" class="btn btn-danger">Delete Doctor</button></a></center>
-        </div> <hr> 
         <div class="container"> 
-    <center><a target="ContentFrame" href="deleteUser.jsp"><button type="button" class="btn btn-danger">Delete Patient</button></a></center>
-    </div>
+    <center><a target="Content2Frame" href="deleteUser.jsp"><button type="button" class="btn btn-danger">Delete Patient</button></a></center>
+        </div>
          </body>
 </html>

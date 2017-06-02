@@ -5,6 +5,8 @@
  */
 package com.pro.controller;
 
+import com.pro.dao.DaoImpl;
+import com.pro.dao.UserDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -14,9 +16,9 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author akshay
+ * @author Sunny
  */
-public class MakeAppointment extends HttpServlet {
+public class makeAppointment extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,8 +34,21 @@ public class MakeAppointment extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-           
-        
+            String pid=request.getParameter("txtpid");
+            String did=request.getParameter("txtdid");
+            String desc=request.getParameter("txtdesc");
+            String aDate = request.getParameter("txtdate");
+            String aTime = request.getParameter("txtdr");
+            String Location="Location";
+            String status = "Requested";
+            System.out.println("pid "+pid+" did "+did+" desc "+desc+" date "+aDate+" time "+aTime+" loc "+Location+" status "+status);
+            UserDAO userdao = new DaoImpl();
+            if (userdao.bookAppointment(pid, did, desc, aDate, aTime, desc, status)) {
+                System.out.println("Sucess if condition");
+            }
+            else{
+                System.out.println("Else block");
+            }
         }
     }
 

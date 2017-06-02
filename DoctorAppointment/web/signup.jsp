@@ -17,6 +17,15 @@
         <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/signup.js"></script>
+        <style>
+            legend{
+        font-family: cursive;
+        font-feature-settings: normal;
+        font-style: italic;
+        font-weight: bold;
+color: red;    
+            }
+        </style>
     </head>
     <body>
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -72,9 +81,9 @@
     <div class="container">
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-4 well well-sm">
-            <legend><i class="glyphicon glyphicon-globe"></i>Sign up!</legend>
+            <legend class="text-center text-danger"><i class="glyphicon glyphicon-globe"></i>Sign up!</legend>
         <div class="col-md-6">
-            <form action="createuser.do" method="post" class="form" id="fileForm" role="form" target="_blank">
+            <form action="createuser.do" method="post" class="form" id="fileForm" role="form">
             <fieldset><legend class="text-center">Valid information is required to register. <span class="req"><small> required *</small></span></legend>
             
             

@@ -25,9 +25,9 @@
         <div class="container">
             <table border="1">
                 <thead><th>A_ID</th>
-            <th>P_ID</th>
+            <th>P            <th>DESCRIPTION</th>
+_ID</th>
             <th>D_ID</th>
-            <th>DESCRIPTION</th>
             <th>A_DATE</th>
             <th>A_TIME</th>
             <th>LOCATION</th>

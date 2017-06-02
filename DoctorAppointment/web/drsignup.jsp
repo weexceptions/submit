@@ -18,6 +18,11 @@
         <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/signup.js"></script>
+        <style>
+            body{
+        background-image: url('Images/background2.jpg');
+    }
+        </style>
     </head>
     <body>
         <div id="myCarousel" class="carousel slide" data-ride="carousel">

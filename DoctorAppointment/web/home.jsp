@@ -97,17 +97,17 @@
        <p style="font-weight: bolder ; font-size: large" > Early morning sun is rich source of vitamin-D <p>
 
        <p style="font-size: medium"> We get vitamin d not only from sun but also different sources.......</p>
-
+<a href="Blog.jsp">Read More</a>
     </div>
     </div>  
         <div class="container">
         <aside id="sticky-social">
         <ul>
-        <li><a href="#" class="entypo-facebook " target="_blank"><span>Facebook</span></a></li>
-        <li><a href="#" class="entypo-twitter" target="_blank"><span>Twitter</span></a></li>
-        <li><a href="#" class="entypo-gplus" target="_blank"><span>Google+</span></a></li>
-        <li><a href="#" class="entypo-linkedin" target="_blank"><span>LinkedIn</span></a></li>
-        <li><a href="#" class="entypo-instagrem" target="_blank"><span>Instagram</span></a></li>
+        <li><a href="www.facebook.com/StayHealthy" class="entypo-facebook " target="_blank"><span>Facebook</span></a></li>
+        <li><a href="www.twitter.com/StayHealthy" class="entypo-twitter" target="_blank"><span>Twitter</span></a></li>
+        <li><a href="www.googleplus.com/StayHealthy" class="entypo-gplus" target="_blank"><span>Google+</span></a></li>
+        <li><a href="www.linked.in/StayHealthy" class="entypo-linkedin" target="_blank"><span>LinkedIn</span></a></li>
+        <li><a href="" class="entypo-instagrem" target="_blank"><span>Instagram</span></a></li>
         </ul>
         </aside>
         </div>

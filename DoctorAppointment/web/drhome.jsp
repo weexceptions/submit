@@ -68,12 +68,12 @@ body{
                     <input type="hidden" name="userId" value="<%out.print(request.getAttribute("auser"));%>">
                     <button class="btn btn-link" type="submit">View Appointment</button>  </li></form>
           <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Help Desk<span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
                 
               <li><a target="ContentFrame" href="userprofile.jsp">My Profile</a></li>
-               </ul>
-          </li>
+              
+         </li>
+          <li><a href="disease.jsp" target="ContentFrame" >Add Disease</a></li>
+         
           <li><a target="_blank" href="index.jsp" onclick=window.close()>LogOut</a></li>
         </ul>
       </div>

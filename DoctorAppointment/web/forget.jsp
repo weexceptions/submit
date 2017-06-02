@@ -13,12 +13,20 @@
          <link rel="stylesheet" href="css/bootstrap.min.css"/>
         <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    </head>
+    <style>
+           legend{
+        font-family: cursive;
+        font-feature-settings: normal;
+        font-style: italic;
+        font-weight: bold;
+    }
+        </style> 
+   </head>
     <body>
         <div class="container">
         <form action="forget.do"  method="post" class="form" role="form">
             <div class="form-group">
-                <legend><i class="glyphicon glyphicon-question-sign"></i>  Forgot Your Password </legend>
+                <legend class="well text-center text-success"><i class="glyphicon glyphicon-question-sign"></i>  Forgot Your Password!<br/>Do not Panic  </legend>
                 </div><br>
                  <div class="form-group">
                 <label for="userid">*User Id :  </label>

@@ -27,7 +27,10 @@
     <body>
         <div class="container">
               <form action="makeAppointment.do" method="post" >
-                  
+                   <input type="hidden" value="<%out.print(request.getAttribute("id"));%>" name="txtpid" />
+                   <input type="hidden" value="<%out.print(request.getAttribute("dr"));%>" name="txtdid" />
+                   <input type="hidden" value="<%out.print(request.getAttribute("date"));%>" name="txtdate" />
+                   
                   <table border="0">
                       <tr class="row">
                           <td class="col-lg-6"><label class="control-label" for="patientname">Patient name :</label></td>
@@ -70,7 +73,7 @@
                       </tr>
                       <tr class="row">
                           <td class="col-lg-6"><label class="control-label" for="patientname">Date :</label></td>
-                          <td class="col-lg-6"><input type="date" class="input-sm" disabled="true" value="<%out.print(request.getAttribute("date"));%>"><br/></td>
+                          <td class="col-lg-6"><input type="date" class="input-sm" disabled="true" name="date" value="<%out.print(request.getAttribute("date"));%>"><br/></td>
                       </tr>
                       <tr class="row">
                       <tr class="row">
@@ -80,7 +83,7 @@
                     String dtime="hidden";
                     //out.println(dtime);%> class="form-group">
                     <label for="appt timeslot">Appointment Time:</label>
-                    <select  type="text" class="form-control" name=""  required>
+                    <select class="form-control" name="txttime"  required>
                         
                          <%
                        
@@ -97,8 +100,8 @@
                         <%
                             rs.next();
                         int btime=rs.getInt(1);
-                        String TimeBooked;
                         String dselect=null;
+                        String tval="0";
                         String atime="Select";
                         for (int i = 1; i < 9; i++) {
                          if (btime==i) {
@@ -110,30 +113,39 @@
                              switch (i) {
                                      case 1:
                                          atime="9 to 10";
+                                         tval="1";
                                          break;
                                      case 2:
                                          atime="10 to 11";
+                                         tval="2";
                                          break;
                                      case 3:
                                          atime="11 to 12";
+                                         tval="3";
                                          break;
                                      case 4:
                                          atime="12 to 1";
+                                         tval="4";
                                          break;
                                      case 5:
                                          atime="2 to 3";
+                                         tval="5";
                                          break;
                                      case 6:
                                          atime="3 to 4";
+                                         tval="6";
                                          break;
                                      case 7:
                                          atime="5 to 6";
+                                         tval="7";
                                          break;
                                      case 8:
                                          atime="6 to 7";
+                                         tval="8";
                                          break;
                                      default:
                                          atime="Booked";
+                                         tval="0";
                                  }
                         }
                          
@@ -153,6 +165,12 @@
                         %>
                   
             </div>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td>
+                              <td class="col-lg-6"><label class="control-label"  for="patientname">Description :</label></td>
+                              <td class="col-lg-6"><textarea type="text" class="form-control input-lg" name="txtdesc" placeholder="Enter your Problem"></textarea>
                           </td>
                       </tr>
                         <tr>
