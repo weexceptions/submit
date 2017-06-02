@@ -30,7 +30,7 @@
   margin: 25px 15px 25px 0;
 }        
 #frame1{
-  border: 1px solid black; margin-left: 1px; float: left; margin-top: 0px;
+  border: 1px solid black; margin-left: 1px; float: right; margin-top: 0px;
 }
 #frame2{
  border: 1px solid black; margin-right: 1px; float:right; margin-top: 0px
@@ -73,7 +73,8 @@ body{
   </nav>
             </div>
             <div class="row" id="container">
-            <IFRAME seamless="seamless" scrolling="yes" src="adminhome.jsp" id="frame2" name="ContentFrame" width="80%" height="800" ><h1>Content</h1></IFRAME>
+            <IFRAME seamless="seamless" scrolling="yes" src="adminhome.jsp" id="frame1" name="ContentFrame" width="80%" height="800" >
+            </IFRAME>
             </div>
             
         <footer>
