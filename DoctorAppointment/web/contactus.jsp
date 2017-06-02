@@ -21,8 +21,8 @@
 .form-area
 {
     background-color: #FAFAFA;
-	padding: 10px 40px 60px;
-	margin: 10px 0px 60px;
+	padding: 5px 20px 20px;
+	margin: 5px 0px 60px;
 
 	}
         </style>
@@ -65,7 +65,7 @@ function clearField() {
 </div>
         
         <script type="text/javascript">
-            $(document).ready(function(){ 
+    $(document).ready(function(){ 
     $('#characterLeft').text('140 characters left');
     $('#message').keydown(function () {
         var max = 140;
@@ -83,8 +83,19 @@ function clearField() {
         }
     });    
 });
-
         </script>
+        <div class="well container">
+            <label class="label-info">Hospital Address :</label>
+            <p class="text-info">
+               StayHealthy<br/>
+               2nd Floor, Bhandarkar Bhavan<br/>
+               Opposite to Borivili Railway Station<br/>
+               S.V. Road<br/>
+               Near Police Station<br/>
+               Mumbai - 400092.</p>
+            
+            <p>Contact No.:9876543210;</p>
+        </div>
         
     </body>
 </html>

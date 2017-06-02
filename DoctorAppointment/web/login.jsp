@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Log In page</title>
         
         <link rel="stylesheet" href="css/bootstrap.min.css"/>
         <link rel="stylesheet" href="css/homestylesheet.css">
@@ -22,13 +22,18 @@
         font-style: italic;
         font-weight: bold;
     }
+    body{
+        background-image: url('Images/doctorbg.jpg');
+        background-size: 1000px;
+        background-position-y: bottom;
+    }  
         </style>    
     </head>
     <body>
                    <h1 class="well text-center text-danger">Hello User!</h1></div>
      
-        
-        <div class="container" >
+       
+    <div class="container">
             <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-4 well well-sm">
             <legend><i class="glyphicon glyphicon-globe"></i>LogIn!</legend>
@@ -53,11 +58,10 @@
                     <center><button type="submit" target="_blank" onclick=window.close() class="btn btn-primary" >LogIn</button></center>      
                 </div>
                 <br>
-                
             </div>
             </form>
         </div>
         </div>
-        </div>
+    </div>
     </body>
 </html>

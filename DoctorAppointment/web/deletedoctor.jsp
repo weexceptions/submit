@@ -36,13 +36,12 @@
                 
             </thead>
             <tr>
-                <td><%=product.getProductId() %> </td>
-                <td><%=product.getProductName() %> </td>
-                <td><%=product.getPrice() %> </td>
-                <td><%=product.getStock() %> </td>
-                <td><%=product.getProductImage() %> </td>
-                
-                </tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
             </table>
         </div>
   
