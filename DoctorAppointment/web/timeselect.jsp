@@ -29,6 +29,8 @@
               <form action="makeAppointment.do" method="post" >
                    <input type="hidden" value="<%out.print(request.getAttribute("id"));%>" name="txtpid" />
                    <input type="hidden" value="<%out.print(request.getAttribute("dr"));%>" name="txtdid" />
+                   <input type="hidden" value="<%out.print(request.getAttribute("date"));%>" name="txtdate" />
+                   
                   <table border="0">
                       <tr class="row">
                           <td class="col-lg-6"><label class="control-label" for="patientname">Patient name :</label></td>
@@ -71,7 +73,7 @@
                       </tr>
                       <tr class="row">
                           <td class="col-lg-6"><label class="control-label" for="patientname">Date :</label></td>
-                          <td class="col-lg-6"><input type="date" class="input-sm" disabled="true" name="txtdate" value="<%out.print(request.getAttribute("date"));%>"><br/></td>
+                          <td class="col-lg-6"><input type="date" class="input-sm" disabled="true" name="date" value="<%out.print(request.getAttribute("date"));%>"><br/></td>
                       </tr>
                       <tr class="row">
                       <tr class="row">
@@ -81,7 +83,7 @@
                     String dtime="hidden";
                     //out.println(dtime);%> class="form-group">
                     <label for="appt timeslot">Appointment Time:</label>
-                    <select  type="text" class="form-control" name="txttime"  required>
+                    <select class="form-control" name="txttime"  required>
                         
                          <%
                        
