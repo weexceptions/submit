@@ -44,6 +44,10 @@
         <servlet-name>restorePointServlet</servlet-name>
         <servlet-class>com.pro.controller.restorePoint</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>createDrServlet</servlet-name>
+        <servlet-class>com.pro.controller.createDr</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CreateUser</servlet-name>
         <url-pattern>/createuser.do</url-pattern>
@@ -87,6 +91,10 @@
     <servlet-mapping>
         <servlet-name>restorePointServlet</servlet-name>
         <url-pattern>/restore.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>createDrServlet</servlet-name>
+        <url-pattern>/createdr.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
