@@ -35,24 +35,29 @@ public class makeAppointment extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
+            System.out.println("makeAppointment.do exe");
             String pid=request.getParameter("txtpid");
             String did=request.getParameter("txtdid");
             String desc=request.getParameter("txtdesc");
             String aDate = request.getParameter("txtdate");
             String aTime = request.getParameter("txttime");
-            String Location=request.getParameter("txtlocation");
+            String Location="Location";
             String status = "Requested";
             System.out.println("pid "+pid+" did "+did+" desc "+desc+" date "+aDate+" time "+aTime+" loc "+Location+" status "+status);
             UserDAO userdao = new DaoImpl();
-            if (userdao.bookAppointment(pid, did, desc, aDate, aTime, Location, status)) {
+            if (userdao.bookAppointment(pid, did, desc, aDate, aTime, desc, status)) {
                 System.out.println("Sucess if condition");
-                RequestDispatcher rd = request.getRequestDispatcher("appsuccess.jsp");
+                
+                RequestDispatcher rd = request.getRequestDispatcher("appointsuccess.jsp");
                 request.setAttribute("auser", pid.toUpperCase());
-                rd.forward(request, response);
-            
+               
+                 rd.forward(request, response);
             }
             else{
                 System.out.println("Else block");
+                RequestDispatcher rd = request.getRequestDispatcher("appointment.jsp");
+                request.setAttribute("auser", pid.toUpperCase());
+                rd.forward(request, response);
             }
         }
     }
