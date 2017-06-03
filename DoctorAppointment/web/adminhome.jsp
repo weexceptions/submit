@@ -25,7 +25,7 @@
            <h1 class="well text-center text-danger">Hello Admin!</h1></div>
         
         <div class="btn-group conntainer">
-    <a target="ContentFrame" href="drsignup.jsp"><button type="button" class="btn btn-danger">Create Doctor</button></a>        
+    <a target="ContentFrame" href="drsignup.jsp"><button type="button" class="btn btn-success">Create Doctor</button></a>        
     <a target="ContentFrame" href="deletedoctor.jsp"><button type="button" class="btn btn-danger">Delete Doctor</button></a></center>
     <a target="Content2Frame" href="deleteUser.jsp"><button type="button" class="btn btn-danger">Delete Patient</button></a></center>
      
@@ -33,6 +33,6 @@
 </div><hr>
         
      
-    <center><a target="Content2Frame" href="deleteUser.jsp"><button type="button" class="btn btn-danger">Delete Patient</button></a></center>
+<center><a target="Content2Frame" href="restore.do"><button type="reset" class="btn btn-danger">Reset</button></a></center>
      </body>
 </html>
