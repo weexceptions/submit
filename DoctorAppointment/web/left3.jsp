@@ -66,28 +66,17 @@
             {
              aid=rs.getString(1);
              pid=rs.getString(2);
-             did=rs.getString(3);
              desc=rs.getString(4);
              adate=rs.getString(5);
              atime=rs.getString(6);
-             loc=rs.getString(7);
-             status=rs.getString(8);
             
             %>
             <td><%out.println(aid);%> </td>
             <td><%out.println(pid);%> </td>
-            <td><%out.println(did);%> </td>
             <td><%out.println(desc);%> </td>
             <td><%out.println(adate);%> </td>
             <td><%out.println(atime);%> </td>
-            <td><%out.println(loc);%> </td>
-            <td><%out.println(status);%> </td>
-            <td> <form action="viewuser.do" method="post" class="form" id="fileForm" role="form">
-                    <input type="hidden" value="<%out.println(aid);%>" name="txtid" />
-                    <button type="submit" class="btn btn-info">View</button>
-                </form>
-            </td> 
-                
+                            
             </tr>
             <%
             }
