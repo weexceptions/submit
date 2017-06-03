@@ -8,6 +8,7 @@ package com.pro.controller;
 import com.pro.dao.RestoreDB;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -49,7 +50,9 @@ public class restorePoint extends HttpServlet {
             o.reSet();
             }
             o.reSet();
-            
+             RequestDispatcher rd = request.getRequestDispatcher("admin.jsp");
+                request.setAttribute("auser", "Administrator");
+                rd.forward(request, response);
         }
     }
 
