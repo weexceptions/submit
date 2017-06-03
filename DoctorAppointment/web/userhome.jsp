@@ -56,7 +56,7 @@ body{
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand">
-             <h4 style="float: right; color: #ffffff">Contact No.: 9876543210</h4>
+             <h4 style="float: right; color: #ffffff">......Patient Login......</h4>
              <img src="Images/logo2.png" width="20%" height="100%"  alt="StayHealthy">
              <p style="float: right; color:#ff0; size: auto" class="text-danger">Welcome <%out.print(request.getAttribute("auser"));%></p>
         </a>
@@ -71,7 +71,12 @@ body{
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Help Desk<span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
                 <li><a target="ContentFrame" href="viewappoint.jsp">Appointments</a></li>
-              <li><a target="ContentFrame" href="viewuser.do">My Profile</a></li>
+              <li><a target="ContentFrame" href="">
+                      <form action="viewuser.do" target="ContentFrame" method="post" class="form" id="fileForm" role="form">
+                    <input type="hidden" value="<%out.print(request.getAttribute("auser"));%>" name="txtid" />
+                    <button type="submit" class="btn btn-info">My Profile</button>
+                </form>
+                      </a></li>
               
                </ul>
           </li>
