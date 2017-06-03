@@ -40,7 +40,6 @@
         <table class="table-condensed table-hover" border="0">
             <th class="col-lg-1">A_ID</th>
             <th class="col-lg-1">P_ID</th>
-            <th class="col-lg-1">D_ID</th>
             <th class="col-lg-1">DESCRIPTION</th>
             <th class="col-lg-1">A_DATE</th>
             <th class="col-lg-1">A_TIME</th>
@@ -65,6 +64,8 @@
             <%
             while(rs.next())
             {
+                String dr=rs.getString(3);
+                if (dr.equals(request.getParameter("userId").toString().toLowerCase())) {
              aid=rs.getString(1);
              pid=rs.getString(2);
              did=rs.getString(3);
@@ -76,8 +77,7 @@
             %>
             <td class="col-lg-1"><%out.println(aid);%> </td>
             <td class="col-lg-1"><%out.println(pid);%> </td>
-            <td class="col-lg-1"><%out.println(did);%> </td>
-            <td class="col-lg-1"><%out.println(desc);%> </td>
+            <th class="col-lg-1"><%out.println(desc);%> </th>
             <td class="col-lg-1"><%out.println(adate);%> </td>
             <td class="col-lg-1"><%out.println(atime);%> </td>
             <td class="col-lg-1"><%out.println(loc);%> </td>
@@ -89,6 +89,7 @@
             </td>
             </tr>
             <%
+            }
             }
             %>
         </table>

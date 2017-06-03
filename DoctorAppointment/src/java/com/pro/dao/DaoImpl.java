@@ -190,7 +190,7 @@ public class DaoImpl implements UserDAO{
         try {
             System.out.println("Update wala id "+id);
             System.out.println("Update wala pass "+pass);
-            ps = con.prepareStatement("UPDATE AKSH.USERDETAIL SET PASSWORD = ? WHERE P_ID like ?");
+            ps = con.prepareStatement("UPDATE USERDETAIL SET PASSWORD = ? WHERE P_ID like ?");
             ps.setString(2,id.trim());
             ps.setString(1, pass);
             int rec = ps.executeUpdate();
@@ -377,4 +377,31 @@ public class DaoImpl implements UserDAO{
         }
         return flag;
     }  
+
+    @Override
+    public boolean appointAction(int aId, String action) {
+        
+        boolean r=false;
+         PreparedStatement ps;
+        try {
+            System.out.println("Update wala id "+aId);
+            System.out.println("Update wala action "+action);
+            if (action.equals("accept")) {
+            ps = con.prepareStatement("UPDATE APPOINTMENT SET STATUS = 'ACCEPTED' WHERE A_ID = ?");
+            }
+            else{
+            ps = con.prepareStatement("UPDATE APPOINTMENT SET STATUS = 'REJECTED' WHERE A_ID = ?");
+            }
+            ps.setInt(1,aId);
+            int rec = ps.executeUpdate();
+            System.out.println("records updated : " + rec);
+            System.out.println("Update hogaya");
+            r=true;
+        } catch (SQLException ex) {
+            System.out.println("UPDATE FAILED");
+        }
+            
+       return r;
+        
+    }
 }
