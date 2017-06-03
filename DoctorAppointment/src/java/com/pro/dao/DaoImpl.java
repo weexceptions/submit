@@ -45,7 +45,7 @@ public class DaoImpl implements UserDAO{
             ps.setString(1, u.getPassword());
             ps.setString(2, u.getFirstName());
             ps.setString(3, u.getLastName());
-            ps.setString(4,u.getDob());
+            ps.setString(4, u.getDob());
             ps.setString(5, u.getEmailId());
             ps.setString(6, u.getAddress());
             ps.setString(7, u.getPhone());
