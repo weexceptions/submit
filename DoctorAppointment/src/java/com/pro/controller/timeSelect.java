@@ -43,14 +43,17 @@ public class timeSelect extends HttpServlet {
             String da=request.getParameter("txtdate");
             String dr = request.getParameter("txtdr");
             String name=request.getParameter("txtname");
+            String loc = request.getParameter("txtlocation");
                 System.out.println("id is : "+id);
                 System.out.println("Date is "+da);
                 System.out.println("Dr is "+dr);
+                System.out.println("loc is "+loc);
                 RequestDispatcher rd = request.getRequestDispatcher("timeselect.jsp");
                 request.setAttribute("id", id);
                 request.setAttribute("date", da);
                 request.setAttribute("dr", dr);
                 request.setAttribute("name", name);
+                request.setAttribute("loc", loc);
                 System.out.println("Enddddddd");
                 rd.forward(request, response);
         }

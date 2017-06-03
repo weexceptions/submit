@@ -34,17 +34,8 @@ public class Forget extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-//            out.println("<!DOCTYPE html>");
-//            out.println("<html>");
-//            out.println("<head>");
-//            out.println("<title>Servlet Forget</title>");            
-//            out.println("</head>");
-//            out.println("<body>");
-//            out.println("<h1>Bhoooola....... " + request.getContextPath() + "</h1>");
-//            out.println("</body>");
-//            out.println("</html>");
-              System.out.println("Loaded Forget Sev");
+           
+            System.out.println("Loaded Forget Sev");
             String id = request.getParameter("txtuid");
             String email = request.getParameter("txtemail");
             String phone = request.getParameter("txtphone");

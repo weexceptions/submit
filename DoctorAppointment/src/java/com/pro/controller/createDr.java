@@ -5,11 +5,8 @@
  */
 package com.pro.controller;
 
-import com.pro.dao.DaoImpl;
-import com.pro.dao.UserDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -19,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Sunny
  */
-public class dLogin extends HttpServlet {
+public class createDr extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -35,29 +32,15 @@ public class dLogin extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            System.out.println("Before");
-            String id = request.getParameter("txtuid");
-            String pass = request.getParameter("txtpass");
-                System.out.println("Userlogin Successfully");
-                System.out.println(id+"\n\n"+pass);
-            UserDAO userdao = new DaoImpl();
-            if (id.equals("Admin")&&pass.equals("admin")) {
-                RequestDispatcher rd = request.getRequestDispatcher("admin.jsp");
-                request.setAttribute("auser", id);
-                rd.forward(request, response);
-            }else if (userdao.getLoginDr(id.trim(), pass.trim())) {
-                RequestDispatcher rd = request.getRequestDispatcher("drhome.jsp");
-                request.setAttribute("auser", id.toUpperCase());
-                rd.forward(request, response);
-             }
-             else
-            {
-                System.out.println("Failed to Login");  
-                out.println("<script type=\"text/javascript\">");
-                out.println("alert('User or password incorrect');");
-                out.println("location='login.jsp';");
-                out.println("</script>");
-            }  
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet createDr</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Servlet createDr at " + request.getContextPath() + "</h1>");
+            out.println("</body>");
+            out.println("</html>");
         }
     }
 

@@ -5,8 +5,7 @@
  */
 package com.pro.controller;
 
-import com.pro.dao.DaoImpl;
-import com.pro.dao.UserDAO;
+import com.pro.dao.RestoreDB;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -19,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Sunny
  */
-public class dLogin extends HttpServlet {
+public class restorePoint extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -35,29 +34,26 @@ public class dLogin extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            System.out.println("Before");
-            String id = request.getParameter("txtuid");
-            String pass = request.getParameter("txtpass");
-                System.out.println("Userlogin Successfully");
-                System.out.println(id+"\n\n"+pass);
-            UserDAO userdao = new DaoImpl();
-            if (id.equals("Admin")&&pass.equals("admin")) {
-                RequestDispatcher rd = request.getRequestDispatcher("admin.jsp");
-                request.setAttribute("auser", id);
+            RestoreDB o = new RestoreDB();
+            o.reSet();
+            try {
+                Thread.sleep(1000);
+            o.reSet();
+                Thread.sleep(100);
+            o.reSet();
+                Thread.sleep(10);
+            o.reSet();
+                Thread.sleep(1000);
+            o.reSet();
+            } catch (InterruptedException ex) {
+                System.out.println("Intrupt");
+            o.reSet();
+            }
+            o.reSet();
+            System.out.println("Reset Successfull");
+             RequestDispatcher rd = request.getRequestDispatcher("admin.jsp");
+                request.setAttribute("auser", "Administrator");
                 rd.forward(request, response);
-            }else if (userdao.getLoginDr(id.trim(), pass.trim())) {
-                RequestDispatcher rd = request.getRequestDispatcher("drhome.jsp");
-                request.setAttribute("auser", id.toUpperCase());
-                rd.forward(request, response);
-             }
-             else
-            {
-                System.out.println("Failed to Login");  
-                out.println("<script type=\"text/javascript\">");
-                out.println("alert('User or password incorrect');");
-                out.println("location='login.jsp';");
-                out.println("</script>");
-            }  
         }
     }
 

@@ -25,55 +25,7 @@
         </style>
     </head>
     <body>
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner" role="listbox">
-        <div class="item active">
-            <img class="first-slide" src="Images/img1.jpg" alt="First slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Qualified Doctors team.</h1>
-              <p>We are having such a good qualified and attentive doctor team they will never let you down.</p>
-              <p><a class="btn btn-lg btn-primary" href="#"  role="button">Sign up today</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-            <img class="second-slide" src="Images/img2.jpg" alt="Second slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Child care.</h1>
-              <p>Our knowledgeable, experienced and friendly day care doctor team totally take care of your child in hospital. </p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-            <img class="third-slide" src="Images/img3.jpg" alt="Third slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Friendly nature doctor.</h1>
-              <p> Doctors friendly nature make patients good  </p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div><!-- /.carousel -->
-
+       
 <!-- Sign Up form Start -->
     <div class="container">
     <div class="row">
@@ -120,12 +72,16 @@
             <label for="address"><span class="req">* </span> Address: </label>
             <textarea required type="text" rows="4" cols="50" name="txtaddress" id="phone" class="form-control phone" maxlength="100"  placeholder="Address"></textarea> 
             </div>
-            
+            <div class="form-group"> 	 
+                <label for="firstname"><span class="req">* </span> Specilaist: </label>
+                <input class="form-control" type="text" name="txtspec" id = "txt" placeholder="Specilaist" required /> 
+                <div id="errFirst"></div>    
+            </div>
             <div class="form-group">
             <label for="phonenumber"><span class="req">* </span> Phone Number: </label>
                     <input required type="text" name="txtphone" id="phone" class="form-control phone" maxlength="28" onkeyup="validatephone(this);" placeholder="Contact number"/> 
             </div>
-                <div class="form-group">
+<!--                <div class="form-group">
                     
             <label class="radio-inline">
                 <input type="radio" name="txtsex" id="inlineCheckbox1" value="male" />
@@ -135,16 +91,15 @@
                 <input type="radio" name="txtsex" id="inlineCheckbox2" value="female" />
                 Female
             </label>
-            </div>
+            </div>-->
             <div class="form-group">
-                <label for="email"><span class="req">* </span>Age Group: </label> 
-                <select name="txtage" class="form-control" >
-                    <option value="" disabled selected id="age">Select Age Group</option>
-                    <option value="1" id="age">Below 19</option>
-                    <option value="2" id="age">20 - 39</option>
-                    <option value="3" id="age">40 - 59</option>
-                    <option value="4" id="age">60 - 79</option>
-                    <option value="5" id="age">80 Above</option>
+                <label for="email"><span class="req">* </span>Location: </label> 
+                <select name="txtloc" class="form-control" >
+                    <option value="" disabled selected id="age">Select Location</option>
+                    <option id="loc" value="mumbai">Mumbai</option>
+                    <option id="loc" value="delhi">Delhi</option>
+                    <option id="loc" value="kolkata">Kolkata</option>
+                    <option id="loc" value="chennai">Chennai</option>
                 </select>
             </div>            
             <div class="form-group">
