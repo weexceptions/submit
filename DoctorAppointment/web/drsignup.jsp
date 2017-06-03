@@ -125,7 +125,7 @@
             <label for="phonenumber"><span class="req">* </span> Phone Number: </label>
                     <input required type="text" name="txtphone" id="phone" class="form-control phone" maxlength="28" onkeyup="validatephone(this);" placeholder="Contact number"/> 
             </div>
-                <div class="form-group">
+<!--                <div class="form-group">
                     
             <label class="radio-inline">
                 <input type="radio" name="txtsex" id="inlineCheckbox1" value="male" />
@@ -135,16 +135,15 @@
                 <input type="radio" name="txtsex" id="inlineCheckbox2" value="female" />
                 Female
             </label>
-            </div>
+            </div>-->
             <div class="form-group">
-                <label for="email"><span class="req">* </span>Age Group: </label> 
-                <select name="txtage" class="form-control" >
-                    <option value="" disabled selected id="age">Select Age Group</option>
-                    <option value="1" id="age">Below 19</option>
-                    <option value="2" id="age">20 - 39</option>
-                    <option value="3" id="age">40 - 59</option>
-                    <option value="4" id="age">60 - 79</option>
-                    <option value="5" id="age">80 Above</option>
+                <label for="email"><span class="req">* </span>Location: </label> 
+                <select name="txtloc" class="form-control" >
+                    <option value="" disabled selected id="age">Select Location</option>
+                    <option id="loc" value="mumbai">Mumbai</option>
+                    <option id="loc" value="delhi">Delhi</option>
+                    <option id="loc" value="kolkata">Kolkata</option>
+                    <option id="loc" value="chennai">Chennai</option>
                 </select>
             </div>            
             <div class="form-group">
