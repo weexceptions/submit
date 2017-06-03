@@ -9,6 +9,7 @@ import com.pro.dao.DaoImpl;
 import com.pro.dao.UserDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -46,9 +47,17 @@ public class makeAppointment extends HttpServlet {
             UserDAO userdao = new DaoImpl();
             if (userdao.bookAppointment(pid, did, desc, aDate, aTime, desc, status)) {
                 System.out.println("Sucess if condition");
+                
+                RequestDispatcher rd = request.getRequestDispatcher("pat_home.jsp");
+                request.setAttribute("auser", pid.toUpperCase());
+               
+                 rd.forward(request, response);
             }
             else{
                 System.out.println("Else block");
+                RequestDispatcher rd = request.getRequestDispatcher("appointment.jsp");
+                request.setAttribute("auser", pid.toUpperCase());
+                rd.forward(request, response);
             }
         }
     }
