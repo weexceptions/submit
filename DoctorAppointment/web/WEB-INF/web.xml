@@ -52,6 +52,10 @@
         <servlet-name>AppointmentActionServlet</servlet-name>
         <servlet-class>com.pro.controller.AppointmentAction</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LeftDrServlet</servlet-name>
+        <servlet-class>com.pro.controller.LeftDr</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CreateUser</servlet-name>
         <url-pattern>/createuser.do</url-pattern>
@@ -103,6 +107,10 @@
     <servlet-mapping>
         <servlet-name>AppointmentActionServlet</servlet-name>
         <url-pattern>/action.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LeftDrServlet</servlet-name>
+        <url-pattern>/left3.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

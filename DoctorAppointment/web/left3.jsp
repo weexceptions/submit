@@ -49,6 +49,7 @@
             <th class="col-lg-1">P_ID</th>
             <th class="col-lg-1">DATE</th>
             <th class="col-lg-1">TIME</th>
+            <%System.out.print("user is in left "+request.getAttribute("a"));%>
             
         <%
             Connection con = null;
@@ -56,8 +57,8 @@
             try
             {
             con = DBconnection.getConnection();
-            String id="mbhai";//equest.getParameter("auser");
-            System.out.println("User id in viewappointment is "+id);
+            String id=request.getAttribute("a").toString();//equest.getParameter("auser");
+            System.out.println("User id in left viewappointment is "+id);
             String sql = "SELECT A_ID,P_ID,D_ID,DESCRIPTION,A_DATE,A_TIME,LOCATION,STATUS FROM APPOINTMENT WHERE D_ID = '"+id.toLowerCase()+"' ORDER BY A_DATE,A_TIME";
             
             ps = con.prepareStatement(sql);
@@ -69,7 +70,7 @@
             while(rs.next())
             {
                 String dr=rs.getString(3);
-                if (dr.equals("mbhai")) {
+                if (dr.equals(id)) {
              aid=rs.getString(1);
              pid=rs.getString(2);
              did=rs.getString(3);
