@@ -24,13 +24,15 @@
     <body>
            <h1 class="well text-center text-danger">Hello Admin!</h1></div>
         
-        <div class="btn-group container">
-    <a target="ContentFrame" href="createdr.jsp"><button type="button" class="btn btn-danger">Create Doctor</button></a>        
+        <div class="btn-group conntainer">
+    <a target="ContentFrame" href="drsignup.jsp"><button type="button" class="btn btn-danger">Create Doctor</button></a>        
     <a target="ContentFrame" href="deletedoctor.jsp"><button type="button" class="btn btn-danger">Delete Doctor</button></a></center>
-        </div><hr>
+    <a target="Content2Frame" href="deleteUser.jsp"><button type="button" class="btn btn-danger">Delete Patient</button></a></center>
+     
+
+</div><hr>
         
-        <div class="container"> 
+     
     <center><a target="Content2Frame" href="deleteUser.jsp"><button type="button" class="btn btn-danger">Delete Patient</button></a></center>
-        </div>
-         </body>
+     </body>
 </html>

@@ -42,7 +42,7 @@ public class dLogin extends HttpServlet {
                 System.out.println(id+"\n\n"+pass);
             UserDAO userdao = new DaoImpl();
             if (id.equals("Admin")&&pass.equals("admin")) {
-                RequestDispatcher rd = request.getRequestDispatcher("adminhome.jsp");
+                RequestDispatcher rd = request.getRequestDispatcher("admin.jsp");
                 request.setAttribute("auser", id);
                 rd.forward(request, response);
             }else if (userdao.getLoginDr(id.trim(), pass.trim())) {
