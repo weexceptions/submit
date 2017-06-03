@@ -41,13 +41,12 @@ public class makeAppointment extends HttpServlet {
             String desc=request.getParameter("txtdesc");
             String aDate = request.getParameter("txtdate");
             String aTime = request.getParameter("txttime");
-            String Location="Location";
+            String Location=request.getParameter("txtlocation");
             String status = "Requested";
             System.out.println("pid "+pid+" did "+did+" desc "+desc+" date "+aDate+" time "+aTime+" loc "+Location+" status "+status);
             UserDAO userdao = new DaoImpl();
-            if (userdao.bookAppointment(pid, did, desc, aDate, aTime, desc, status)) {
+            if (userdao.bookAppointment(pid, did, desc, aDate, aTime, Location, status)) {
                 System.out.println("Sucess if condition");
-                
                 RequestDispatcher rd = request.getRequestDispatcher("appointsuccess.jsp");
                 request.setAttribute("auser", pid.toUpperCase());
                
