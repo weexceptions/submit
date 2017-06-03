@@ -48,7 +48,7 @@ public class makeAppointment extends HttpServlet {
             if (userdao.bookAppointment(pid, did, desc, aDate, aTime, desc, status)) {
                 System.out.println("Sucess if condition");
                 
-                RequestDispatcher rd = request.getRequestDispatcher("pat_home.jsp");
+                RequestDispatcher rd = request.getRequestDispatcher("appointsuccess.jsp");
                 request.setAttribute("auser", pid.toUpperCase());
                
                  rd.forward(request, response);
