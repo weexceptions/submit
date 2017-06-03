@@ -117,18 +117,96 @@
                                         System.out.println("Match hua date");
                                         String sql2 = "SELECT A_DATE,A_TIME FROM APPOINTMENT WHERE D_ID ='"+request.getParameter("txtdr").toLowerCase()+"' AND A_DATE = '"+mDate+"'";
                                         ps2 = con.prepareStatement(sql2);
-                                        ResultSet rs2 = ps2.executeQuery(); 
-                                        while(rs2.next()){
-                                            System.out.println("While loop");
-                                            int btime=rs2.getInt(2);
+                                        
+                                        {
+                                        System.out.println("While loop");
                                         String dselect=null;
-                                        atime="Select";
+                                         atime="Select";
                                               for (int i = 1; i < 9; i++) {
-                                         if (btime==i) {
-                                                 atime="Booked";
-                                                 dselect="disabled";
-                                                 //rs2.next();
-                                             }
+                                                  ResultSet rs2 = ps2.executeQuery(); 
+                                                  int btime=0;
+                                               if (rs2.next()&&(i==rs2.getInt(2))) {
+                                                         System.out.println("next col");
+                                                         btime=rs2.getInt(2);
+                                                         System.out.println("btime "+btime);
+                                                         atime="Booked";
+                                                         dselect="disabled";
+                                                         rs2.next();
+                                                     }
+                                               else if (rs2.next()&&(i==rs2.getInt(2))) {
+                                                         System.out.println("next col");
+                                                         btime=rs2.getInt(2);
+                                                         System.out.println("btime "+btime);
+                                                         atime="Booked";
+                                                         dselect="disabled";
+                                                         rs2.next();
+                                                   }
+                                               else if (rs2.next()&&(i==rs2.getInt(2))) {
+                                                         System.out.println("next col");
+                                                         btime=rs2.getInt(2);
+                                                         System.out.println("btime "+btime);
+                                                         atime="Booked";
+                                                         dselect="disabled";
+                                                         rs2.next();
+                                                   }
+                                               else if (rs2.next()&&(i==rs2.getInt(2))) {
+                                                         System.out.println("next col");
+                                                         btime=rs2.getInt(2);
+                                                         System.out.println("btime "+btime);
+                                                         atime="Booked";
+                                                         dselect="disabled";
+                                                         rs2.next();
+                                                   }
+                                               else if (rs2.next()&&(i==rs2.getInt(2))) {
+                                                         System.out.println("next col");
+                                                         btime=rs2.getInt(2);
+                                                         System.out.println("btime "+btime);
+                                                         atime="Booked";
+                                                         dselect="disabled";
+                                                         rs2.next();
+                                                   }
+                                               else if (rs2.next()&&(i==rs2.getInt(2))) {
+                                                         System.out.println("next col");
+                                                         btime=rs2.getInt(2);
+                                                         System.out.println("btime "+btime);
+                                                         atime="Booked";
+                                                         dselect="disabled";
+                                                         rs2.next();
+                                                   }
+                                               else if (rs2.next()&&(i==rs2.getInt(2))) {
+                                                         System.out.println("next col");
+                                                         btime=rs2.getInt(2);
+                                                         System.out.println("btime "+btime);
+                                                         atime="Booked";
+                                                         dselect="disabled";
+                                                         rs2.next();
+                                                   }
+                                               else if (rs2.next()&&(i==rs2.getInt(2))) {
+                                                         System.out.println("next col");
+                                                         btime=rs2.getInt(2);
+                                                         System.out.println("btime "+btime);
+                                                         atime="Booked";
+                                                         dselect="disabled";
+                                                         rs2.next();
+                                                   }
+                                               else if (rs2.next()&&(i==rs2.getInt(2))) {
+                                                         System.out.println("next col");
+                                                         btime=rs2.getInt(2);
+                                                         System.out.println("btime "+btime);
+                                                         atime="Booked";
+                                                         dselect="disabled";
+                                                         rs2.next();
+                                                   }
+                                               else if (rs2.next()&&(i==rs2.getInt(2))) {
+                                                         System.out.println("next col");
+                                                         btime=rs2.getInt(2);
+                                                         System.out.println("btime "+btime);
+                                                         atime="Booked";
+                                                         dselect="disabled";
+                                                         rs2.next();
+                                                   }
+                                            
+                                        
                                          else{
                                              dselect=null;
                                              switch (i) {
