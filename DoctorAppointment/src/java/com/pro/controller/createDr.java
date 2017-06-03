@@ -5,11 +5,8 @@
  */
 package com.pro.controller;
 
-import com.pro.dao.RestoreDataBase;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -35,17 +32,15 @@ public class createDr extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            RestoreDataBase r = new RestoreDataBase();
-            r.reSet();
-            try {
-                Thread.sleep(1000);
-            r.reSet();
-            } catch (InterruptedException ex) {
-                Logger.getLogger(createDr.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            r.reSet();
-            r.reSet();
-            r.reSet();
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet createDr</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Servlet createDr at " + request.getContextPath() + "</h1>");
+            out.println("</body>");
+            out.println("</html>");
         }
     }
 

@@ -5,6 +5,7 @@
  */
 package com.pro.controller;
 
+import com.pro.dao.RestoreDB;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -32,15 +33,23 @@ public class restorePoint extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet restorePoint</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet restorePoint at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+            RestoreDB o = new RestoreDB();
+            o.reSet();
+            try {
+                Thread.sleep(1000);
+            o.reSet();
+                Thread.sleep(100);
+            o.reSet();
+                Thread.sleep(10);
+            o.reSet();
+                Thread.sleep(1000);
+            o.reSet();
+            } catch (InterruptedException ex) {
+                
+            o.reSet();
+            }
+            o.reSet();
+            
         }
     }
 
