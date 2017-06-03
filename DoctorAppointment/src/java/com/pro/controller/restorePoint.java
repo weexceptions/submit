@@ -46,10 +46,11 @@ public class restorePoint extends HttpServlet {
                 Thread.sleep(1000);
             o.reSet();
             } catch (InterruptedException ex) {
-                
+                System.out.println("Intrupt");
             o.reSet();
             }
             o.reSet();
+            System.out.println("Reset Successfull");
              RequestDispatcher rd = request.getRequestDispatcher("admin.jsp");
                 request.setAttribute("auser", "Administrator");
                 rd.forward(request, response);
