@@ -58,6 +58,7 @@
         <div class="item">
             <img class="second-slide" src="Images/Raisins.png" alt="Second slide"width="900" height="200">
         </div>
+          
         <div class="item">
             <img class="third-slide" src="Images/lemon.png" alt="Third slide"width="900" height="200">
         </div>
