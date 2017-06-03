@@ -49,17 +49,14 @@
         <li data-target="#myCarousel" data-slide-to="3"></li>
         <li data-target="#myCarousel" data-slide-to="4"></li>
         <li data-target="#myCarousel" data-slide-to="5"></li>
-        <li data-target="#myCarousel" data-slide-to="6"></li>
-        
       </ol>
        
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-            <img class="first-slide" src="Images/nuc.png" alt="First slide" width="900" height="200">
-          </div>
+            <img class="first-slide" src="Images/nuc.jpg" alt="First slide" width="900" height="200">
+        </div>
         <div class="item">
             <img class="second-slide" src="Images/Raisins.png" alt="Second slide"width="900" height="200">
-        
         </div>
         <div class="item">
             <img class="third-slide" src="Images/lemon.png" alt="Third slide"width="900" height="200">
@@ -68,13 +65,11 @@
         <div class="item">
             <img class="fourth-slide" src="Images/macadamia.png" alt="Fourth slide" width="900" height="200">
         </div>  
-            
         <div class="item">
             <img class="fifth-slide" src="Images/woodapples.jpg" alt="Fifth slide" width="900" height="200">
         </div>  
-            
         <div class="item">
-            <img class="sixth-slide" src="Images/Untitled.jpg" alt="Sixth slide" width="900" height="200">
+            <img class="sixth-slide" src="Images/Untitled.png" alt="Sixth slide" width="900" height="200">
         </div>  
       </div>
       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
