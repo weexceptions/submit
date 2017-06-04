@@ -45,40 +45,54 @@
         <div class="container-fluid" >
             <marquee  direction="up" width="100%" height="800" scrollamount="5" loop="true" onmouseover="this.stop()" onmouseout="this.start()">
         <div class="col-lg-12 col-sm-12" >
-            <h4>
+         <table class="table-condensed table-hover" border="0">
+            <th class="col-lg-1">P_ID</th>
+            <th class="col-lg-1">DATE</th>
+            <th class="col-lg-1">TIME</th>
+            <%System.out.print("user is in left "+request.getAttribute("a"));%>
+            
         <%
             Connection con = null;
             PreparedStatement ps = null;
             try
             {
             con = DBconnection.getConnection();
-            String id=request.getParameter("userId");
-            System.out.println("User id in viewappointment is "+id);
-            String sql = "SELECT A_ID,P_ID,D_ID,DESCRIPTION,A_DATE,A_TIME,LOCATION,STATUS FROM APPOINTMENT  ORDER BY A_DATE,A_TIME";
+            String id=request.getAttribute("a").toString();//equest.getParameter("auser");
+            System.out.println("User id in left viewappointment is "+id);
+            String sql = "SELECT A_ID,P_ID,D_ID,DESCRIPTION,A_DATE,A_TIME,LOCATION,STATUS FROM APPOINTMENT WHERE D_ID = '"+id.toLowerCase()+"' ORDER BY A_DATE,A_TIME";
+            
             ps = con.prepareStatement(sql);
             ResultSet rs = ps.executeQuery(); 
             String aid,pid,did,desc,adate,atime,loc,status;
             %>
-
             <tr>
             <%
             while(rs.next())
             {
+                String dr=rs.getString(3);
+                if (dr.equals(id)) {
              aid=rs.getString(1);
              pid=rs.getString(2);
+             did=rs.getString(3);
              desc=rs.getString(4);
              adate=rs.getString(5);
              atime=rs.getString(6);
-            
+             loc=rs.getString(7);
+             status=rs.getString(8);
             %>
-            <td><%out.println(aid);%> </td>
-            <td><%out.println(pid);%> </td>
-            <td><%out.println(desc);%> </td>
-            <td><%out.println(adate);%> </td>
-            <td><%out.println(atime);%> </td>
-                            
+            
+            <td class="col-lg-1"><%out.println(pid);%> </td>
+            <td class="col-lg-1"><%out.println(adate);%> </td>
+            <td class="col-lg-1"><%out.println(atime);%> </td>
+            
+            <td class="col-lg-1"> <form action="viewuser.do" method="post" class="form" id="fileForm" role="form">
+                    <input type="hidden" value="<%out.println(pid);%>" name="txtid" />
+                    <button type="submit" class="btn btn-info">View</button>
+                </form>
+            </td>
             </tr>
             <%
+            }
             }
             %>
         </table>
@@ -88,9 +102,7 @@
             { 
             out.println(sqe);
             }
-%>
-                
-            </h4>
+            %>
         </div>
         
     </marquee>

@@ -37,16 +37,20 @@
         <servlet-class>com.pro.controller.ViewUser</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>makeAppointmentServlet</servlet-name>
-        <servlet-class>com.pro.controller.makeAppointment</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>restorePointServlet</servlet-name>
         <servlet-class>com.pro.controller.restorePoint</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>createDrServlet</servlet-name>
-        <servlet-class>com.pro.controller.createDr</servlet-class>
+        <servlet-name>AppointmentActionServlet</servlet-name>
+        <servlet-class>com.pro.controller.AppointmentAction</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LeftDrServlet</servlet-name>
+        <servlet-class>com.pro.controller.LeftDr</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>makeAppointmentServlet</servlet-name>
+        <servlet-class>com.pro.controller.makeAppointment</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>CreateUser</servlet-name>
@@ -85,16 +89,20 @@
         <url-pattern>/viewuser.do</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>makeAppointmentServlet</servlet-name>
-        <url-pattern>/makeAppointment.do</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
         <servlet-name>restorePointServlet</servlet-name>
         <url-pattern>/restore.do</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>createDrServlet</servlet-name>
-        <url-pattern>/createdr.do</url-pattern>
+        <servlet-name>AppointmentActionServlet</servlet-name>
+        <url-pattern>/action.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LeftDrServlet</servlet-name>
+        <url-pattern>/left3.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>makeAppointmentServlet</servlet-name>
+        <url-pattern>/makeAppointment.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

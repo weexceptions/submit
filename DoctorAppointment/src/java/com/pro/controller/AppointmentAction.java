@@ -5,11 +5,11 @@
  */
 package com.pro.controller;
 
-import com.pro.dao.restoreDataBase;
+import com.pro.dao.DaoImpl;
+import com.pro.dao.UserDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Sunny
  */
-public class createDr extends HttpServlet {
+public class AppointmentAction extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -35,17 +35,19 @@ public class createDr extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            restoreDataBase r = new restoreDataBase();
-            r.reSet();
-            try {
-                Thread.sleep(1000);
-            r.reSet();
-            } catch (InterruptedException ex) {
-                Logger.getLogger(createDr.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            r.reSet();
-            r.reSet();
-            r.reSet();
+            int aId =Integer.parseInt(request.getParameter("aId"));
+            String id = request.getParameter("userId");
+            String action = request.getParameter("action");
+            UserDAO userdao = new DaoImpl();
+             if (userdao.appointAction(aId, action)) {
+                RequestDispatcher rd = request.getRequestDispatcher("drviewappoint.jsp");
+                request.setAttribute("auser", id.toLowerCase());
+                rd.forward(request, response);
+                 System.out.println("if block end");
+             }
+             else{
+                 System.out.println("else block");
+             }
         }
     }
 

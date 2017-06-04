@@ -5,7 +5,6 @@
  */
 package com.pro.controller;
 
-import com.pro.dao.RestoreDB;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -18,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Sunny
  */
-public class restorePoint extends HttpServlet {
+public class LeftDr extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,25 +33,10 @@ public class restorePoint extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            RestoreDB o = new RestoreDB();
-            o.reSet();
-            try {
-                Thread.sleep(1000);
-            o.reSet();
-                Thread.sleep(100);
-            o.reSet();
-                Thread.sleep(10);
-            o.reSet();
-                Thread.sleep(1000);
-            o.reSet();
-            } catch (InterruptedException ex) {
-                System.out.println("Intrupt");
-            o.reSet();
-            }
-            o.reSet();
-            System.out.println("Reset Successfull");
-             RequestDispatcher rd = request.getRequestDispatcher("admin.jsp");
-                request.setAttribute("auser", "Administrator");
+            String s1=request.getParameter("a");
+            System.out.println("s1 = "+s1);
+            RequestDispatcher rd = request.getRequestDispatcher("left3.jsp");
+                request.setAttribute("a", s1.toLowerCase());
                 rd.forward(request, response);
         }
     }
