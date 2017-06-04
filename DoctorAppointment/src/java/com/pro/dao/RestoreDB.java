@@ -156,14 +156,213 @@ public class RestoreDB {
         } catch (SQLException ex) {
             Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
         }
-//            PreparedStatement i = con.prepareStatement("");
-//            i.executeUpdate();
-//            PreparedStatement i = con.prepareStatement("");
-//            i.executeUpdate();
-//            PreparedStatement i = con.prepareStatement("");
-//            i.executeUpdate();
-//            PreparedStatement i = con.prepareStatement("");
-//            i.executeUpdate();
+            PreparedStatement i7;
+        try {
+            i7 = con.prepareStatement("INSERT INTO DOCTOR (D_ID, LOCATION, SPECIALIST) \n" +"	VALUES ('MIWAGH', 'MUMBAI', 'PLASTIC SURGEON')");
+            i7.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            PreparedStatement i8;
+        try {
+            i8 = con.prepareStatement("INSERT INTO DOCTOR (D_ID, LOCATION, SPECIALIST) \n" +
+                    "	VALUES ('GADATTA', 'DELHI', 'CARDIOLOGISTS')");
+            i8.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            
+            PreparedStatement i9;
+        try {
+            i9 = con.prepareStatement("INSERT INTO DOCTOR (D_ID, LOCATION, SPECIALIST) \n" +
+                    "	VALUES ('ASCHOKSEY', 'DELHI', 'COSMETIC DENTIST')");
+              i9.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+          
+            PreparedStatement i10;
+        try {
+            i10 = con.prepareStatement("INSERT INTO DOCTOR (D_ID, LOCATION, SPECIALIST) \n" +
+                    "	VALUES ('GAWALIA', 'KOLKATA', 'DENTAL SURGEON')");
+               i10.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+         
+            PreparedStatement i11;
+        try {
+            i11 = con.prepareStatement("INSERT INTO DOCTOR (D_ID, LOCATION, SPECIALIST) \n" +
+                    "	VALUES ('SUPRADHAN', 'KOLKATA', 'IMPLANT DENTIST')");
+                        i11.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+            PreparedStatement i12;
+        try {
+            i12 = con.prepareStatement("INSERT INTO DOCTOR (D_ID, LOCATION, SPECIALIST) \n" +
+                    "	VALUES ('VINARAYNAN', 'MUMBAI', 'DENTAL IMPLANT')");
+             i12.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+           
+            PreparedStatement i13;
+        try {
+            i13 = con.prepareStatement("INSERT INTO DOCTOR (D_ID, LOCATION, SPECIALIST) \n" +
+                    "	VALUES ('PRSHAH', 'MUMBAI', 'ENDOSCOPIC SURGERY')");
+             i13.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+           
+
+            PreparedStatement i14;
+        try {
+            i14 = con.prepareStatement("INSERT INTO DOCTOR (D_ID, LOCATION, SPECIALIST) \n" +
+                    "	VALUES ('GAUDATTA', 'MUMBAI', 'UROGYNECOLOGY')");
+            i14.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            
+            PreparedStatement i15;
+        try {
+            i15 = con.prepareStatement("INSERT INTO DOCTOR (D_ID, LOCATION, SPECIALIST) \n" +
+                    "	VALUES ('SOHALI', 'DELHI', 'LAPAROSCOPIC SURGERY')");
+              i15.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+          
+            PreparedStatement i16;
+        try {
+            i16 = con.prepareStatement("INSERT INTO DOCTOR (D_ID, LOCATION, SPECIALIST) \n" +
+                    "	VALUES ('LADAVE', 'DELHI', 'OBSTETRICS')");
+            i16.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            
+            PreparedStatement i17;
+        try {
+            i17 = con.prepareStatement("INSERT INTO DOCTOR (D_ID, LOCATION, SPECIALIST) \n" +
+                    "	VALUES ('GADATTA', 'MUMBAI', 'UROGYNECOLOGY')");
+               i17.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+         
+            PreparedStatement i18;
+        try {
+            i18 = con.prepareStatement("INSERT INTO DOCTOR (D_ID, LOCATION, SPECIALIST) \n" +
+                    "	VALUES ('SOALI', 'DELHI', 'LAPAROSCOPIC SURGERY')");
+             i18.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+//       
+
+            PreparedStatement i19;
+        try {
+            i19 = con.prepareStatement("INSERT INTO USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
+                    "	VALUES ('milind1234', 'MILIND', 'WAGH', '10-8-1969', 'milingwagh@gmail.com', 'MUMBAI CENTRAL', '8655173011', NULL, 'MIWAGH')");
+              i19.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+          PreparedStatement i20;
+        try {
+            i20 = con.prepareStatement("INSERT INTO USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
+                    "	VALUES ('gautam1234', 'GAUTAM', 'DATTA', '2-17-1978', 'dattagautam@gmail.com', 'BORIVALI(WEST', '9833007346', NULL, 'GADATTA')");
+            i20.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            
+            PreparedStatement i21;
+        try {
+            i21 = con.prepareStatement("INSERT INTO USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
+                    "	VALUES ('gautam1234', 'GAUTAM', 'DATTA', '2-17-1978', 'dattagautam@gmail.com', 'BORIVALI(WEST', '9833007346', NULL, 'GADATTA')");
+            i21.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            
+            PreparedStatement i22;
+        try {
+            i22 = con.prepareStatement("INSERT INTO USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
+                    "	VALUES ('ashni1234', 'ASHNI', 'CHOKSEY', '8-20-1987', 'chokseyashni@gmail.com', 'MALAD(EAST)', '9833337346', NULL, 'ASCHOKSEY');");
+        i22.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            
+            PreparedStatement i23;
+        try {
+            i23 = con.prepareStatement("INSERT INTO USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
+                    "	VALUES ('gaurav1234', 'GAURAV', 'WALIA', '4-8-1984', 'waliagaurav@gmail.com', 'CHURCHGATE', '9988337346', NULL, 'GAWALIA');");
+        i23.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            
+            PreparedStatement i24;
+        try {
+            i24 = con.prepareStatement("INSERT INTO USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
+                    "	VALUES ('suchetan1234', 'SUCHETAN', 'PRADHAN', '1-15-1967', 'suchetanpradhan@gmail.com', 'ABADA', '9098765768', NULL, 'SUPRADHAN');");
+        i24.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            
+            PreparedStatement i25;
+        try {
+            i25 = con.prepareStatement("INSERT INTO USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
+                    "	VALUES ('vinod1234', 'VINOD', 'NARAYNAN', '5-30-1987', 'vinodnaraynan@gmail.com', 'AMBIKA KALNA', '9897678760', NULL, 'VINARAYNAN');");
+        i25.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            
+            PreparedStatement i26;
+        try {
+            i26 = con.prepareStatement("INSERT INTO USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
+                    "	VALUES ('pranay1234', 'PRANAY', 'SHAH', '7-9-1966', 'pranayshah@gmail.com', 'BADKULLA', '9876787601', NULL, 'PRSHAH');");
+         i26.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+           
+            PreparedStatement i27;
+        try {
+            i27 = con.prepareStatement("INSERT INTO USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
+                    "	VALUES ('laila1234', 'LAILA', 'DAVE', '7-11-1991', 'lailadave@gmail.com', 'AMTA', '9234578901', NULL, 'LADAVE');");
+        i27.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            
+            PreparedStatement i28;
+        try {
+            i28 = con.prepareStatement("INSERT INTO USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
+                    "	VALUES ('gautam1234', 'GAUTAM', 'DATTA', '3-23-1990', 'gautamdatta@gmail.com', 'KALYAN', '9897654320', NULL, 'GADATTA');");
+        i28.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            
+            PreparedStatement i29;
+        try {
+            i29 = con.prepareStatement("INSERT INTO USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
+                    "	VALUES ('sohel1234', 'SOHEL', 'ALI', '12-31-1989', 'sohelali@gmail.com', 'BADLAPUR', '9098765456', NULL, 'SOALI');");
+         i29.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+           
+
 //            
             flag=true;
             System.out.println("Creation Insersion Done");
