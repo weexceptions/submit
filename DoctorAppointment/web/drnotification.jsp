@@ -43,7 +43,7 @@
             <th class="col-lg-2">A_DATE</th>
             <th class="col-lg-2">A_TIME</th>
             <th class="col-lg-2">LOCATION</th>
-            <th class="col-lg-2">Actions</th>
+            <th class="col-lg-2"> ACTION </th>
                 
         <%
             Connection con = null;
@@ -51,7 +51,7 @@
             try
             {
             con = DBconnection.getConnection();
-            String sql = "SELECT A_ID,P_ID,D_ID,DESCRIPTION,A_DATE,A_TIME,LOCATION,STATUS FROM APPOINTMENT";
+            String sql = "SELECT A_ID,P_ID,D_ID,DESCRIPTION,A_DATE,A_TIME,LOCATION,STATUS FROM APPOINTMENT WHERE STATUS = 'Requested'";
             
             ps = con.prepareStatement(sql);
             ResultSet rs = ps.executeQuery(); 
@@ -61,6 +61,10 @@
             <%
             while(rs.next())
             {
+                String dr=rs.getString(3).toLowerCase();
+                System.out.println("dr is "+dr+" & "+request.getParameter("userId").toString().toLowerCase());
+                if (request.getParameter("userId").toString().toLowerCase().equals(dr))
+                {
              aid=rs.getString(1);
              pid=rs.getString(2);
              did=rs.getString(3);
@@ -75,10 +79,19 @@
             <td class="col-lg-2"><%out.println(adate);%> </td>
             <td class="col-lg-2"><%out.println(atime);%> </td>
             <td class="col-lg-2"><%out.println(loc);%> </td>
-            <td class="col-lg-2"><a href="drviewappoint.jsp">View Details</a></td>
+            
+            <td class="col-lg-2"><form target="ContentFrame" method="post" action="action.do">  
+                    <input type="hidden" name="aId" value="<%out.print(aid);%>"><input type="hidden" name="action" value="accept">
+                    <input type="hidden" name="userId" value="<%out.print(request.getParameter("userId"));%>">
+                    <button class="btn btn-success" type="submit">Accept</button>  </form>   
+                    <form target="ContentFrame" method="post" action="action.do">  
+                    <input type="hidden" name="aId" value="<%out.print(aid);%>"><input type="hidden" name="action" value="reject">
+                    <input type="hidden" name="userId" value="<%out.print(request.getParameter("userId"));%>">
+                    <button class="btn btn-warning" type="submit">Reject</button>  </form></td>
             </tr>
             <%
             }
+            }           
             %>
         </table>
             <%
