@@ -1,6 +1,6 @@
 <%-- 
-    Document   : profil
-    Created on : May 29, 2017, 2:34:31 PM
+    Document   : drprofile
+    Created on : Jun 4, 2017, 9:48:00 AM
     Author     : Akshay
 --%>
 
@@ -10,24 +10,26 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
-        <link rel="stylesheet" href="css/bootstrap.min.css"/>
-        <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/bootstrap.min.css"/>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <style>   h1{
+        font-family: cursive;
+        font-feature-settings: normal;
+        font-style: italic;
+        font-weight: bold;
+    }
+</style>
     </head>
-    <body><div class="container text-center" >
-            <label class="">
-                Hello, Pleass Upload Your Profil Picture.
-            </label>
-<div class="fileinput fileinput-new" data-provides="fileinput">
-    <span class="btn btn-default btn-file"><span>Choose file</span><input type="file" /></span>
-    <span class="fileinput-filename"></span><span class="fileinput-new">No file chosen</span>
-</div>
-            <div class="btn btn-success" onclick="">Submit</div>
+    <body>
+        <div class="container text-center" >
+            <h1 class="well label-primary">
+                Hello, Doctor!
+                </h1>
     
 </div><hr>
 
-        </div>
-        <div class="container">
+<div class="container">
             <table class="text-justify">
                 <tr class="row">
                     <td class="col-lg-6 col-sm-6">
@@ -44,7 +46,8 @@
                 <label class="col-lg-5">Phone No.:</label><input type="text" class="input-sm col-lg-7" disabled="true" value="<%out.print(request.getAttribute("phone"));%>"><br/><br/>
                     </td>
                 </tr>
-            </div>
-        
+            </table>           
+</div>
+
     </body>
 </html>

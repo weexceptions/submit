@@ -16,8 +16,8 @@
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
       
         <style>
-        .carousel {
-  height: 500px;
+                 .carousel {
+  height: 400px;
   margin-bottom: 60px;
 }
 /* Since positioning the image, we need to help out the caption */
@@ -27,7 +27,7 @@
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
-  height: 500px;
+  height: 400px;
   background-color: #777;
 }
 .carousel-inner > .item > img {
@@ -35,24 +35,24 @@
   top: 0;
   left: 0;
   min-width: 100%;
-  height: 500px;
+  height: 400px;
 }
+
         </style>
     </head>
     <body>
-       <div id="myCarousel" class="carousel slide" data-ride="carousel">
+              <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
-      <ol class="carousel-indicators" >
-        <li data-target="#myCarousel" data-slide-to="0" class="active" ></li>
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
         <li data-target="#myCarousel" data-slide-to="3"></li>
         <li data-target="#myCarousel" data-slide-to="4"></li>
         <li data-target="#myCarousel" data-slide-to="5"></li>
       </ol>
-       
       <div class="carousel-inner" role="listbox">
-        <div class="item active">
+            <div class="item active">
             <img class="first-slide" src="Images/nuc.jpg" alt="First slide" width="900" height="200">
         </div>
         <div class="item">
@@ -71,11 +71,11 @@
         <div class="item">
             <img class="sixth-slide" src="Images/Untitled.png" alt="Sixth slide" width="900" height="200">
         </div>  
-      </div>
+       </div>
       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
-      </a>      
+      </a>
       <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
         <span class="sr-only">Next</span>

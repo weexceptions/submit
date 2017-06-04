@@ -16,13 +16,13 @@
     </head>
     <body>
         <div class="container">
-        <form>
+            <form class="form-group ">
             <div class="form-group">
                 <legend><i class="glyphicon glyphicon-alert"></i>   Facts About Disease</legend>
                 </div><br>
             <div class="form-group">
                 <label for="diseasename">Disease Name :  </label>
-                <input type="text" class="form-control" id="txt" name="txtdiseasename" >
+                <input type="text" class="form-control" id="txt" name="txtdiseasename">
             </div>
             <div class="form-group" >
                 <label for="symptoms">Symptoms : </label>
@@ -36,9 +36,10 @@
                 <label for="cure">Cure : </label>
                 <textarea type="text" class="form-control" id="txt" name="txtcure"></textarea>
                 </div>
-                </div>
+                
             </form><br><br>
         <button type="submit" class="btn btn-success"> SUBMIT </button>
         <button type="reset" class="btn btn-warning"> RESET </button>
+        </div>
     </body>
 </html>

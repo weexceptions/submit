@@ -66,10 +66,10 @@ body{
           <li><a href="drnotification.jsp" target="ContentFrame" >Notification</a></li>
           <li><form target="ContentFrame" method="post" action="drviewappoint.jsp">  
                     <input type="hidden" name="userId" value="<%out.print(request.getAttribute("auser"));%>">
-                    <button class="btn btn-link" type="submit">View Appointment</button>  </li></form>
+                    <button class="btn btn-link" type="submit">View Appointment</button> </form></li>
           <li class="dropdown">
                 
-              <li><a target="ContentFrame" href="userprofile.jsp">My Profile</a></li>
+          <li><a target="ContentFrame" href="drprofile.jsp">My Profile</a></li>
               
          </li>
           <li><a href="disease.jsp" target="ContentFrame" >Add Disease</a></li>

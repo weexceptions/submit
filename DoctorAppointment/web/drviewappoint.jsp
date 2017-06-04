@@ -35,7 +35,7 @@
     
     </head>f
     <body>
-        <h1 class="well text-center text-success">Your Appoints!</h1>
+        <h1 class="well text-center text-success">Your Appointments!</h1>
         <div class="container">
         <table class="table-condensed table-hover" border="0">
             <th class="col-lg-1">A_ID</th>

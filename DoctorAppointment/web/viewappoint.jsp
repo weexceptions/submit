@@ -70,7 +70,7 @@ _ID</th>
             <td><%out.println(loc);%> </td>
             <td><%out.println(status);%> </td>
             <td> <form action="viewuser.do" method="post" class="form" id="fileForm" role="form">
-                    <input type="hidden" value="<%out.println(aid);%>" name="txtid" />
+                    <input type="hidden" value="<%out.println(pid);%>" name="txtid" />
                     <button type="submit" class="btn btn-info">View</button>
                 </form>
             </td> 

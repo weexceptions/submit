@@ -5,7 +5,7 @@
  */
 package com.pro.controller;
 
-import com.pro.dao.RestoreDataBase;
+import com.pro.dao.restoreDataBase;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.logging.Level;
@@ -35,7 +35,7 @@ public class createDr extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            RestoreDataBase r = new RestoreDataBase();
+            restoreDataBase r = new restoreDataBase();
             r.reSet();
             try {
                 Thread.sleep(1000);

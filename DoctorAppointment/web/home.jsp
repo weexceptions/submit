@@ -1,4 +1,4 @@
-<%-- 
+<%--  
     Document   : home.jsp
     Created on : May 6, 2017, 1:32:09 PM
     Author     : Priyanka Workspace
@@ -10,7 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Home </title>
-       ` <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
         <link rel="stylesheet" href="css/homestylesheet.css">
         <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -36,12 +36,12 @@
   min-width: 100%;
   height: 500px;
 }
-        </style>
+    </style>
     </head>
     <body>
-         <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators" >
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active" ></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
@@ -113,4 +113,5 @@
         </div>
         
     </body>
+        
 </html>
