@@ -34,8 +34,7 @@ public class makeAppointment extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            System.out.println("makeAppointment.do exe");
+            System.out.println("makeAppointment.do exe started");
             String pid=request.getParameter("txtpid");
             String did=request.getParameter("txtdid");
             String desc=request.getParameter("txtdesc");

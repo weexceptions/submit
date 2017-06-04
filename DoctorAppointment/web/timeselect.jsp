@@ -315,7 +315,7 @@
                               <td class="col-lg-6"><textarea type="text" class="form-control input-lg" name="txtdesc" placeholder="Enter your Problem"></textarea>
                        </tr>
                        <tr>
-                            <td colspan="2"> <button type="submit" class="btn btn-success" >Submit</button></td>
+                            <td colspan="2"> <button type="submit" class="btn btn-success" >Book</button></td>
                         </tr>
               </table>
               </form>
