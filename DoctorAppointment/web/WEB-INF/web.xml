@@ -52,6 +52,10 @@
         <servlet-name>makeAppointmentServlet</servlet-name>
         <servlet-class>com.pro.controller.makeAppointment</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AddDisease</servlet-name>
+        <servlet-class>com.pro.controller.AddDisease</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CreateUser</servlet-name>
         <url-pattern>/createuser.do</url-pattern>
@@ -103,6 +107,10 @@
     <servlet-mapping>
         <servlet-name>makeAppointmentServlet</servlet-name>
         <url-pattern>/makeAppointment.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddDisease</servlet-name>
+        <url-pattern>/disease.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

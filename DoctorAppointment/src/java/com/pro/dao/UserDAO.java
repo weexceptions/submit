@@ -24,6 +24,7 @@ public interface UserDAO {
     List<AllDoctor> getAllDoctor();
     List<DoctorInfo> getAllDrDetails();
     String[]  viewProfile(String id);
+    boolean addDisease(Disease dis);
     boolean bookAppointment(String pid,String did,String desc,String aDate,String aTime,String loc,String status);
     boolean appointAction(int aId,String action);
 }

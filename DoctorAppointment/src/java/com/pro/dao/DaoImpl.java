@@ -404,4 +404,25 @@ public class DaoImpl implements UserDAO{
        return r;
         
     }
+
+    @Override
+    public boolean addDisease(Disease dis) {
+        boolean flag = false;
+        
+        try {
+            PreparedStatement ps = con.prepareStatement("insert into DISEASE (DISEASE_NAME,SYMPTOMS,PREVENTION,CURE) values (?,?,?,?)");
+            ps.setString(1, dis.getDiseaseName());
+            ps.setString(2, dis.getSymptoms());
+            ps.setString(3, dis.getPrevention());
+            ps.setString(4, dis.getCure());
+            ps.execute();
+            flag=true;
+            System.out.println("Insert Successfull in DISEASE");
+        } catch (Exception e) {
+            flag=false;
+            System.out.println("Insert Failed in DISEASE");
+            System.out.println(e.getMessage());
+        }
+        return false;
+    }
 }

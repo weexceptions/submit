@@ -65,7 +65,7 @@ body{
       <div id="navbar3" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-left">
           <li class="active"><a href="pat_home.jsp" target="ContentFrame">Home</a></li>
-          <li><a href="#" target="ContentFrame" >Notification</a></li>
+          <li><a href="" target="ContentFrame" >Notification</a></li>
           <li><a  href="confirmid.jsp" target="ContentFrame">Make Appointment</a></li>
           <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Help Desk<span class="caret"></span></a>

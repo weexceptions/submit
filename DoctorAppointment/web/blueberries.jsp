@@ -18,7 +18,8 @@
     <body>
        <div class="container">
     <div class="well" >
-       <p style="font-weight: bolder ; font-size: large" > An apple a day keeps the doctor away..............<p>
+        <img class="img-responsive" alt="bluebarries" src="Images/blueberries.jpg">
+       <p style="font-weight: bolder ; font-size: large" > Facts of blueberries........<p>
        <p style="font-size: medium">Natural medicine has long held that these round purple berries give long-life health benefits that far exceed their tiny size. Native to North America, blueberries are rich in proanthocyanidin, contributing to blueberry benefits that include fighting cancer, losing weight and glowing, young skin. Blueberries are also rich in vitamin C, vitamin K, manganese and other antioxidants that lead to its numerous other health benefits discussed below.
 <br><br>
 Top 7 Health Benefits of Blueberries

@@ -18,7 +18,8 @@
     <body>
        <div class="container">
     <div class="well">
-        <p style="font-weight: bolder ; font-size: large" > An apple a day keeps the doctor away..............</p>
+        <img alt="Vitamin D" src="Images/vitamin_d.jpg" class="img-responsive">
+        <p style="font-weight: bolder ; font-size: large" > Facts about vitamin D..........</p>
        <p style="font-size: medium"> Vitamin D helps your body absorb calcium. Calcium is one of the main building blocks of bone. A lack of vitamin D can lead to bone diseases such as osteoporosis or rickets. Vitamin D also has a role in your nerve, muscle, and immune systems.
 <br>You can get vitamin D in three ways: through your skin, from your diet, and from supplements. Your body forms vitamin D naturally after exposure to sunlight. However, too much sun exposure can lead to skin aging and skin cancer. So many people try to get their vitamin D from other sources.
 Vitamin D-rich foods include egg yolks, saltwater fish, and liver. Some other foods, like milk and cereal, often have added vitamin D.<br><br>

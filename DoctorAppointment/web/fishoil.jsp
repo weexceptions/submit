@@ -18,7 +18,8 @@
     <body>
        <div class="container">
     <div class="well">
-       <p style="font-weight: bolder ; font-size: large" > An apple a day keeps the doctor away..............<p>
+        <img style="width:100%; height: 300px;" class="img-responsive" src="Images/fish_oil.jpg" alt="fish_oil" >
+       <p style="font-weight: bolder ; font-size: large" >fish-oil...............<p>
        <p style="font-size: medium">
            Fish oil is oil derived from the tissues of oily fish. Fish oils contain the omega-3 fatty acids eicosapentaenoic acid (EPA) and docosahexaenoic acid (DHA), precursors of certain eicosanoids that are known to reduce inflammation in the body, and have other health benefits, such as treating hypertriglyceridemia, although claims of preventing heart attacks or strokes have not been supported. Fish oil and omega-3 fatty acids have been studied in a wide variety of other conditions, such as clinical depression, anxiety, cancer, and macular degeneration, yet benefits in these conditions have not been verified.
 <br><br><br>
