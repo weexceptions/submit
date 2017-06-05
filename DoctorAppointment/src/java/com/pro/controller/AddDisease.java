@@ -5,8 +5,12 @@
  */
 package com.pro.controller;
 
+import com.pro.dao.DaoImpl;
+import com.pro.model.*;
+import com.pro.dao.UserDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -36,12 +40,25 @@ public class AddDisease extends HttpServlet {
         String prevention= request.getParameter("txtpreventions");
         String cure= request.getParameter("txtcure");
         
-        
-        
+            UserDAO u= new DaoImpl();
+            Disease disease = new Disease("", symptoms, prevention, cure, diseaseName);
+            
+         if(u.addDisease(disease)){
+                System.out.println("Disease Record Successfully Inserted");
+                RequestDispatcher rd = request.getRequestDispatcher("regsuccess.jsp");
+                request.setAttribute("auser", diseaseName.toLowerCase());
+                
+                rd.forward(request, response);
+            }
+            else
+            {
+                System.out.println("Failed to Add Disease Record");                
+                out.println("Failed to add disease");
+            }  
+            
         
         }
     }
-
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.

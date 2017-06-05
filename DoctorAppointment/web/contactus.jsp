@@ -36,7 +36,7 @@ function clearField() {
     </head>
     <body>
         <div class="well container" >
-            <img src="Images/infra1.jpg" width="500" height="350"> <br><br><br>
+            <img src="Images/infra1.jpg" class="img-responsive" width="100%" height="10%"> <br><br><br>
             <label class="label-info" style="font-weight: bold; font-size: large">Hospital Address :</label>
             <p class="text-info" style="font-weight: bold">
                 
