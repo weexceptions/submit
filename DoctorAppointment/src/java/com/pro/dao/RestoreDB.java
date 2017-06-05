@@ -591,6 +591,25 @@ public class RestoreDB {
         } catch (SQLException ex) {
             Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
         }
+        {
+              PreparedStatement i225;
+        try {
+            i225 = con.prepareStatement("INSERT INTO AKSH.APPOINTMENT (P_ID, D_ID, DESCRIPTION, A_DATE, A_TIME, LOCATION, STATUS) \n" +
+"	VALUES ('sunny', 'aarao', 'Test1', '2017-06-14', 2, 'Mumbai', 'Requested')");
+        i225.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            
+            PreparedStatement i226;
+        try {
+            i226 = con.prepareStatement("INSERT INTO AKSH.APPOINTMENT (P_ID, D_ID, DESCRIPTION, A_DATE, A_TIME, LOCATION, STATUS) \n" +
+"	VALUES ('sunny', 'aarao', 'Test2', '2017-06-14', 5, 'Mumbai', 'REJECTED'");
+         i226.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        }
            
          
         }
