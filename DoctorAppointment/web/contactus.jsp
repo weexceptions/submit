@@ -35,6 +35,21 @@ function clearField() {
 </script>  
     </head>
     <body>
+        <div class="well container" >
+            <img src="Images/infra1.jpg" width="500" height="350"> <br><br><br>
+            <label class="label-info" style="font-weight: bold; font-size: large">Hospital Address :</label>
+            <p class="text-info" style="font-weight: bold">
+                
+               StayHealthy<br/>
+               2nd Floor, Bhandarkar Bhavan<br/>
+               Opposite to Borivali Railway Station<br/>
+               Near Police Station<br/>
+               S.V. Road<br/>
+               Borivali(West)<br/>
+               Mumbai - 400092.</p>
+            
+            <p style="font-weight: bold">Contact No.:9876543210;</p>
+        </div>
         <div class="container">
 <div class="col-md-5">
     <div class="form-area">  
@@ -84,18 +99,7 @@ function clearField() {
     });    
 });
         </script>
-        <div class="well container">
-            <label class="label-info">Hospital Address :</label>
-            <p class="text-info">
-               StayHealthy<br/>
-               2nd Floor, Bhandarkar Bhavan<br/>
-               Opposite to Borivili Railway Station<br/>
-               S.V. Road<br/>
-               Near Police Station<br/>
-               Mumbai - 400092.</p>
-            
-            <p>Contact No.:9876543210;</p>
-        </div>
+        
         
     </body>
 </html>
