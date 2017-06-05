@@ -72,7 +72,9 @@ body{
           <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Help Desk<span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-                <li><a target="ContentFrame" href="viewappoint.jsp">Appointments</a></li>
+                <li><form target="ContentFrame" method="post" action="viewappoint.jsp">  
+                    <input type="hidden" name="userId" value="<%out.print(request.getAttribute("auser"));%>">
+                    <button class="btn btn-success" type="submit">Appointment</button> </form></li>
               <li><a target="ContentFrame" href="">
                       <form action="viewuser.do" target="ContentFrame" method="post" class="form" id="fileForm" role="form">
                     <input type="hidden" value="<%out.print(request.getAttribute("auser"));%>" name="txtid" />

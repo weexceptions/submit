@@ -33,6 +33,8 @@
 </div><hr>
         
      
-<center><a target="Content2Frame" href="restore.do"><button type="reset" class="btn btn-danger">Reset</button></a></center>
+<center><br/><br/><a target="Content2Frame" href="restore.do"><button type="reset" class="btn btn-danger">Reset</button></a>
+    <br/><br/><p style="font-weight: bold">First Create DataBase as Following:</p>
+    <p style="font-weight: 600">("jdbc:derby://localhost:1527/DocAppointDB", "aksh", "aksh123");</p></center>
      </body>
 </html>

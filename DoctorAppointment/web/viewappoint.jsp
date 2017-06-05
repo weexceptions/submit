@@ -1,8 +1,9 @@
 <%-- 
-    Document   : viewappoint
-    Created on : May 29, 2017, 8:47:52 PM
+    Document   : drviewappoint
+    Created on : May 29, 2017, 9:12:48 PM
     Author     : Sunny
 --%>
+
 
 <%@page import="java.sql.Connection"%>
 <%@page import="java.sql.PreparedStatement"%>
@@ -14,42 +15,56 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Appointment JSP Page</title>
+        <title>View DR JSP Page</title>
         <link rel="stylesheet" href="css/bootstrap.min.css"/>
         <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
-
-    </head>
+        <style>
+    body{
+        background-image: url('Images/background.jpg');
+    }
+    h1{
+        font-family: cursive;
+        font-feature-settings: normal;
+        font-style: italic;
+        font-weight: bold;
+    }
+    .table-hover>tbody>tr:hover{background-color:  #00aced;}
+            
+        </style>
+    
+    </head>f
     <body>
-        <h1>Your Appointments!</h1>
+        <h1 class="well text-center text-success">Your Appointments History!</h1>
         <div class="container">
-            <table border="1">
-                <thead><th>A_ID</th>
-            <th>P            <th>DESCRIPTION</th>
-_ID</th>
-            <th>D_ID</th>
-            <th>A_DATE</th>
-            <th>A_TIME</th>
-            <th>LOCATION</th>
-            <th>STATUS</th>
-            <th>link</th></thead>
+        <table class="table-condensed table-hover" border="0">
+            <th class="col-lg-1">A_ID</th>
+            <th class="col-lg-1">P_ID</th>
+            <th class="col-lg-1">DESCRIPTION</th>
+            <th class="col-lg-1">A_DATE</th>
+            <th class="col-lg-1">A_TIME</th>
+            <th class="col-lg-1">LOCATION</th>
+            <th class="col-lg-1">STATUS</th>
         <%
             Connection con = null;
             PreparedStatement ps = null;
             try
             {
             con = DBconnection.getConnection();
-            String id=request.getParameter("userId");
+            String id=request.getParameter("userId").toLowerCase();
             System.out.println("User id in viewappointment is "+id);
-            String sql = "SELECT A_ID,P_ID,D_ID,DESCRIPTION,A_DATE,A_TIME,LOCATION,STATUS FROM APPOINTMENT  ORDER BY A_DATE,A_TIME";
+            String sql = "SELECT A_ID,P_ID,D_ID,DESCRIPTION,A_DATE,A_TIME,LOCATION,STATUS FROM APPOINTMENT WHERE P_ID = '"+id.toLowerCase()+"' ORDER BY A_DATE,A_TIME";
+            
             ps = con.prepareStatement(sql);
             ResultSet rs = ps.executeQuery(); 
             String aid,pid,did,desc,adate,atime,loc,status;
             %>
-             <tr>
+            <tr>
             <%
             while(rs.next())
             {
+                String dr=rs.getString(2);
+                if (dr.equals(request.getParameter("userId").toString().toLowerCase())) {
              aid=rs.getString(1);
              pid=rs.getString(2);
              did=rs.getString(3);
@@ -58,53 +73,17 @@ _ID</th>
              atime=rs.getString(6);
              loc=rs.getString(7);
              status=rs.getString(8);
-            
             %>
-            <td><%out.println(aid);%> </td>
-            <td><%out.println(pid);%> </td>
-            <td><%out.println(did);%> </td>
-            <td><%out.println(desc);%> </td>
-            <td><%out.println(adate);%> </td>
-            <td><%
-                                    switch (atime.trim()) {
-                                     case "1":
-                                         atime="9 to 10";
-                                         break;
-                                     case "2":
-                                         atime="10 to 11";
-                                         break;
-                                     case "3":
-                                         atime="11 to 12";
-                                         break;
-                                     case "4":
-                                         atime="12 to 1";
-                                         break;
-                                     case "5":
-                                         atime="2 to 3";
-                                         break;
-                                     case "6":
-                                         atime="3 to 4";
-                                         break;
-                                     case "7":
-                                         atime="5 to 6";
-                                         break;
-                                     case "8":
-                                         atime="6 to 7";
-                                         break;
-                                         default:
-                                         atime="test";
-                                    }
-                out.println(atime);%> </td>
-            <td><%out.println(loc);%> </td>
-            <td><%out.println(status);%> </td>
-            <td> <form action="viewuser.do" method="post" class="form" id="fileForm" role="form">
-                    <input type="hidden" value="<%out.println(pid);%>" name="txtid" />
-                    <button type="submit" class="btn btn-info">View</button>
-                </form>
-            </td> 
-                
+            <td class="col-lg-1"><%out.println(aid);%> </td>
+            <td class="col-lg-1"><%out.println(did);%> </td>
+            <th class="col-lg-1"><%out.println(desc);%> </th>
+            <td class="col-lg-1"><%out.println(adate);%> </td>
+            <td class="col-lg-1"><%out.println(atime);%> </td>
+            <td class="col-lg-1"><%out.println(loc);%> </td>
+            <td class="col-lg-1"><%out.println(status);%> </td>
             </tr>
             <%
+            }
             }
             %>
         </table>
@@ -114,7 +93,7 @@ _ID</th>
             { 
             out.println(sqe);
             }
-%>
+            %>
         </div>
     </body>
 </html>

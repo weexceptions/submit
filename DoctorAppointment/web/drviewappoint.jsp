@@ -45,7 +45,7 @@
             <th class="col-lg-1">A_TIME</th>
             <th class="col-lg-1">LOCATION</th>
             <th class="col-lg-1">STATUS</th>
-            <th class="col-lg-1">link</th>
+            <th class="col-lg-1">LINK</th>
         <%
             Connection con = null;
             PreparedStatement ps = null;
