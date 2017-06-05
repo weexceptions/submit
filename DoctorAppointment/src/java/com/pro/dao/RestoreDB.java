@@ -598,7 +598,8 @@ public class RestoreDB {
         } catch (SQLException ex) {
             Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }
+        }
+        }
         {
               PreparedStatement i225;
         try {
@@ -618,11 +619,7 @@ public class RestoreDB {
             Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
         }
         }
-           
-         
-        }
-
-//            
+           //            
             flag=true;
             System.out.println("Creation Insersion Done");
 //        } catch (SQLException e) {
