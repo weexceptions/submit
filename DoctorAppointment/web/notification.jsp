@@ -83,7 +83,7 @@
                     <form target="ContentFrame" method="post" action="action2.do">  
                     <input type="hidden" name="aId" value="<%out.print(aid);%>"><input type="hidden" name="action" value="reject">
                     <input type="hidden" name="userId" value="<%out.print(request.getParameter("userId"));%>">
-                    <button class="btn btn-warning" type="submit">Reject</button>  </form></td>
+                    <button class="btn btn-warning" type="submit">Cancel</button>  </form></td>
             </tr>
             <%
             }
