@@ -18,7 +18,14 @@ import java.util.logging.Logger;
 public class RestoreDB {
     Connection con = DBconnection.getConnection();
     public boolean reSet() {
+        
         boolean flag = false;
+        for (int i = 0; i < 5; i++) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException ex) {
+                System.out.println("Thread.sleep(1000); ERROR");
+            }
         {
             PreparedStatement t1;
         try {
@@ -591,6 +598,8 @@ public class RestoreDB {
         } catch (SQLException ex) {
             Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
         }
+        }
+        }
         {
               PreparedStatement i225;
         try {
@@ -610,11 +619,7 @@ public class RestoreDB {
             Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
         }
         }
-           
-         
-        }
-
-//            
+           //            
             flag=true;
             System.out.println("Creation Insersion Done");
 //        } catch (SQLException e) {
