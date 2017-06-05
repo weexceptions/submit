@@ -35,21 +35,12 @@ public class restorePoint extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             RestoreDB o = new RestoreDB();
-            o.reSet();
             try {
-                Thread.sleep(1000);
-            o.reSet();
-                Thread.sleep(100);
-            o.reSet();
-                Thread.sleep(10);
-            o.reSet();
                 Thread.sleep(1000);
             o.reSet();
             } catch (InterruptedException ex) {
                 System.out.println("Intrupt");
-            o.reSet();
             }
-            o.reSet();
             System.out.println("Reset Successfull");
              RequestDispatcher rd = request.getRequestDispatcher("admin.jsp");
                 request.setAttribute("auser", "Administrator");
