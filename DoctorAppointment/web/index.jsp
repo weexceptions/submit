@@ -55,8 +55,8 @@ body{
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand">
-             <h4 style="float: right; color: #ffffff">Contact No.: 9876543210</h4>
-             <img src="Images/logo2.png" width="20%" height="100%"  alt="StayHealthy" >
+           <h4 style="float: right; color: #ffffff">Contact No.: 9876543210</h4>
+           <img src="Images/logo2.png" width="20%" height="100%"  alt="StayHealthy" >
         </a>
          
       </div>
