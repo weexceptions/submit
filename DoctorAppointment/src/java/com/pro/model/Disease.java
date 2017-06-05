@@ -10,7 +10,8 @@ package com.pro.model;
      private String prevention;
      private String cure;
      private String diseaseName;
- 
+
+    
      @Override
      public String toString() {
          return "disease{" + "disease_id=" + disease_id + ", symptoms=" + symptoms + ", prevention=" + prevention + ", cure=" + cure + ", diseaseName=" + diseaseName + '}';

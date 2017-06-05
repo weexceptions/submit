@@ -16,7 +16,7 @@
     </head>
     <body>
         <div class="container">
-            <form action="disease.do" method="" class="form-group ">
+            <form action="disease.do" method="post" class="form-group ">
             <div class="form-group">
                 <legend><i class="glyphicon glyphicon-alert"></i>   Facts About Disease</legend>
                 </div><br>
