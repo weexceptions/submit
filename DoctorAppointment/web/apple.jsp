@@ -18,6 +18,7 @@
     <body>
        <div class="container">
     <div class="well">
+        <img class="img-responsive" src="Images/Appless.jpg" alt="Apples" >
        <p style="font-weight: bolder ; font-size: large" > An apple a day keeps the doctor away..............<p>
        <p style="font-size: medium">Do you really know what makes an apple so special? Why is it that we never hear an orange or a banana a day keeps the doctor away?
 Apples have properties that no other fruits have and its benefits have been proven overtime.<br>

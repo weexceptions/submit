@@ -21,10 +21,10 @@
         font-weight: bold;
         }</style>
     </head>
-    <body style="background-image: url('Images/success.jpg');">
-            <marquee direction="left" width="100%" height="800" scrollamount="10" loop="true" onmouseover="this.stop()" onmouseout="this.start()">
+    <body style="background-image: url('Images/success.jpg'); background-size: 1000px;">
+           
                 <h1 class="well text-center text-danger"><%out.print(request.getAttribute("auser"));%>, You have Successfully...booked<br/> your appointment</h1><br/>
                  <h1 class="text-center" style="color: red">Have a Beautiful Healthy Day</h1><br/>
-            </marquee>
+           
     </body>
 </html>

@@ -16,13 +16,13 @@
     </head>
     <body>
         <div class="container">
-            <form class="form-group ">
+            <form action="disease.do" method="" class="form-group ">
             <div class="form-group">
                 <legend><i class="glyphicon glyphicon-alert"></i>   Facts About Disease</legend>
                 </div><br>
             <div class="form-group">
                 <label for="diseasename">Disease Name :  </label>
-                <input type="text" class="form-control" id="txt" name="txtdiseasename">
+                <input type="text" class="form-control" id="txt" name="txtdname">
             </div>
             <div class="form-group" >
                 <label for="symptoms">Symptoms : </label>

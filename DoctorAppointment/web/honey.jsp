@@ -18,6 +18,7 @@
     <body>
        <div class="container">
     <div class="well">
+        <img alt="Honey" class="img-responsive" src="Images/honey.jpg">
        <p style="font-weight: bolder ; font-size: large" > Know about honey.........................<p>
        <p style="font-size: medium">If you’re not taking full advantage of the nutritional and medicinal properties of honey, it’s time to begin doing so because honey is a remarkable healing agent for all sorts of ailments.<br>
 People have been using honey for its antibacterial and antifungal properties since the ancient times.

@@ -174,4 +174,100 @@ INSERT INTO AKSH.APPOINTMENT (P_ID, D_ID, DESCRIPTION, A_DATE, LOCATION, STATUS)
 --6=3to4
 --7=5to6
 --8=7to8
+
+
+INSERT INTO AKSH.USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) 
+	VALUES ('123123', 'Priyanka', 'Kalakoti', '1998-02-24', 'pinkysingh@gmail.com', 'vasai road(west)', '9833456123', 'priyaa', NULL);
+INSERT INTO AKSH.USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) 
+	VALUES ('aksh123', 'Akshay', 'Sonie', '1995-02-17', 'akshaysonie@gmail.com', 'Borivali (east)', '9833704511', 'aksh', NULL);
+INSERT INTO AKSH.USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) 
+	VALUES ('sunny123', 'Sunny', 'Singh', '1996-02-22', 'sunny@gmail.com', 'Malad (EAST)', '9833307346', 'sunny', NULL);
+INSERT INTO AKSH.USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) 
+	VALUES ('smruti123', 'Smruti', 'Jadhav', '1997-08-20', 'smrutijadhav@gmail.com', 'Nallasopara (West)', '9769241231', 'smruti', NULL);
+INSERT INTO AKSH.USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) 
+	VALUES ('kirti123', 'Kirti', 'Rupnoor', '1997-05-04', 'kirtirupnoor@gmail.com', 'Bandra (East)', '8655512345', 'kirti', NULL);
+INSERT INTO AKSH.USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) 
+	VALUES ('sid123', 'Siddhesh', 'Modak', '1995-05-05', 'siddheshmodak@gmail.com', 'Airoli, new mumbai', '8970745451', 'sid', NULL);
+INSERT INTO AKSH.USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) 
+	VALUES ('niru123', 'Niranjan', 'Sawant', '1994-02-24', 'niranjansawant@gmail.com', 'Kandivali(west)', '9819811545', 'niru', NULL);
+INSERT INTO AKSH.USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) 
+	VALUES ('karan123', 'Karan', 'Yadav', '1997-04-13', 'karanyadav@gmail.com', 'Vasai Road (west)', '9096115858', 'karan', NULL);
+INSERT INTO AKSH.USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) 
+	VALUES ('siddhesh123', 'Siddhesh', 'Parab', '1998-06-21', 'siddheshparab@gmail.com', 'Mira road', '982935099', 'siddhesh', NULL);
+INSERT INTO AKSH.USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) 
+	VALUES ('surendra123', 'Surendra', 'Singh', '1995-05-24', 'singhsurendra@gmail.com', 'Bhayandar', '9833981922', 'surendra', NULL);
+INSERT INTO AKSH.USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) 
+	VALUES ('harshal123', 'Harshal', 'Pandya', '2001-04-08', 'harshalpandya@gmail.com', 'Mira road', '9819964641', 'harshal', NULL);
+INSERT INTO AKSH.USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) 
+	VALUES ('mina123', 'Meenakshi', 'Singh', '1997-04-10', 'meenakshisingh@gmail.com', 'Goregaon', '9763325818', 'meenakshi', NULL);
+INSERT INTO AKSH.USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) 
+	VALUES ('vivek123', 'Vivek', 'Kanojiya', '1996-06-01', 'vivekkanojiya@gmail.com', 'Vile Parle', '9862343488', 'vivek', NULL);
+
+
+--Now for Patient table
+
+
+INSERT INTO AKSH.PATIENT (P_ID, AGEGROUP, GENDER) 
+	VALUES ('priyaa', '20-39', 'female');
+INSERT INTO AKSH.PATIENT (P_ID, AGEGROUP, GENDER) 
+	VALUES ('aksh', '20-39', 'male');
+INSERT INTO AKSH.PATIENT (P_ID, AGEGROUP, GENDER) 
+	VALUES ('sunny', '20-39', 'male');
+INSERT INTO AKSH.PATIENT (P_ID, AGEGROUP, GENDER) 
+	VALUES ('smruti', '20-39', 'male');
+INSERT INTO AKSH.PATIENT (P_ID, AGEGROUP, GENDER) 
+	VALUES ('kirti', '20-39', 'male');
+INSERT INTO AKSH.PATIENT (P_ID, AGEGROUP, GENDER) 
+	VALUES ('sid', '20-39', 'male');
+INSERT INTO AKSH.PATIENT (P_ID, AGEGROUP, GENDER) 
+	VALUES ('niru', '20-39', 'male');
+INSERT INTO AKSH.PATIENT (P_ID, AGEGROUP, GENDER) 
+	VALUES ('karan', '20-39', 'male');
+INSERT INTO AKSH.PATIENT (P_ID, AGEGROUP, GENDER) 
+	VALUES ('siddhesh', 'Below 19', 'male');
+INSERT INTO AKSH.PATIENT (P_ID, AGEGROUP, GENDER) 
+	VALUES ('surendra', '20-39', 'male');
+INSERT INTO AKSH.PATIENT (P_ID, AGEGROUP, GENDER) 
+	VALUES ('harshal', 'Below 19', 'male');
+INSERT INTO AKSH.PATIENT (P_ID, AGEGROUP, GENDER) 
+	VALUES ('meenakshi', '20-39', 'female');
+INSERT INTO AKSH.PATIENT (P_ID, AGEGROUP, GENDER) 
+	VALUES ('vivek', '20-39', 'male');
+
+
+
+
+
+
+
+
+
+
+--extra
+   PreparedStatement i27;
+        try {
+            i27 = con.prepareStatement("INSERT INTO USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
+                    "	VALUES ('laila1234', 'LAILA', 'DAVE', '7-11-1991', 'lailadave@gmail.com', 'AMTA', '9234578901', NULL, 'ladave');");
+        i27.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            
+            PreparedStatement i28;
+        try {
+            i28 = con.prepareStatement("INSERT INTO USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
+                    "	VALUES ('gautam1234', 'GAUTAM', 'DATTA', '3-23-1990', 'gautamdatta@gmail.com', 'KALYAN', '9897654320', NULL, 'gadatta');");
+        i28.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            
+            PreparedStatement i29;
+        try {
+            i29 = con.prepareStatement("INSERT INTO USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
+                    "	VALUES ('sohel1234', 'SOHEL', 'ALI', '12-31-1989', 'sohelali@gmail.com', 'BADLAPUR', '9098765456', NULL, 'soali');");
+         i29.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
 --45 errors occurred. As an output

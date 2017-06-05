@@ -46,8 +46,7 @@ _ID</th>
             ResultSet rs = ps.executeQuery(); 
             String aid,pid,did,desc,adate,atime,loc,status;
             %>
-
-            <tr>
+             <tr>
             <%
             while(rs.next())
             {
@@ -66,7 +65,36 @@ _ID</th>
             <td><%out.println(did);%> </td>
             <td><%out.println(desc);%> </td>
             <td><%out.println(adate);%> </td>
-            <td><%out.println(atime);%> </td>
+            <td><%
+                                    switch (atime.trim()) {
+                                     case "1":
+                                         atime="9 to 10";
+                                         break;
+                                     case "2":
+                                         atime="10 to 11";
+                                         break;
+                                     case "3":
+                                         atime="11 to 12";
+                                         break;
+                                     case "4":
+                                         atime="12 to 1";
+                                         break;
+                                     case "5":
+                                         atime="2 to 3";
+                                         break;
+                                     case "6":
+                                         atime="3 to 4";
+                                         break;
+                                     case "7":
+                                         atime="5 to 6";
+                                         break;
+                                     case "8":
+                                         atime="6 to 7";
+                                         break;
+                                         default:
+                                         atime="test";
+                                    }
+                out.println(atime);%> </td>
             <td><%out.println(loc);%> </td>
             <td><%out.println(status);%> </td>
             <td> <form action="viewuser.do" method="post" class="form" id="fileForm" role="form">
