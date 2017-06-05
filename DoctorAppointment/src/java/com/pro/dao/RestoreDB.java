@@ -19,7 +19,7 @@ public class RestoreDB {
     Connection con = DBconnection.getConnection();
     public boolean reSet() {
         boolean flag = false;
-        
+        {
             PreparedStatement t1;
         try {
             t1 = con.prepareStatement("CREATE TABLE USERDETAIL (\n" +
@@ -361,7 +361,239 @@ public class RestoreDB {
         } catch (SQLException ex) {
             Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+        //New section
+        {
+                PreparedStatement i1;
+        try {
+            i1 = con.prepareStatement("INSERT INTO AKSH.USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
+"	VALUES ('123123', 'Priyanka', 'Kalakoti', '1998-02-24', 'pinkysingh@gmail.com', 'vasai road(west)', '9833456123', 'priyaa', NULL)");
+            i1.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            PreparedStatement i2;
+        try {
+            i2 = con.prepareStatement("INSERT INTO AKSH.USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
+"	VALUES ('aksh123', 'Akshay', 'Sonie', '1995-02-17', 'akshaysonie@gmail.com', 'Borivali (east)', '9833704511', 'aksh', NULL)");
+            i2.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            PreparedStatement i3;
+        try {
+            i3 = con.prepareStatement("INSERT INTO AKSH.USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
+"	VALUES ('sunny123', 'Sunny', 'Singh', '1996-02-22', 'sunny@gmail.com', 'Malad (EAST)', '9833307346', 'sunny', NULL)");
+            i3.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            PreparedStatement i4;
+        try {
+            i4 = con.prepareStatement("INSERT INTO AKSH.USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
+"	VALUES ('smruti123', 'Smruti', 'Jadhav', '1997-08-20', 'smrutijadhav@gmail.com', 'Nallasopara (West)', '9769241231', 'smruti', NULL)");
+            i4.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            PreparedStatement i5;
+        try {
+            i5 = con.prepareStatement("INSERT INTO AKSH.USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
+"	VALUES ('kirti123', 'Kirti', 'Rupnoor', '1997-05-04', 'kirtirupnoor@gmail.com', 'Bandra (East)', '8655512345', 'kirti', NULL)");
+            i5.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            PreparedStatement i6;
+        try {
+            i6 = con.prepareStatement("INSERT INTO AKSH.USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
+"	VALUES ('sid123', 'Siddhesh', 'Modak', '1995-05-05', 'siddheshmodak@gmail.com', 'Airoli, new mumbai', '8970745451', 'sid', NULL)");
+            i6.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            PreparedStatement i7;
+        try {
+            i7 = con.prepareStatement("INSERT INTO AKSH.USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
+"	VALUES ('niru123', 'Niranjan', 'Sawant', '1994-02-24', 'niranjansawant@gmail.com', 'Kandivali(west)', '9819811545', 'niru', NULL)");
+            i7.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            PreparedStatement i8;
+        try {
+            i8 = con.prepareStatement("INSERT INTO AKSH.USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
+"	VALUES ('karan123', 'Karan', 'Yadav', '1997-04-13', 'karanyadav@gmail.com', 'Vasai Road (west)', '9096115858', 'karan', NULL)");
+            i8.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            
+            PreparedStatement i9;
+        try {
+            i9 = con.prepareStatement("INSERT INTO AKSH.USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
+"	VALUES ('siddhesh123', 'Siddhesh', 'Parab', '1998-06-21', 'siddheshparab@gmail.com', 'Mira road', '982935099', 'siddhesh', NULL)");
+              i9.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+          
+            PreparedStatement i10;
+        try {
+            i10 = con.prepareStatement("INSERT INTO AKSH.USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
+"	VALUES ('surendra123', 'Surendra', 'Singh', '1995-05-24', 'singhsurendra@gmail.com', 'Bhayandar', '9833981922', 'surendra', NULL)");
+               i10.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+         
+            PreparedStatement i11;
+        try {
+            i11 = con.prepareStatement("INSERT INTO AKSH.USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
+"	VALUES ('harshal123', 'Harshal', 'Pandya', '2001-04-08', 'harshalpandya@gmail.com', 'Mira road', '9819964641', 'harshal', NULL)");
+                        i11.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+            PreparedStatement i12;
+        try {
+            i12 = con.prepareStatement("INSERT INTO AKSH.USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
+"	VALUES ('mina123', 'Meenakshi', 'Singh', '1997-04-10', 'meenakshisingh@gmail.com', 'Goregaon', '9763325818', 'meenakshi', NULL)");
+             i12.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
            
+            PreparedStatement i13;
+        try {
+            i13 = con.prepareStatement("INSERT INTO AKSH.USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
+"	VALUES ('vivek123', 'Vivek', 'Kanojiya', '1996-06-01', 'vivekkanojiya@gmail.com', 'Vile Parle', '9862343488', 'vivek', NULL)");
+             i13.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+           
+
+            PreparedStatement i14;
+        try {
+            i14 = con.prepareStatement("INSERT INTO AKSH.PATIENT (P_ID, AGEGROUP, GENDER) \n" +
+"	VALUES ('priyaa', '20-39', 'female')");
+            i14.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            
+            PreparedStatement i15;
+        try {
+            i15 = con.prepareStatement("INSERT INTO AKSH.PATIENT (P_ID, AGEGROUP, GENDER) \n" +
+"	VALUES ('aksh', '20-39', 'male')");
+              i15.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+          
+            PreparedStatement i16;
+        try {
+            i16 = con.prepareStatement("INSERT INTO AKSH.PATIENT (P_ID, AGEGROUP, GENDER) \n" +
+"	VALUES ('sunny', '20-39', 'male')");
+            i16.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            
+            PreparedStatement i17;
+        try {
+            i17 = con.prepareStatement("INSERT INTO AKSH.PATIENT (P_ID, AGEGROUP, GENDER) \n" +
+"	VALUES ('smruti', '20-39', 'male')");
+               i17.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+         
+            PreparedStatement i18;
+        try {
+            i18 = con.prepareStatement("INSERT INTO AKSH.PATIENT (P_ID, AGEGROUP, GENDER) \n" +
+"	VALUES ('kirti', '20-39', 'male')");
+             i18.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+//       
+
+            PreparedStatement i19;
+        try {
+            i19 = con.prepareStatement("INSERT INTO AKSH.PATIENT (P_ID, AGEGROUP, GENDER) \n" +
+"	VALUES ('sid', '20-39', 'male')");
+              i19.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+          PreparedStatement i20;
+        try {
+            i20 = con.prepareStatement("INSERT INTO AKSH.PATIENT (P_ID, AGEGROUP, GENDER) \n" +
+"	VALUES ('niru', '20-39', 'male')");
+            i20.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            
+            PreparedStatement i21;
+        try {
+            i21 = con.prepareStatement("INSERT INTO AKSH.PATIENT (P_ID, AGEGROUP, GENDER) \n" +
+"	VALUES ('karan', '20-39', 'male')");
+            i21.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            
+            PreparedStatement i22;
+        try {
+            i22 = con.prepareStatement("INSERT INTO AKSH.PATIENT (P_ID, AGEGROUP, GENDER) \n" +
+"	VALUES ('siddhesh', 'Below 19', 'male')");
+        i22.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            
+            PreparedStatement i23;
+        try {
+            i23 = con.prepareStatement("INSERT INTO AKSH.PATIENT (P_ID, AGEGROUP, GENDER) \n" +
+"	VALUES ('surendra', '20-39', 'male')");
+        i23.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            
+            PreparedStatement i24;
+        try {
+            i24 = con.prepareStatement("INSERT INTO AKSH.PATIENT (P_ID, AGEGROUP, GENDER) \n" +
+"	VALUES ('harshal', 'Below 19', 'male')");
+        i24.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            
+            PreparedStatement i25;
+        try {
+            i25 = con.prepareStatement("INSERT INTO AKSH.PATIENT (P_ID, AGEGROUP, GENDER) \n" +
+"	VALUES ('meenakshi', '20-39', 'female')");
+        i25.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            
+            PreparedStatement i26;
+        try {
+            i26 = con.prepareStatement("INSERT INTO AKSH.PATIENT (P_ID, AGEGROUP, GENDER) \n" +
+"	VALUES ('vivek', '20-39', 'male')");
+         i26.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+           
+         
+        }
 
 //            
             flag=true;
