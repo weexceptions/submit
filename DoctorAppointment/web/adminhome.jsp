@@ -26,7 +26,7 @@
         
         <div class="btn-group conntainer">
     <a target="ContentFrame" href="drsignup.jsp"><button type="button" class="btn btn-success">Create Doctor</button></a>        
-    <a target="ContentFrame" href="deletedoctor.jsp"><button type="button" class="btn btn-danger">Delete Doctor</button></a></center>
+    <a target="ContentFrame" href="deletedruser.jsp"><button type="button" class="btn btn-danger">Delete Doctor</button></a></center>
     <a target="ContentFrame" href="deleteuser.jsp"><button type="button" class="btn btn-danger">Delete Patient</button></a></center>
      
 
