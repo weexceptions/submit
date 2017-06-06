@@ -143,6 +143,7 @@ function myFunction() {
             
             <td class="col-lg-1"> <form action="viewuser.do" method="post" class="form" id="fileForm" role="form">
                     <input type="hidden" value="<%out.println(pid);%>" name="txtid" />
+                    <input type="hidden" value="noedit" name="edit" />
                     <button type="submit" class="btn btn-info">Show</button>
                 </form>
             </td>

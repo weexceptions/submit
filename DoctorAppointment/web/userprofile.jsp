@@ -44,6 +44,17 @@
                 <label class="col-lg-5">Phone No.:</label><input type="text" class="input-sm col-lg-7" disabled="true" value="<%out.print(request.getAttribute("phone"));%>"><br/><br/>
                     </td>
                 </tr>
+            </table>
+                <%
+                if (request.getAttribute("edit").equals("edit")) {
+                      %>
+                 <form action="edituser.do" method="post" class="form" id="fileForm" role="form">
+                    <input type="hidden" value="<%out.print(request.getAttribute("uid"));%>" name="txtid" />
+                    <button type="submit" class="btn btn-info">Edit or Update</button>
+                </form>
+                    <%  
+                    }
+                %>
             </div>
         
     </body>

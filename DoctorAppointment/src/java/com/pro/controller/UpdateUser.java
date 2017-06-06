@@ -5,11 +5,10 @@
  */
 package com.pro.controller;
 
-import com.pro.dao.DaoImpl;
-import com.pro.dao.UserDAO;
+import com.pro.dao.*;
+import com.pro.model.*;
 import java.io.IOException;
 import java.io.PrintWriter;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -19,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Sunny
  */
-public class ViewUser extends HttpServlet {
+public class UpdateUser extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -35,32 +34,33 @@ public class ViewUser extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            
-            UserDAO userdao = new DaoImpl();
-            String id = request.getParameter("txtid").toLowerCase();
-            String edit;
-            try{
-            edit= request.getParameter("edit");
+        String fname= request.getParameter("txtfname");
+            System.out.println("i");
+        String lname= request.getParameter("txtlname");
+            System.out.println("i");
+        String dob= request.getParameter("txtdob");
+            System.out.println("i");
+        String email= request.getParameter("txtemail");
+            System.out.println("i");
+        String Address= request.getParameter("txtaddress");
+            System.out.println("i");
+        String Phone= request.getParameter("txtphone");
+            System.out.println("phone "+Phone);
+        String gender=request.getParameter("txtsex").toLowerCase();
+            System.out.println("gen "+gender);
+        String pid=request.getParameter("txtpid").toLowerCase();
+            System.out.println("pid "+pid);
+        String agegroup= request.getParameter("txtage");
+            System.out.println("i");
+        
+            System.out.println("in Update user we have \n"+fname+" "+lname+" "+dob+" "+email+" "+Address+" "+Phone+" "+gender+" "+pid+" "+agegroup+" end");
+        User user = new User(pid,fname,lname,"",dob,Phone,email,Address);
+        Patient patient =new Patient(pid, agegroup, gender);
+        UserDAO userdao = new DaoImpl();
+            if (userdao.updateUser(user, patient, pid)) {
+                
             }
-            catch(Exception e){
-                edit="noedit";
-            }
-            System.out.println("\nEdit value is "+edit);
-            String details[]=userdao.viewProfile(id);
-            RequestDispatcher rd = request.getRequestDispatcher("userprofile.jsp");
-            
-            request.setAttribute("uid", id);
-            request.setAttribute("fname", details[2]);
-            request.setAttribute("lname", details[3]);
-            request.setAttribute("dob", details[4]);
-            request.setAttribute("email", details[5]);
-            request.setAttribute("addr", details[6]);
-            request.setAttribute("phone", details[7]);
-            request.setAttribute("agegr", details[8]);
-            request.setAttribute("gender", details[9]);
-            request.setAttribute("edit", edit);
-            rd.forward(request, response);
-            
+        
         }
     }
 
