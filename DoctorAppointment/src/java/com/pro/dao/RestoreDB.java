@@ -15,11 +15,85 @@ import java.util.logging.Logger;
  *
  * @author Sunny
  */
+
 public class RestoreDB {
     Connection con = DBconnection.getConnection();
     public boolean reSet() {
         
         boolean flag = false;
+        for (int i = 0; i < 3; i++) {
+            try{
+                PreparedStatement ps= con.prepareStatement("TRUNCATE TABLE AKSH.APPOINTMENT");
+                ps.execute();
+                Thread.sleep(10);
+            } catch(Exception e){
+                System.out.println("TRUNK fail");
+            }
+             try{
+                PreparedStatement ps= con.prepareStatement("DROP TABLE AKSH.APPOINTMENT");
+                ps.execute();
+                Thread.sleep(10);
+            } catch(Exception e){
+                System.out.println("DROP fail");
+            }
+             try{
+                PreparedStatement ps= con.prepareStatement("TRUNCATE TABLE AKSH.DISEASE");
+                ps.execute();
+                Thread.sleep(10);
+            } catch(Exception e){
+                System.out.println("TRUNK fail");
+            }
+             try{
+                PreparedStatement ps= con.prepareStatement("DROP TABLE AKSH.DISEASE");
+                ps.execute();
+                Thread.sleep(10);
+            } catch(Exception e){
+                System.out.println("DROP fail");
+            }
+              try{
+                PreparedStatement ps= con.prepareStatement("TRUNCATE TABLE AKSH.DOCTOR");
+                ps.execute();
+                Thread.sleep(10);
+            } catch(Exception e){
+                System.out.println("TRUNK fail");
+            } 
+              try{
+                PreparedStatement ps= con.prepareStatement("DROP TABLE AKSH.DOCTOR");
+                ps.execute();
+                Thread.sleep(10);
+            } catch(Exception e){
+                System.out.println("DROP fail");
+            } 
+              try{
+                PreparedStatement ps= con.prepareStatement("TRUNCATE TABLE AKSH.PATIENT");
+                ps.execute();
+                Thread.sleep(10);
+            } catch(Exception e){
+                System.out.println("TRUNK fail");
+            } 
+              try{
+                PreparedStatement ps= con.prepareStatement("DROP TABLE AKSH.PATIENT");
+                ps.execute();
+                Thread.sleep(10);
+            } catch(Exception e){
+                System.out.println("DROP fail");
+            } 
+              try{
+                PreparedStatement ps= con.prepareStatement("TRUNCATE TABLE AKSH.USERDETAIL");
+                ps.execute();
+                Thread.sleep(10);
+            } catch(Exception e){
+                System.out.println("TRUNK fail");
+            }
+              try{
+                PreparedStatement ps= con.prepareStatement("DROP TABLE AKSH.USERDETAIL");
+                ps.execute();
+                Thread.sleep(10);
+            } catch(Exception e){
+                System.out.println("DROP fail");
+            } 
+        }
+        
         for (int i = 0; i < 5; i++) {
             try {
                 Thread.sleep(1000);
@@ -96,7 +170,8 @@ public class RestoreDB {
                     "DISEASE_NAME VARCHAR(15),\n" +
                     "SYMPTOMS varchar(100),\n" +
                     "PREVENTION varchar(100),\n" +
-                    "CURE varchar(50)\n" +
+                    "CURE varchar(50),\n" +
+                    "PRIMARY KEY(DS_ID)\n" +
                     ")");
             t5.executeUpdate();
         } catch (SQLException ex) {
