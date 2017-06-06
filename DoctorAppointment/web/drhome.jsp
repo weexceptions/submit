@@ -80,6 +80,7 @@ body{
           <li><a href="disease.jsp" target="ContentFrame" >Add Disease</a></li>
          
           <li><a target="_blank" href="index.jsp" onclick=window.close()>LogOut</a></li>
+            <li class="active"><a href="searchuser.jsp" target="ContentFrame">Search</a></li>
         </ul>
       </div>
       <!--/.nav-collapse -->
