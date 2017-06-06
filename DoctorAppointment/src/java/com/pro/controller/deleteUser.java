@@ -34,31 +34,22 @@ public class deleteUser extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-//            out.println("<!DOCTYPE html>");
-//            out.println("<html>");
-//            out.println("<head>");
-//            out.println("<title>Servlet deleteUser</title>");            
-//            out.println("</head>");
-//            out.println("<body>");
-//            out.println("<h1>Servlet deleteUser at " + request.getContextPath() + "</h1>");
-//            out.println("</body>");
-//            out.println("</html>");
             String id = request.getParameter("txtuid");
             UserDAO userdao = new DaoImpl();
-            id="aksh";
+            
             if (userdao.deleteUser(id)) {
                 RequestDispatcher rd = request.getRequestDispatcher("adminhome.jsp");
+                System.out.println("user is deleted");
                 rd.forward(request, response);
              }
              else
-            {
+             {
                 System.out.println("Failed to Login");  
                 out.println("<script type=\"text/javascript\">");
                 out.println("alert('Incorrect User');");
                 out.println("location='removeuser.jsp';");
                 out.println("</script>");
-            }  
+              }  
         }
     }
 

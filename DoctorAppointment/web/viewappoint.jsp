@@ -33,7 +33,7 @@
             
         </style>
     
-    </head>f
+    </head>
     <body>
         <h1 class="well text-center text-success">Your Appointments History!</h1>
         <div class="container">

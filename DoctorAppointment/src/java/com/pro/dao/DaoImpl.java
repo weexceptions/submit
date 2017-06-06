@@ -93,9 +93,7 @@ public class DaoImpl implements UserDAO{
         } catch (SQLException ex) {
             System.out.println("Failed To Delete");
         }
-          
         return flag;   
-    
     }
 
     @Override

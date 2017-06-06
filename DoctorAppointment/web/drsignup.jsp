@@ -28,10 +28,10 @@
        
 <!-- Sign Up form Start -->
     <div class="container">
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-4 well well-sm">
+    
+        <div class="col-xs-12 col-lg-12 col-md-12 well well-lg">
             <legend><i class="glyphicon glyphicon-globe"></i>Sign up!</legend>
-        <div class="col-md-6">
+        <div class="col-lg-12">
             <form action="createdr.do" method="post" class="form" id="fileForm" role="form" target="_blank">
             <fieldset><legend class="text-center">Valid information is required to register. <span class="req"><small> required *</small></span></legend>
             
@@ -106,7 +106,7 @@
             <label for="password"><span class="req">* </span>Date of Birth: </label>
                 <input type="date" name="txtdob">
                 <hr>
-                <input type="checkbox" required name="terms" onchange="this.setCustomValidity(validity.valueMissing ? 'Please indicate that you accept the Terms and Conditions' : '');" id="field_terms">   <label for="terms">I agree with the <a href="#" title="You may read our terms and conditions by clicking on this link">terms and conditions</a> for Registration.</label><span class="req">* </span>
+                <input type="checkbox" required name="terms" onchange="this.setCustomValidity(validity.valueMissing ? 'Please indicate that you accept the Terms and Conditions' : '');" id="field_terms">   <label for="terms">I agree with the <a target="ContentFrame" href="privacypolicy.htm" title="You may read our terms and conditions by clicking on this link">terms and conditions</a> for Registration.</label><span class="req">* </span>
             </div>
 
             <div class="form-group">
@@ -120,8 +120,8 @@
             </form><!-- ends register form -->
             </div>
         </div>
-    </div>
+    
         </div>
-        </div>  
+          
     </body>
 </html>

@@ -27,7 +27,7 @@
         <div class="btn-group conntainer">
     <a target="ContentFrame" href="drsignup.jsp"><button type="button" class="btn btn-success">Create Doctor</button></a>        
     <a target="ContentFrame" href="deletedoctor.jsp"><button type="button" class="btn btn-danger">Delete Doctor</button></a></center>
-    <a target="Content2Frame" href="deleteUser.jsp"><button type="button" class="btn btn-danger">Delete Patient</button></a></center>
+    <a target="ContentFrame" href="deleteuser.jsp"><button type="button" class="btn btn-danger">Delete Patient</button></a></center>
      
 
 </div><hr>
@@ -35,6 +35,6 @@
      
 <center><br/><br/><a target="Content2Frame" href="restore.do"><button type="reset" class="btn btn-danger">Reset</button></a>
     <br/><br/><p style="font-weight: bold">First Create DataBase as Following:</p>
-    <p style="font-weight: 600">("jdbc:derby://localhost:1527/DocAppointDB", "aksh", "aksh123");</p></center>
+    <p style="font-weight: 600px;">("jdbc:derby://localhost:1527/DocAppointDB", "aksh", "aksh123");</p></center>
      </body>
 </html>
