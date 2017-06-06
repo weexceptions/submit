@@ -51,7 +51,7 @@ PRIMARY KEY(A_ID)
 --**************DISEASE DETAILS**************************
 
 create table DISEASE(
-DS_ID integer,
+DS_ID INT GENERATED ALWAYS AS IDENTITY,
 DISEASE_NAME VARCHAR(15),
 SYMPTOMS varchar(100),
 PREVENTION varchar(100),
