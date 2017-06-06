@@ -516,7 +516,7 @@ public class DaoImpl implements UserDAO{
          details[9]=rs2.getString(3).toUpperCase();
          
          
-            System.out.println("Array data are");
+            System.out.println("Array data are: ");
             for (int j = 0; j < 10; j++) {
                 System.out.println("index "+j+" "+details[j]);
             }
