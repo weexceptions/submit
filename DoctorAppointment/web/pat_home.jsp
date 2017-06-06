@@ -4,6 +4,8 @@
     Author     : Priyanka WorkSpace
 --%>
 
+<%@page import="com.pro.dao.DBconnection"%>
+<%@page import="java.sql.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -14,7 +16,28 @@
         <link rel="stylesheet" href="css/homestylesheet.css">
         <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
-      
+        <script>
+function myFunction() {
+  // Declare variables 
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    } 
+  }
+}
+</script>
         <style>
                  .carousel {
   height: 400px;
@@ -36,6 +59,38 @@
   left: 0;
   min-width: 100%;
   height: 400px;
+}
+#myInput {
+    background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+}
+
+#myTable {
+    border-collapse: collapse; /* Collapse borders */
+    width: 100%; /* Full-width */
+    border: 1px solid #ddd; /* Add a grey border */
+    font-size: 18px; /* Increase font-size */
+}
+
+#myTable th, #myTable td {
+    text-align: left; /* Left-align text */
+    padding: 12px; /* Add padding */
+}
+
+#myTable tr {
+    /* Add a bottom border to all table rows */
+    border-bottom: 1px solid #ddd; 
+}
+
+#myTable tr.header, #myTable tr:hover {
+    /* Add a grey background color to the table header and on hover */
+    background-color: #f1f1f1;
 }
 
         </style>
@@ -82,9 +137,60 @@
         <span class="sr-only">Next</span>
       </a>
     </div><!-- /.carousel -->
-
-    <center><h3> Stay Healthy Hospital</h3></center>
     
+    <div class="container">
+    <center><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for DISEASE Names.."></center>
+    <table id="myTable">
+  <tr class="header">
+    <th style="width:15%;">DISEASE ID</th>
+    <th style="width:30%;">DISEASE NAME </th>
+    <th style="width:45%;">SYMPTOMS</th>
+    <th style="width:7%;">SHOW</th>
+  </tr>
+   <%
+            Connection con = null;
+            PreparedStatement ps = null;
+            try
+            {
+            con = DBconnection.getConnection();
+            String sql = "SELECT DS_ID,DISEASE_NAME,SYMPTOMS,PREVENTION,CURE FROM DISEASE ";
+            ps = con.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery(); 
+            String dsid,dname,sym,pre,cure;
+            %>
+            <tr>
+            <%
+            while(rs.next())
+            {
+                
+             dsid=rs.getString(1);
+             dname=rs.getString(2);
+             sym=rs.getString(3);
+             pre=rs.getString(4);
+             cure=rs.getString(5);
+            %>
+            
+            <td class="col-lg-1"><%out.println(dsid);%> </td>
+            <td class="col-lg-1"><%out.println(dname);%> </td>
+            <td class="col-lg-1"><%out.println(sym);%> </td>
+            
+            <td class="col-lg-1"> <form action="viewdisease.do" method="post" class="form" id="fileForm" role="form">
+                    <input type="hidden" value="<%out.println(dsid);%>" name="txtid" />
+                    <button type="submit" class="btn btn-info">Show</button>
+                </form>
+            </td>
+            </tr>
+            <%
+            }
+            %>
+            <%
+            }
+            catch(SQLException sqe)
+            { 
+            out.println(sqe);
+            }
+            %>
+</table>
     <div class="container">
         <aside id="sticky-social">
         <ul>
@@ -96,6 +202,6 @@
         </ul>
         </aside>
         </div>
-    
+    </div>
     </body>
 </html>

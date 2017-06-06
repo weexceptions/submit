@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Sunny
  */
-public class deleteUser extends HttpServlet {
+public class DeleteDrUser extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -38,9 +38,9 @@ public class deleteUser extends HttpServlet {
             UserDAO userdao = new DaoImpl();
             System.out.println("for user Delete id="+id+" & :");
             
-            if (userdao.deleteUser(id.toLowerCase().trim())) {
+            if (userdao.deleteDrUser(id.toLowerCase().trim())) {
                 RequestDispatcher rd = request.getRequestDispatcher("adminhome.jsp");
-                System.out.println("user is deleted");
+                System.out.println("Dr user is deleted");
                 rd.forward(request, response);
              }
              else
@@ -53,7 +53,6 @@ public class deleteUser extends HttpServlet {
               }  
         }
     }
-
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.

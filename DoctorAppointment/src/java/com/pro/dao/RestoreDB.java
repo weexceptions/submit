@@ -166,7 +166,7 @@ public class RestoreDB {
         }
         try {
             PreparedStatement t5 = con.prepareStatement("create table DISEASE(\n" +
-                    "DS_ID integer,\n" +
+                    "DS_ID INT GENERATED ALWAYS AS IDENTITY,\n" +
                     "DISEASE_NAME VARCHAR(15),\n" +
                     "SYMPTOMS varchar(100),\n" +
                     "PREVENTION varchar(100),\n" +
@@ -240,7 +240,7 @@ public class RestoreDB {
         }
             PreparedStatement i7;
         try {
-            i7 = con.prepareStatement("INSERT INTO DOCTOR (D_ID, LOCATION, SPECIALIST) \n" +"	VALUES ('MIWAGH', 'MUMBAI', 'PLASTIC SURGEON')");
+            i7 = con.prepareStatement("INSERT INTO DOCTOR (D_ID, LOCATION, SPECIALIST) \n" +"	VALUES ('miwagh', 'MUMBAI', 'PLASTIC SURGEON')");
             i7.executeUpdate();
         } catch (SQLException ex) {
             Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
@@ -690,6 +690,38 @@ public class RestoreDB {
             i226 = con.prepareStatement("INSERT INTO AKSH.APPOINTMENT (P_ID, D_ID, DESCRIPTION, A_DATE, A_TIME, LOCATION, STATUS) \n" +
 "	VALUES ('sunny', 'aarao', 'Test2', '2017-06-14', 5, 'Mumbai', 'REJECTED'");
          i226.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+         PreparedStatement i227;
+        try {
+            i227 = con.prepareStatement("INSERT INTO AKSH.APPOINTMENT (P_ID, D_ID, DESCRIPTION, A_DATE, A_TIME, LOCATION, STATUS) \n" +
+"	VALUES ('aksh', 'aarao', 'Continuous Loose Motion', '2017-06-08', 4, 'Mumbai', 'Requested')");
+         i227.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+         PreparedStatement i228;
+        try {
+            i228 = con.prepareStatement("INSERT INTO AKSH.APPOINTMENT (P_ID, D_ID, DESCRIPTION, A_DATE, A_TIME, LOCATION, STATUS) \n" +
+"	VALUES ('sunny', 'kagrawal', 'Vomit, Loose motion', '2017-06-10', 7, 'Delhi', 'ACCEPTED')");
+         i228.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+         PreparedStatement i229;
+        try {
+            i229 = con.prepareStatement("INSERT INTO AKSH.APPOINTMENT (P_ID, D_ID, DESCRIPTION, A_DATE, A_TIME, LOCATION, STATUS) \n" +
+"	VALUES ('priyaa', 'kagrawal', 'Redness and itching in eye', '2017-06-11', 4, 'Mumbai', 'ACCEPTED')");
+         i229.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+         PreparedStatement i230;
+        try {
+            i230 = con.prepareStatement("INSERT INTO AKSH.APPOINTMENT (P_ID, D_ID, DESCRIPTION, A_DATE, A_TIME, LOCATION, STATUS) \n" +
+"	VALUES ('smruti', 'kagrawal', 'Twwth decaying', '2017-06-12', 3, 'Mumbai', 'REJECTED')");
+         i230.executeUpdate();
         } catch (SQLException ex) {
             Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
         }

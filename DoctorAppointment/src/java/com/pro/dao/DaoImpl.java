@@ -81,17 +81,39 @@ public class DaoImpl implements UserDAO{
     boolean flag=false;
         PreparedStatement ps=null;
         PreparedStatement ps2=null;
+        PreparedStatement ps3=null;
         try {
             ps = con.prepareStatement("DELETE FROM USERDETAIL WHERE P_ID = ?");
             ps2 = con.prepareStatement("DELETE FROM PATIENT WHERE P_ID = ?");
-            ps.setString(1, userId);
-            ps2.setString(1, userId);
-            System.out.println("First ps "+ps.executeUpdate());
+            ps3 = con.prepareStatement("DELETE FROM APPOINTMENT WHERE P_ID = ?");
+           
+        try {
+             ps3.setString(1, userId);
+            System.out.println("Third ps3 "+ps3.executeUpdate());
+            Thread.sleep(1000);
+        } catch (Exception ex) {
+            System.out.println("Thread Sleep error:\n"+ex.getMessage());
+        }
+           
+        try {
+             ps2.setString(1, userId);
             System.out.println("Second ps2 "+ps2.executeUpdate());
+            Thread.sleep(1000);
+        } catch (InterruptedException ex) {
+            System.out.println("Thread Sleep error:\n"+ex.getMessage());
+        }
+        try {
+            ps.setString(1, userId);
+            System.out.println("First ps "+ps.executeUpdate());
+            Thread.sleep(1000);
+        } catch (InterruptedException ex) {
+            System.out.println("Thread Sleep error:\n"+ex.getMessage());
+        }
+           
             flag=true;
             
         } catch (SQLException ex) {
-            System.out.println("Failed To Delete");
+            System.out.println("Failed To Delete \n"+ex.getMessage());
         }
         return flag;   
     }
@@ -408,10 +430,10 @@ public class DaoImpl implements UserDAO{
         boolean flag = false;
         
         try {
-            PreparedStatement ps = con.prepareStatement("insert into DISEASE (DISEASE_NAME,SYMPTOMS,PREVENTION,CURE) values (?,?,?,?)");
+            PreparedStatement ps = con.prepareStatement("INSERT into DISEASE (DISEASE_NAME,SYMPTOMS,PREVENTION,CURE) values (?,?,?,?)");
             ps.setString(1, dis.getDiseaseName());
             ps.setString(2, dis.getSymptoms());
-            ps.setString(3, dis.getPrevention());
+            ps.setString(3, dis.getSymptoms());
             ps.setString(4, dis.getCure());
             ps.execute();
             flag=true;
@@ -421,6 +443,51 @@ public class DaoImpl implements UserDAO{
             System.out.println("Insert Failed in DISEASE");
             System.out.println(e.getMessage());
         }
-        return false;
+        return flag;
     }
+
+    @Override
+    public boolean deleteDrUser(String userId) {
+        
+    boolean flag=false;
+        PreparedStatement ps=null;
+        PreparedStatement ps2=null;
+        PreparedStatement ps3=null;
+        System.out.println("Dr id in deleDAO is "+userId);
+        try {
+            ps = con.prepareStatement("DELETE FROM USERDETAIL WHERE D_ID = ?");
+            ps2 = con.prepareStatement("DELETE FROM DOCTOR WHERE D_ID = ?");
+            ps3 = con.prepareStatement("DELETE FROM APPOINTMENT WHERE D_ID = ?");
+           
+        try {
+             ps3.setString(1, userId);
+            System.out.println("Third ps3 "+ps3.executeUpdate());
+            Thread.sleep(1000);
+        } catch (Exception ex) {
+            System.out.println("Thread Sleep error:\n"+ex.getMessage());
+        }
+           
+        try {
+             ps2.setString(1, userId);
+            System.out.println("Second ps2 "+ps2.executeUpdate());
+            Thread.sleep(1000);
+        } catch (InterruptedException ex) {
+            System.out.println("Thread Sleep error:\n"+ex.getMessage());
+        }
+        try {
+            ps.setString(1, userId);
+            System.out.println("First ps "+ps.executeUpdate());
+            Thread.sleep(1000);
+        } catch (InterruptedException ex) {
+            System.out.println("Thread Sleep error:\n"+ex.getMessage());
+        }
+           
+            flag=true;
+            
+        } catch (SQLException ex) {
+            System.out.println("Failed To Delete \n"+ex.getMessage());
+        }
+        return flag;   
+    }
+
 }
