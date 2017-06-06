@@ -41,6 +41,7 @@ public class AddDisease extends HttpServlet {
         String cure= request.getParameter("txtcure");
         
             UserDAO u= new DaoImpl();
+            System.out.println("dname: "+diseaseName+" Sym: "+symptoms+" pre: "+prevention+" cure: "+cure);
             Disease disease = new Disease("", symptoms, prevention, cure, diseaseName);
             
          if(u.addDisease(disease)){

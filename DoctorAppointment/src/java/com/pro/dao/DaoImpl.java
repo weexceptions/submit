@@ -430,7 +430,7 @@ public class DaoImpl implements UserDAO{
         boolean flag = false;
         
         try {
-            PreparedStatement ps = con.prepareStatement("insert into DISEASE (DISEASE_NAME,SYMPTOMS,PREVENTION,CURE) values (?,?,?,?)");
+            PreparedStatement ps = con.prepareStatement("INSERT into DISEASE (DISEASE_NAME,SYMPTOMS,PREVENTION,CURE) values (?,?,?,?)");
             ps.setString(1, dis.getDiseaseName());
             ps.setString(2, dis.getSymptoms());
             ps.setString(3, dis.getPrevention());
