@@ -433,7 +433,7 @@ public class DaoImpl implements UserDAO{
             PreparedStatement ps = con.prepareStatement("INSERT into DISEASE (DISEASE_NAME,SYMPTOMS,PREVENTION,CURE) values (?,?,?,?)");
             ps.setString(1, dis.getDiseaseName());
             ps.setString(2, dis.getSymptoms());
-            ps.setString(3, dis.getPrevention());
+            ps.setString(3, dis.getSymptoms());
             ps.setString(4, dis.getCure());
             ps.execute();
             flag=true;
@@ -443,7 +443,7 @@ public class DaoImpl implements UserDAO{
             System.out.println("Insert Failed in DISEASE");
             System.out.println(e.getMessage());
         }
-        return false;
+        return flag;
     }
 
     @Override
