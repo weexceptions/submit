@@ -17,6 +17,7 @@ public interface UserDAO {
     User getUserById(int userId);
     boolean updateUser(int userId, User user);
     boolean deleteUser(String userId);
+    boolean deleteDrUser(String userId);
     boolean getLogin(String id,String pass);
     boolean getLoginDr(String id,String pass);
     boolean checkPassword(String id,String email,String phone);

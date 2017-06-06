@@ -60,6 +60,10 @@
         <servlet-name>UAppointmentActionServlet</servlet-name>
         <servlet-class>com.pro.controller.UAppointmentAction</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DeleteDrUser</servlet-name>
+        <servlet-class>com.pro.controller.DeleteDrUser</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CreateUser</servlet-name>
         <url-pattern>/createuser.do</url-pattern>
@@ -119,6 +123,10 @@
     <servlet-mapping>
         <servlet-name>UAppointmentActionServlet</servlet-name>
         <url-pattern>/action2.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteDrUser</servlet-name>
+        <url-pattern>/deletedruser.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
