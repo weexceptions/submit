@@ -57,5 +57,6 @@
         </div>
         </div>
         </div>
+        <img class="img-responsive" src="Images/docbg.jpg" width="100%" height="100px" alt="doctor">
     </body>
 </html>

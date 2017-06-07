@@ -56,12 +56,13 @@ body{
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand">
-             <h4 style="float: right; color: #ffffff">......Patient Login......</h4>
+              <h1 style="font-weight: bolder; font-size: x-large;color: #ffffff; float: right"> Stay Healthy Hospital</h1>
+
              <img src="Images/logo2.png" width="20%" height="100%"  alt="StayHealthy">
-             <p style="float: right; color:#ff0; size: auto" class="text-danger">Welcome <%out.print(request.getAttribute("auser"));%></p>
+                         <p style="float: right; color:#ff0; size: auto" class="text-danger">Welcome <%out.print(request.getAttribute("auser"));%></p>
         </a>
          
-      </div>
+      </div> 
       <div id="navbar3" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-left">
           <li class="active"><a href="pat_home.jsp" target="ContentFrame">Home</a></li>
