@@ -726,6 +726,42 @@ public class RestoreDB {
             Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
         }
         }
+        
+        //dISEASE RECORDS
+        
+         PreparedStatement i31;
+        try {
+            i31 = con.prepareStatement("INSERT INTO AKSH.DISEASE (DS_ID, DISEASE_NAME, SYMPTOMS, PREVENTION, CURE, DESCRIPTION) \n" +
+"	VALUES (NULL, 'DIABETES', 'HUNGER AND FATIGUE, BLLURRED VISION, UNPLANNED WEIGHT LOSS, SLOW HEALING SORE OR CUTS, DRY MOUTH,ETC', 'MAINTAIN YOU SUGAR LEVEL, CONSUME LESS SUGAR IN YOUR FOOD, EXERCISE DAILY, EAT HEALTHY', 'CHECK YOUR SUGAR, AVOID SUGAR AND SWEET THINGS', 'DIABETES IS A GROUP OF METABOLIC DISEASE IN WHICH THERE ARE HIGH BLOOD SUGAR LEVELS OVER A PROLONGED PERIOD')");
+            i31.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+             PreparedStatement i32;
+        try {
+            i32 = con.prepareStatement("INSERT INTO AKSH.DISEASE (DS_ID, DISEASE_NAME, SYMPTOMS, PREVENTION, CURE, DESCRIPTION) \n" +
+"	VALUES (NULL, 'JAUNDICE', 'YELLOW SKIN AND EYES, WHITES OF YOUR EYES TURN BROWN OR ORANGE COLORED,DARK URINE AND PALE STOOLS', 'DRINK PURE AND HYGIENIC WATER, USE CLEAN WATER FOR HOUSE HOLD WORK MAINTAIN CLEANLINESS', 'DO A BLOOD TEST AND TAKE PROPER MEDICATION', 'JAUNDICE IS A YELLOWISH OR GREEN PIGMENTATION OF SKIN AND WHITES OF EYES DUE TO HIGH BILIRUBIN LEVELS')");
+            i32.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+             PreparedStatement i33;
+        try {
+            i33 = con.prepareStatement("INSERT INTO AKSH.DISEASE (DS_ID, DISEASE_NAME, SYMPTOMS, PREVENTION, CURE, DESCRIPTION) \n" +
+"	VALUES (NULL, 'DIARRHEA', 'STOMACH PAIN, ABDOMINAL CRAMPS, BLOATING, THIRST, WEIGHT LOSS, FEVER', 'CLEAN/SAFE DRINKING WATER,GOOD SANITATION, GOOD HYDIENE PRACTICE', 'DRINK ORS SOLUTION, HIGH SODIUM FOOD AND LIQUID.', 'ITS A CONDITION IN WHICH FAECES ARE DISCHARGED FROM THE BOWELS FREQUENTLY AND IN A LIQUID FORM')");
+            i33.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+             PreparedStatement i34;
+        try {
+            i34 = con.prepareStatement("INSERT INTO AKSH.DISEASE (DS_ID, DISEASE_NAME, SYMPTOMS, PREVENTION, CURE, DESCRIPTION) \n" +
+"	VALUES (NULL, 'ASTHMA', 'WHEEZING, COUGHING, CHEST TIGHTNESS, SHORTNESS OF BREATH', 'AVIOD TRIGGERS, SUCH AS ALLERGENS AND IRRITANS, USE INHALED CORTICOSTERIODS', 'ASTHMA IS A  LONG TERM INNFLAMMATORY DISEASE ', 'ASTHMA IS A CHRONIC DISEASE INVOLVING THE AIRWAYS IN THE LUNGS')");
+            i34.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            
            //            
             flag=true;
             System.out.println("Creation Insersion Done");
