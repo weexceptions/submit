@@ -72,15 +72,16 @@ public class DaoImpl implements UserDAO{
     @Override
     public boolean updateUser(User u,Patient p,String pidd) {
         boolean flag = false;
-        
+        PreparedStatement ps;
         try {
-            PreparedStatement ps = con.prepareStatement("UPDATE PATIENT SET AGEGROUP = ? ,GENDER = ? WHERE P_ID like ?");
+             ps = con.prepareStatement("UPDATE PATIENT SET AGEGROUP = ? ,GENDER = ? WHERE P_ID = ?");
             ps.setString(3, p.getPid());
             ps.setString(1, p.getAgeGroup());
             ps.setString(2, p.getGender());
             int rec = ps.executeUpdate();
             System.out.println("pid is "+p.getPid()+" pidd is "+pidd);
-            System.out.println("Patient updates : "+rec);
+            System.out.println("pagegr "+p.getAgeGroup()+ " gender "+p.getGender());
+            System.out.println("no of Patient updates : "+rec);
             flag=true;
             System.out.println("Update Successfull in PATIENT");
         } catch (Exception e) {
@@ -89,14 +90,15 @@ public class DaoImpl implements UserDAO{
             System.out.println(e.getMessage());
         }
         try {
-            PreparedStatement ps = con.prepareStatement("UPDATE USERDETAIL SET FNAME = ? ,LNAME = ? ,DOB = ? ,EMAIL = ? ,ADDRESS = ? ,PHONE = ? WHERE P_ID like ? ");
-            ps.setString(1, u.getFirstName());
-            ps.setString(2, u.getLastName());
-            ps.setString(3, u.getDob());
-            ps.setString(4, u.getEmailId());
-            ps.setString(5, u.getAddress());
-            ps.setString(6, u.getPhone());
-            ps.setString(7, p.getPid());
+            ps = con.prepareStatement("UPDATE AKSH.USERDETAIL SET FNAME = ? WHERE P_ID = ? ");
+            ps.setString(1, u.getEmailId());
+//            ps.setString(2, u.getLastName());
+//            ps.setString(3, u.getDob());
+//            ps.setString(4, u.getEmailId());
+//            ps.setString(5, u.getAddress());
+//            ps.setString(6, u.getPhone());
+            ps.setString(2, p.getPid());
+            System.out.println("fname "+u.getFirstName()+" lname "+u.getLastName()+" dob "+u.getDob()+" email "+u.getEmailId()+" addr "+u.getAddress()+" phone "+u.getPhone());
             int rec = ps.executeUpdate();
             System.out.println("USERDETAIL updates : "+rec);
             flag=true;
