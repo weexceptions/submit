@@ -55,8 +55,13 @@ body{
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand">
-           <h4 style="float: right; color: #ffffff">Contact No.: 9876543210</h4>
+             
+           <h1 style="float: right; color: #ffffff; font-size: xx-large;font-weight: bolder">Stay Healthy Hospital</h1>
+          
            <img src="Images/logo2.png" width="20%" height="100%"  alt="StayHealthy" >
+           <h4 style="; font-size: small ;color: #ffffff;">Contact No.: 9876543210 </h4>
+           
+          
         </a>
          
       </div>
