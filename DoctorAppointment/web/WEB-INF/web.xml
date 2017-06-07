@@ -64,6 +64,22 @@
         <servlet-name>DeleteDrUser</servlet-name>
         <servlet-class>com.pro.controller.DeleteDrUser</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ViewDiseaseServlet</servlet-name>
+        <servlet-class>com.pro.controller.ViewDisease</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ViewDrUserServlet</servlet-name>
+        <servlet-class>com.pro.controller.ViewDrUser</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EditUserServlet</servlet-name>
+        <servlet-class>com.pro.controller.EditUser</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateUserServlet</servlet-name>
+        <servlet-class>com.pro.controller.UpdateUser</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CreateUser</servlet-name>
         <url-pattern>/createuser.do</url-pattern>
@@ -127,6 +143,22 @@
     <servlet-mapping>
         <servlet-name>DeleteDrUser</servlet-name>
         <url-pattern>/deletedruser.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewDiseaseServlet</servlet-name>
+        <url-pattern>/viewdisease.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewDrUserServlet</servlet-name>
+        <url-pattern>/viewdruser.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EditUserServlet</servlet-name>
+        <url-pattern>/edituser.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateUserServlet</servlet-name>
+        <url-pattern>/updateuser.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

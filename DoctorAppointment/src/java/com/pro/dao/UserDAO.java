@@ -15,7 +15,7 @@ public interface UserDAO {
     
     boolean createUser(User u,Patient p);
     User getUserById(int userId);
-    boolean updateUser(int userId, User user);
+    boolean updateUser(User u,Patient p,String pidd);
     boolean deleteUser(String userId);
     boolean deleteDrUser(String userId);
     boolean getLogin(String id,String pass);
@@ -25,6 +25,7 @@ public interface UserDAO {
     List<AllDoctor> getAllDoctor();
     List<DoctorInfo> getAllDrDetails();
     String[]  viewProfile(String id);
+    String[]  viewDrProfile(String id);
     boolean addDisease(Disease dis);
     boolean bookAppointment(String pid,String did,String desc,String aDate,String aTime,String loc,String status);
     boolean appointAction(int aId,String action);

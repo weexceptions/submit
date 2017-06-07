@@ -37,9 +37,9 @@
                 <textarea type="text" class="form-control" id="txt" name="txtcure"></textarea>
                 </div>
                 
-            </form><br><br>
+            <br><br>
         <button type="submit" class="btn btn-success"> SUBMIT </button>
-        <button type="reset" class="btn btn-warning"> RESET </button>
+        <button type="reset" class="btn btn-warning"> RESET </button></form>
         </div>
     </body>
 </html>

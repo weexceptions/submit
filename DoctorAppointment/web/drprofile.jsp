@@ -41,8 +41,8 @@
                     </td>
                     <td class="col-lg-6 col-sm-6">
                 <label class="col-lg-5">Last Name :</label><input type="text" class="input-sm col-lg-7" disabled="true" value="<%out.print(request.getAttribute("lname"));%>"><br/><br/>
-                <label class="col-lg-5">Location :</label><input type="text" class="input-sm col-lg-7" disabled="true" value="<%out.print(request.getAttribute("gender"));%>"><br/><br/>
-                <label class="col-lg-5">Specialist:</label><input type="text" class="input-sm col-lg-7" disabled="true" value="<%out.print(request.getAttribute("agegr"));%>"><br/><br/>
+                <label class="col-lg-5">Specialist:</label><input type="text" class="input-sm col-lg-7" disabled="true" value="<%out.print(request.getAttribute("gender"));%>"><br/><br/>
+                <label class="col-lg-5">Location :</label><input type="text" class="input-sm col-lg-7" disabled="true" value="<%out.print(request.getAttribute("agegr"));%>"><br/><br/>
                 <label class="col-lg-5">Phone No.:</label><input type="text" class="input-sm col-lg-7" disabled="true" value="<%out.print(request.getAttribute("phone"));%>"><br/><br/>
                     </td>
                 </tr>

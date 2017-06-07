@@ -1,21 +1,20 @@
 <%-- 
-    Document   : pat_home
-    Created on : May 31, 2017, 9:53:15 PMdd
-    Author     : Priyanka WorkSpace
+    Document   : searchuser
+    Created on : Jun 6, 2017, 7:47:53 PM
+    Author     : Sunny
 --%>
 
+<%@page import="java.sql.SQLException"%>
+<%@page import="java.sql.ResultSet"%>
 <%@page import="com.pro.dao.DBconnection"%>
-<%@page import="java.sql.*"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.Connection"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
-         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Home </title>
-        <link rel="stylesheet" href="css/bootstrap.min.css"/>
-        <link rel="stylesheet" href="css/homestylesheet.css">
-        <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
         <script>
 function myFunction() {
   // Declare variables 
@@ -38,6 +37,11 @@ function myFunction() {
   }
 }
 </script>
+
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/homestylesheet.css">
+        <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <style>
                  .carousel {
   height: 400px;
@@ -94,58 +98,17 @@ function myFunction() {
 }
 
         </style>
+        <title>JSP Page</title>
     </head>
-    <body>
-              <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-        <li data-target="#myCarousel" data-slide-to="4"></li>
-        <li data-target="#myCarousel" data-slide-to="5"></li>
-      </ol>
-      <div class="carousel-inner" role="listbox">
-            <div class="item active">
-            <img class="first-slide" src="Images/nuc.jpg" alt="First slide" width="900" height="200">
-        </div>
-        <div class="item">
-            <img class="second-slide" src="Images/Raisins.png" alt="Second slide"width="900" height="200">
-        </div>
-          
-        <div class="item">
-            <img class="third-slide" src="Images/lemon.png" alt="Third slide"width="900" height="200">
-        </div>
-          
-        <div class="item">
-            <img class="fourth-slide" src="Images/macadamia.png" alt="Fourth slide" width="900" height="200">
-        </div>  
-        <div class="item">
-            <img class="fifth-slide" src="Images/woodapples.jpg" alt="Fifth slide" width="900" height="200">
-        </div>  
-        <div class="item">
-            <img class="sixth-slide" src="Images/Untitled.png" alt="Sixth slide" width="900" height="200">
-        </div>  
-       </div>
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div><!-- /.carousel -->
-    
-    <div class="container">
-    <center><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for DISEASE Names.."></center>
+    <body><div class="container-fluid">
+    <center><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Names.."></center>
     <table id="myTable">
   <tr class="header">
-    <th style="width:15%;">DISEASE ID</th>
-    <th style="width:30%;">DISEASE NAME </th>
-    <th style="width:45%;">SYMPTOMS</th>
-    <th style="width:7%;">SHOW</th>
+    <th>UID</th>
+    <th>FNAME </th>
+    <th>LNAME</th>
+    <th>P_ID</th>
+    <th>VIEW</th>
   </tr>
    <%
             Connection con = null;
@@ -153,29 +116,34 @@ function myFunction() {
             try
             {
             con = DBconnection.getConnection();
-            String sql = "SELECT DS_ID,DISEASE_NAME,SYMPTOMS,PREVENTION,CURE FROM DISEASE ";
+            String sql = "SELECT UID,FNAME,LNAME,P_ID,DOB,EMAIL,ADDRESS,PHONE FROM USERDETAIL WHERE P_ID IS NOT NULL";
             ps = con.prepareStatement(sql);
             ResultSet rs = ps.executeQuery(); 
-            String dsid,dname,sym,pre,cure;
+            String uid,fname,lname,pid,dob,email,addr,phone;
             %>
             <tr>
             <%
             while(rs.next())
             {
                 
-             dsid=rs.getString(1);
-             dname=rs.getString(2);
-             sym=rs.getString(3);
-             pre=rs.getString(4);
-             cure=rs.getString(5);
+             uid=rs.getString(1);
+             fname=rs.getString(2);
+             lname=rs.getString(3);
+             pid=rs.getString(4);
+             dob=rs.getString(5);
+             email=rs.getString(6);
+             addr=rs.getString(7);
+             phone=rs.getString(8);
             %>
             
-            <td class="col-lg-1"><%out.println(dsid);%> </td>
-            <td class="col-lg-1"><%out.println(dname);%> </td>
-            <td class="col-lg-1"><%out.println(sym);%> </td>
+            <td class="col-lg-1"><%out.println(uid);%> </td>
+            <td class="col-lg-1"><%out.println(fname);%> </td>
+            <td class="col-lg-1"><%out.println(lname);%> </td>
+            <td class="col-lg-1"><%out.println(pid);%> </td>
             
-            <td class="col-lg-1"> <form action="viewdisease.do" method="post" class="form" id="fileForm" role="form">
-                    <input type="hidden" value="<%out.println(dsid);%>" name="txtid" />
+            <td class="col-lg-1"> <form action="viewuser.do" method="post" class="form" id="fileForm" role="form">
+                    <input type="hidden" value="<%out.println(pid);%>" name="txtid" />
+                    <input type="hidden" value="noedit" name="edit" />
                     <button type="submit" class="btn btn-info">Show</button>
                 </form>
             </td>
