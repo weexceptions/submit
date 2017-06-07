@@ -9,6 +9,7 @@ import com.pro.dao.*;
 import com.pro.model.*;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -58,7 +59,17 @@ public class UpdateUser extends HttpServlet {
         Patient patient =new Patient(pid, agegroup, gender);
         UserDAO userdao = new DaoImpl();
             if (userdao.updateUser(user, patient, pid)) {
+                System.out.println("True in UpdateServlet");
+                RequestDispatcher rd = request.getRequestDispatcher("pat_home.jsp");
+                request.setAttribute("auser", pid.toUpperCase());
+                rd.forward(request, response);
+            }
+            else{
                 
+                System.out.println("Flase in UpdateServlet");
+                RequestDispatcher rd = request.getRequestDispatcher("/viewuser.do");
+                request.setAttribute("txtid", pid.toUpperCase());
+                rd.forward(request, response);
             }
         
         }
