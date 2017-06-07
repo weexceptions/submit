@@ -90,14 +90,14 @@ public class DaoImpl implements UserDAO{
             System.out.println(e.getMessage());
         }
         try {
-            ps = con.prepareStatement("UPDATE AKSH.USERDETAIL SET FNAME = ? WHERE P_ID = ? ");
-            ps.setString(1, u.getEmailId());
-//            ps.setString(2, u.getLastName());
-//            ps.setString(3, u.getDob());
-//            ps.setString(4, u.getEmailId());
-//            ps.setString(5, u.getAddress());
-//            ps.setString(6, u.getPhone());
-            ps.setString(2, p.getPid());
+            ps = con.prepareStatement("UPDATE USERDETAIL SET FNAME = ? ,LNAME = ? ,DOB = ? ,EMAIL = ? ,ADDRESS = ? ,PHONE = ? WHERE P_ID = ? ");
+            ps.setString(1, u.getFirstName());
+            ps.setString(2, u.getLastName());
+            ps.setString(3, u.getDob());
+            ps.setString(4, u.getEmailId());
+            ps.setString(5, u.getAddress());
+            ps.setString(6, u.getPhone());
+            ps.setString(7, p.getPid());
             System.out.println("fname "+u.getFirstName()+" lname "+u.getLastName()+" dob "+u.getDob()+" email "+u.getEmailId()+" addr "+u.getAddress()+" phone "+u.getPhone());
             int rec = ps.executeUpdate();
             System.out.println("USERDETAIL updates : "+rec);
