@@ -75,9 +75,9 @@ public class DaoImpl implements UserDAO{
         PreparedStatement ps;
         try {
              ps = con.prepareStatement("UPDATE PATIENT SET AGEGROUP = ? ,GENDER = ? WHERE P_ID = ?");
-            ps.setString(3, p.getPid());
-            ps.setString(1, p.getAgeGroup());
-            ps.setString(2, p.getGender());
+            ps.setString(3, p.getPid().trim());
+            ps.setString(1, p.getAgeGroup().trim());
+            ps.setString(2, p.getGender().trim());
             int rec = ps.executeUpdate();
             System.out.println("pid is "+p.getPid()+" pidd is "+pidd);
             System.out.println("pagegr "+p.getAgeGroup()+ " gender "+p.getGender());
@@ -91,13 +91,13 @@ public class DaoImpl implements UserDAO{
         }
         try {
             ps = con.prepareStatement("UPDATE USERDETAIL SET FNAME = ? ,LNAME = ? ,DOB = ? ,EMAIL = ? ,ADDRESS = ? ,PHONE = ? WHERE P_ID = ? ");
-            ps.setString(1, u.getFirstName());
-            ps.setString(2, u.getLastName());
-            ps.setString(3, u.getDob());
-            ps.setString(4, u.getEmailId());
-            ps.setString(5, u.getAddress());
-            ps.setString(6, u.getPhone());
-            ps.setString(7, p.getPid());
+            ps.setString(1, u.getFirstName().trim());
+            ps.setString(2, u.getLastName().trim());
+            ps.setString(3, u.getDob().trim());
+            ps.setString(4, u.getEmailId().trim());
+            ps.setString(5, u.getAddress().trim());
+            ps.setString(6, u.getPhone().trim());
+            ps.setString(7, p.getPid().trim());
             System.out.println("fname "+u.getFirstName()+" lname "+u.getLastName()+" dob "+u.getDob()+" email "+u.getEmailId()+" addr "+u.getAddress()+" phone "+u.getPhone());
             int rec = ps.executeUpdate();
             System.out.println("USERDETAIL updates : "+rec);
