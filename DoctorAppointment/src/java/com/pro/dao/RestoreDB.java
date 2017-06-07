@@ -240,11 +240,13 @@ public class RestoreDB {
         }
             PreparedStatement i7;
         try {
-            i7 = con.prepareStatement("INSERT INTO DOCTOR (D_ID, LOCATION, SPECIALIST) \n" +"	VALUES ('miwagh', 'MUMBAI', 'PLASTIC SURGEON')");
+            i7 = con.prepareStatement("INSERT INTO DOCTOR (D_ID, LOCATION, SPECIALIST) \n" +
+                    "	VALUES ('miwagh', 'MUMBAI', 'PLASTIC SURGEON')");
             i7.executeUpdate();
         } catch (SQLException ex) {
             Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
             PreparedStatement i8;
         try {
             i8 = con.prepareStatement("INSERT INTO DOCTOR (D_ID, LOCATION, SPECIALIST) \n" +

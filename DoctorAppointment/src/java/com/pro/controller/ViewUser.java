@@ -61,7 +61,7 @@ public class ViewUser extends HttpServlet {
             request.setAttribute("edit", edit);
             rd.forward(request, response);
             
-        }
+        } 
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

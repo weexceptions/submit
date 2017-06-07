@@ -79,7 +79,7 @@ body{
                     <input type="hidden" name="userId" value="<%out.print(request.getAttribute("auser"));%>">
                     <button class="btn btn-link" type="submit">View Profile</button> </form></li>
               
-         </li>
+         
           <li><a href="disease.jsp" target="ContentFrame" >Add Disease</a></li>
          
           <li><a target="_blank" href="index.jsp" onclick=window.close()>LogOut</a></li>
