@@ -14,11 +14,12 @@
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <title>JSP Page</title>
     </head>
-    <body><div class="container">
+    <body><div class="well"><h2></h2></div>
+        <div class="container">
+                         <form action="updateuser.do" method="post" class="form" id="fileForm" role="form">
             <table class="text-justify">
                 <tr class="row">
                     <td class="col-lg-6 col-sm-6">
-                         <form action="updateuser.do" method="post" class="form" id="fileForm" role="form">
                         <label class="col-lg-5">User Id :</label><input type="text" name="txtpid2" class="input-sm col-lg-7" disabled="true" value="<%out.print(request.getAttribute("uid"));%>"><br/><br/>
                 <label class="col-lg-5">First Name :</label><input type="text" class="input-sm col-lg-7" name="txtfname"  value="<%out.print(request.getAttribute("fname"));%>"><br/><br/>
                 <label class="col-lg-5">DOB :</label><input type="text" name="txtdob" class="input-sm col-lg-7"  value="<%out.print(request.getAttribute("dob"));%>"><br/><br/>

@@ -67,22 +67,18 @@ body{
           <li class="active"><a href="pat_home.jsp" target="ContentFrame">Home</a></li>
           <li><form target="ContentFrame" method="post" action="notification.jsp">  
                     <input type="hidden" name="userId" value="<%out.print(request.getAttribute("auser"));%>">
-                    <button class="btn btn-link" type="submit">Notification</button>  </li></form>
-          <li><a  href="confirmid.jsp" target="ContentFrame">Make Appointment</a></li>
-          <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Help Desk<span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-                <li><form target="ContentFrame" method="post" action="viewappoint.jsp">  
+                    <button class="btn btn-link" type="submit">Notification</button></form></li>
+                    <li><a  href="confirmid.jsp" target="ContentFrame">Make Appointment</a></li>
+          <li><form target="ContentFrame" method="post" action="viewappoint.jsp">  
                     <input type="hidden" name="userId" value="<%out.print(request.getAttribute("auser"));%>">
-                    <center><button class="btn btn-success" type="submit">Appointment</button></center> </form></li>
-              <li><a target="ContentFrame" href="">
-                      <form action="viewuser.do" target="ContentFrame" method="post" class="form" id="fileForm" role="form">
+                    <button class="btn btn-link" type="submit">Appointment</button></form></li>
+              <li> <form action="viewuser.do" target="ContentFrame" method="post" class="form" id="fileForm" role="form">
                     <input type="hidden" value="<%out.print(request.getAttribute("auser"));%>" name="txtid" />
                     <input type="hidden" value="edit" name="edit" />
-                    <center><button type="submit" class="btn btn-info">My Profile</button></center> </form>
-                </a></li>
-              </ul>
-          </li>
+                    <button type="submit" class="btn btn-link">My Profile</button></form>
+                </li>
+             
+          
           <li><a target="_blank" href="index.jsp" onclick=window.close()>LogOut</a></li>
         </ul>
       </div>
