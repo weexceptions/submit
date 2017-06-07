@@ -3,7 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package com.pro.controller;
 
+import com.pro.dao.*;
+import com.pro.model.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -15,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Sunny
  */
-public class ViewDisease extends HttpServlet {
+public class UpdateUser extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -31,15 +34,33 @@ public class ViewDisease extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet ViewDisease</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet ViewDisease at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+        String fname= request.getParameter("txtfname");
+            System.out.println("i");
+        String lname= request.getParameter("txtlname");
+            System.out.println("i");
+        String dob= request.getParameter("txtdob");
+            System.out.println("i");
+        String email= request.getParameter("txtemail");
+            System.out.println("i");
+        String Address= request.getParameter("txtaddress");
+            System.out.println("i");
+        String Phone= request.getParameter("txtphone");
+            System.out.println("phone "+Phone);
+        String gender=request.getParameter("txtsex").toLowerCase();
+            System.out.println("gen "+gender);
+        String pid=request.getParameter("txtpid").toLowerCase();
+            System.out.println("pid "+pid);
+        String agegroup= request.getParameter("txtage");
+            System.out.println("i");
+        
+            System.out.println("in Update user we have \n"+fname+" "+lname+" "+dob+" "+email+" "+Address+" "+Phone+" "+gender+" "+pid+" "+agegroup+" end");
+        User user = new User(pid,fname,lname,"",dob,Phone,email,Address);
+        Patient patient =new Patient(pid, agegroup, gender);
+        UserDAO userdao = new DaoImpl();
+            if (userdao.updateUser(user, patient, pid)) {
+                
+            }
+        
         }
     }
 

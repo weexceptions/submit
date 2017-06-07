@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Sunny
  */
-public class ViewUser extends HttpServlet {
+public class EditUser extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -35,19 +35,12 @@ public class ViewUser extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            
             UserDAO userdao = new DaoImpl();
             String id = request.getParameter("txtid").toLowerCase();
-            String edit;
-            try{
-            edit= request.getParameter("edit");
-            }
-            catch(Exception e){
-                edit="noedit";
-            }
-            System.out.println("\nEdit value is "+edit);
+            String edit="edit";
+            System.out.println("\nEdit value in edit user  is "+edit);
             String details[]=userdao.viewProfile(id);
-            RequestDispatcher rd = request.getRequestDispatcher("userprofile.jsp");
+            RequestDispatcher rd = request.getRequestDispatcher("updateuser.jsp");
             
             request.setAttribute("uid", id);
             request.setAttribute("fname", details[2]);
@@ -61,7 +54,7 @@ public class ViewUser extends HttpServlet {
             request.setAttribute("edit", edit);
             rd.forward(request, response);
             
-        } 
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

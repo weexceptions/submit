@@ -78,6 +78,7 @@ body{
               <li><a target="ContentFrame" href="">
                       <form action="viewuser.do" target="ContentFrame" method="post" class="form" id="fileForm" role="form">
                     <input type="hidden" value="<%out.print(request.getAttribute("auser"));%>" name="txtid" />
+                    <input type="hidden" value="edit" name="edit" />
                     <center><button type="submit" class="btn btn-info">My Profile</button></center> </form>
                 </a></li>
               </ul>

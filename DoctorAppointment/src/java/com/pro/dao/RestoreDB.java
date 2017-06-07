@@ -158,7 +158,7 @@ public class RestoreDB {
                     "A_TIME INT DEFAULT 0,\n" +
                     "LOCATION VARCHAR(10),\n" +
                     "STATUS VARCHAR(10),\n" +
-                    "PRIMARY KEY(A_ID)\n" +
+                        "PRIMARY KEY(A_ID)\n" +
                     ")");
             t4.executeUpdate();
         } catch (SQLException ex) {
@@ -199,7 +199,7 @@ public class RestoreDB {
             Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
         }
             PreparedStatement i2;
-        try {
+                    try {
             i2 = con.prepareStatement("INSERT INTO USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
                     "	VALUES ('maidr', 'Munna', 'Bhai', '1995-08-15', 'munnabhai@gmail.com', 'Borivali-West', '8888888888', NULL, 'mbhai')");
             i2.executeUpdate();
@@ -450,7 +450,7 @@ public class RestoreDB {
         {
                 PreparedStatement i1;
         try {
-            i1 = con.prepareStatement("INSERT INTO AKSH.USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
+            i1 = con.prepareStatement("INSERT INTO USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
 "	VALUES ('123123', 'Priyanka', 'Kalakoti', '1998-02-24', 'pinkysingh@gmail.com', 'vasai road(west)', '9833456123', 'priyaa', NULL)");
             i1.executeUpdate();
         } catch (SQLException ex) {
@@ -458,7 +458,7 @@ public class RestoreDB {
         }
             PreparedStatement i2;
         try {
-            i2 = con.prepareStatement("INSERT INTO AKSH.USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
+            i2 = con.prepareStatement("INSERT INTO USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
 "	VALUES ('aksh123', 'Akshay', 'Sonie', '1995-02-17', 'akshaysonie@gmail.com', 'Borivali (east)', '9833704511', 'aksh', NULL)");
             i2.executeUpdate();
         } catch (SQLException ex) {
@@ -466,7 +466,7 @@ public class RestoreDB {
         }
             PreparedStatement i3;
         try {
-            i3 = con.prepareStatement("INSERT INTO AKSH.USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
+            i3 = con.prepareStatement("INSERT INTO USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
 "	VALUES ('sunny123', 'Sunny', 'Singh', '1996-02-22', 'sunny@gmail.com', 'Malad (EAST)', '9833307346', 'sunny', NULL)");
             i3.executeUpdate();
         } catch (SQLException ex) {
@@ -474,7 +474,7 @@ public class RestoreDB {
         }
             PreparedStatement i4;
         try {
-            i4 = con.prepareStatement("INSERT INTO AKSH.USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
+            i4 = con.prepareStatement("INSERT INTO USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
 "	VALUES ('smruti123', 'Smruti', 'Jadhav', '1997-08-20', 'smrutijadhav@gmail.com', 'Nallasopara (West)', '9769241231', 'smruti', NULL)");
             i4.executeUpdate();
         } catch (SQLException ex) {
@@ -482,7 +482,7 @@ public class RestoreDB {
         }
             PreparedStatement i5;
         try {
-            i5 = con.prepareStatement("INSERT INTO AKSH.USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
+            i5 = con.prepareStatement("INSERT INTO USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
 "	VALUES ('kirti123', 'Kirti', 'Rupnoor', '1997-05-04', 'kirtirupnoor@gmail.com', 'Bandra (East)', '8655512345', 'kirti', NULL)");
             i5.executeUpdate();
         } catch (SQLException ex) {
@@ -490,7 +490,7 @@ public class RestoreDB {
         }
             PreparedStatement i6;
         try {
-            i6 = con.prepareStatement("INSERT INTO AKSH.USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
+            i6 = con.prepareStatement("INSERT INTO USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
 "	VALUES ('sid123', 'Siddhesh', 'Modak', '1995-05-05', 'siddheshmodak@gmail.com', 'Airoli, new mumbai', '8970745451', 'sid', NULL)");
             i6.executeUpdate();
         } catch (SQLException ex) {
@@ -498,7 +498,7 @@ public class RestoreDB {
         }
             PreparedStatement i7;
         try {
-            i7 = con.prepareStatement("INSERT INTO AKSH.USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
+            i7 = con.prepareStatement("INSERT INTO USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
 "	VALUES ('niru123', 'Niranjan', 'Sawant', '1994-02-24', 'niranjansawant@gmail.com', 'Kandivali(west)', '9819811545', 'niru', NULL)");
             i7.executeUpdate();
         } catch (SQLException ex) {
@@ -506,7 +506,7 @@ public class RestoreDB {
         }
             PreparedStatement i8;
         try {
-            i8 = con.prepareStatement("INSERT INTO AKSH.USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
+            i8 = con.prepareStatement("INSERT INTO USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
 "	VALUES ('karan123', 'Karan', 'Yadav', '1997-04-13', 'karanyadav@gmail.com', 'Vasai Road (west)', '9096115858', 'karan', NULL)");
             i8.executeUpdate();
         } catch (SQLException ex) {
@@ -515,7 +515,7 @@ public class RestoreDB {
             
             PreparedStatement i9;
         try {
-            i9 = con.prepareStatement("INSERT INTO AKSH.USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
+            i9 = con.prepareStatement("INSERT INTO USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
 "	VALUES ('siddhesh123', 'Siddhesh', 'Parab', '1998-06-21', 'siddheshparab@gmail.com', 'Mira road', '982935099', 'siddhesh', NULL)");
               i9.executeUpdate();
         } catch (SQLException ex) {
@@ -524,7 +524,7 @@ public class RestoreDB {
           
             PreparedStatement i10;
         try {
-            i10 = con.prepareStatement("INSERT INTO AKSH.USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
+            i10 = con.prepareStatement("INSERT INTO USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
 "	VALUES ('surendra123', 'Surendra', 'Singh', '1995-05-24', 'singhsurendra@gmail.com', 'Bhayandar', '9833981922', 'surendra', NULL)");
                i10.executeUpdate();
         } catch (SQLException ex) {
@@ -533,7 +533,7 @@ public class RestoreDB {
          
             PreparedStatement i11;
         try {
-            i11 = con.prepareStatement("INSERT INTO AKSH.USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
+            i11 = con.prepareStatement("INSERT INTO USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
 "	VALUES ('harshal123', 'Harshal', 'Pandya', '2001-04-08', 'harshalpandya@gmail.com', 'Mira road', '9819964641', 'harshal', NULL)");
                         i11.executeUpdate();
         } catch (SQLException ex) {
@@ -542,7 +542,7 @@ public class RestoreDB {
 
             PreparedStatement i12;
         try {
-            i12 = con.prepareStatement("INSERT INTO AKSH.USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
+            i12 = con.prepareStatement("INSERT INTO USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
 "	VALUES ('mina123', 'Meenakshi', 'Singh', '1997-04-10', 'meenakshisingh@gmail.com', 'Goregaon', '9763325818', 'meenakshi', NULL)");
              i12.executeUpdate();
         } catch (SQLException ex) {
@@ -551,7 +551,7 @@ public class RestoreDB {
            
             PreparedStatement i13;
         try {
-            i13 = con.prepareStatement("INSERT INTO AKSH.USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
+            i13 = con.prepareStatement("INSERT INTO USERDETAIL (PASSWORD, FNAME, LNAME, DOB, EMAIL, ADDRESS, PHONE, P_ID, D_ID) \n" +
 "	VALUES ('vivek123', 'Vivek', 'Kanojiya', '1996-06-01', 'vivekkanojiya@gmail.com', 'Vile Parle', '9862343488', 'vivek', NULL)");
              i13.executeUpdate();
         } catch (SQLException ex) {
@@ -561,7 +561,7 @@ public class RestoreDB {
 
             PreparedStatement i14;
         try {
-            i14 = con.prepareStatement("INSERT INTO AKSH.PATIENT (P_ID, AGEGROUP, GENDER) \n" +
+            i14 = con.prepareStatement("INSERT INTO PATIENT (P_ID, AGEGROUP, GENDER) \n" +
 "	VALUES ('priyaa', '20-39', 'female')");
             i14.executeUpdate();
         } catch (SQLException ex) {
@@ -570,7 +570,7 @@ public class RestoreDB {
             
             PreparedStatement i15;
         try {
-            i15 = con.prepareStatement("INSERT INTO AKSH.PATIENT (P_ID, AGEGROUP, GENDER) \n" +
+            i15 = con.prepareStatement("INSERT INTO PATIENT (P_ID, AGEGROUP, GENDER) \n" +
 "	VALUES ('aksh', '20-39', 'male')");
               i15.executeUpdate();
         } catch (SQLException ex) {
@@ -579,7 +579,7 @@ public class RestoreDB {
           
             PreparedStatement i16;
         try {
-            i16 = con.prepareStatement("INSERT INTO AKSH.PATIENT (P_ID, AGEGROUP, GENDER) \n" +
+            i16 = con.prepareStatement("INSERT INTO PATIENT (P_ID, AGEGROUP, GENDER) \n" +
 "	VALUES ('sunny', '20-39', 'male')");
             i16.executeUpdate();
         } catch (SQLException ex) {
@@ -588,7 +588,7 @@ public class RestoreDB {
             
             PreparedStatement i17;
         try {
-            i17 = con.prepareStatement("INSERT INTO AKSH.PATIENT (P_ID, AGEGROUP, GENDER) \n" +
+            i17 = con.prepareStatement("INSERT INTO PATIENT (P_ID, AGEGROUP, GENDER) \n" +
 "	VALUES ('smruti', '20-39', 'male')");
                i17.executeUpdate();
         } catch (SQLException ex) {
@@ -597,7 +597,7 @@ public class RestoreDB {
          
             PreparedStatement i18;
         try {
-            i18 = con.prepareStatement("INSERT INTO AKSH.PATIENT (P_ID, AGEGROUP, GENDER) \n" +
+            i18 = con.prepareStatement("INSERT INTO PATIENT (P_ID, AGEGROUP, GENDER) \n" +
 "	VALUES ('kirti', '20-39', 'male')");
              i18.executeUpdate();
         } catch (SQLException ex) {
@@ -607,7 +607,7 @@ public class RestoreDB {
 
             PreparedStatement i19;
         try {
-            i19 = con.prepareStatement("INSERT INTO AKSH.PATIENT (P_ID, AGEGROUP, GENDER) \n" +
+            i19 = con.prepareStatement("INSERT INTO PATIENT (P_ID, AGEGROUP, GENDER) \n" +
 "	VALUES ('sid', '20-39', 'male')");
               i19.executeUpdate();
         } catch (SQLException ex) {
@@ -615,7 +615,7 @@ public class RestoreDB {
         }
           PreparedStatement i20;
         try {
-            i20 = con.prepareStatement("INSERT INTO AKSH.PATIENT (P_ID, AGEGROUP, GENDER) \n" +
+            i20 = con.prepareStatement("INSERT INTO PATIENT (P_ID, AGEGROUP, GENDER) \n" +
 "	VALUES ('niru', '20-39', 'male')");
             i20.executeUpdate();
         } catch (SQLException ex) {
@@ -624,7 +624,7 @@ public class RestoreDB {
             
             PreparedStatement i21;
         try {
-            i21 = con.prepareStatement("INSERT INTO AKSH.PATIENT (P_ID, AGEGROUP, GENDER) \n" +
+            i21 = con.prepareStatement("INSERT INTO PATIENT (P_ID, AGEGROUP, GENDER) \n" +
 "	VALUES ('karan', '20-39', 'male')");
             i21.executeUpdate();
         } catch (SQLException ex) {
@@ -633,7 +633,7 @@ public class RestoreDB {
             
             PreparedStatement i22;
         try {
-            i22 = con.prepareStatement("INSERT INTO AKSH.PATIENT (P_ID, AGEGROUP, GENDER) \n" +
+            i22 = con.prepareStatement("INSERT INTO PATIENT (P_ID, AGEGROUP, GENDER) \n" +
 "	VALUES ('siddhesh', 'Below 19', 'male')");
         i22.executeUpdate();
         } catch (SQLException ex) {
@@ -642,7 +642,7 @@ public class RestoreDB {
             
             PreparedStatement i23;
         try {
-            i23 = con.prepareStatement("INSERT INTO AKSH.PATIENT (P_ID, AGEGROUP, GENDER) \n" +
+            i23 = con.prepareStatement("INSERT INTO PATIENT (P_ID, AGEGROUP, GENDER) \n" +
 "	VALUES ('surendra', '20-39', 'male')");
         i23.executeUpdate();
         } catch (SQLException ex) {
@@ -651,7 +651,7 @@ public class RestoreDB {
             
             PreparedStatement i24;
         try {
-            i24 = con.prepareStatement("INSERT INTO AKSH.PATIENT (P_ID, AGEGROUP, GENDER) \n" +
+            i24 = con.prepareStatement("INSERT INTO PATIENT (P_ID, AGEGROUP, GENDER) \n" +
 "	VALUES ('harshal', 'Below 19', 'male')");
         i24.executeUpdate();
         } catch (SQLException ex) {
@@ -660,7 +660,7 @@ public class RestoreDB {
             
             PreparedStatement i25;
         try {
-            i25 = con.prepareStatement("INSERT INTO AKSH.PATIENT (P_ID, AGEGROUP, GENDER) \n" +
+            i25 = con.prepareStatement("INSERT INTO PATIENT (P_ID, AGEGROUP, GENDER) \n" +
 "	VALUES ('meenakshi', '20-39', 'female')");
         i25.executeUpdate();
         } catch (SQLException ex) {
@@ -669,7 +669,7 @@ public class RestoreDB {
             
             PreparedStatement i26;
         try {
-            i26 = con.prepareStatement("INSERT INTO AKSH.PATIENT (P_ID, AGEGROUP, GENDER) \n" +
+            i26 = con.prepareStatement("INSERT INTO PATIENT (P_ID, AGEGROUP, GENDER) \n" +
 "	VALUES ('vivek', '20-39', 'male')");
          i26.executeUpdate();
         } catch (SQLException ex) {
@@ -728,6 +728,42 @@ public class RestoreDB {
             Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
         }
         }
+        
+        //dISEASE RECORDS
+        
+         PreparedStatement i31;
+        try {
+            i31 = con.prepareStatement("INSERT INTO AKSH.DISEASE (DS_ID, DISEASE_NAME, SYMPTOMS, PREVENTION, CURE, DESCRIPTION) \n" +
+"	VALUES (NULL, 'DIABETES', 'HUNGER AND FATIGUE, BLLURRED VISION, UNPLANNED WEIGHT LOSS, SLOW HEALING SORE OR CUTS, DRY MOUTH,ETC', 'MAINTAIN YOU SUGAR LEVEL, CONSUME LESS SUGAR IN YOUR FOOD, EXERCISE DAILY, EAT HEALTHY', 'CHECK YOUR SUGAR, AVOID SUGAR AND SWEET THINGS', 'DIABETES IS A GROUP OF METABOLIC DISEASE IN WHICH THERE ARE HIGH BLOOD SUGAR LEVELS OVER A PROLONGED PERIOD')");
+            i31.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+             PreparedStatement i32;
+        try {
+            i32 = con.prepareStatement("INSERT INTO AKSH.DISEASE (DS_ID, DISEASE_NAME, SYMPTOMS, PREVENTION, CURE, DESCRIPTION) \n" +
+"	VALUES (NULL, 'JAUNDICE', 'YELLOW SKIN AND EYES, WHITES OF YOUR EYES TURN BROWN OR ORANGE COLORED,DARK URINE AND PALE STOOLS', 'DRINK PURE AND HYGIENIC WATER, USE CLEAN WATER FOR HOUSE HOLD WORK MAINTAIN CLEANLINESS', 'DO A BLOOD TEST AND TAKE PROPER MEDICATION', 'JAUNDICE IS A YELLOWISH OR GREEN PIGMENTATION OF SKIN AND WHITES OF EYES DUE TO HIGH BILIRUBIN LEVELS')");
+            i32.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+             PreparedStatement i33;
+        try {
+            i33 = con.prepareStatement("INSERT INTO AKSH.DISEASE (DS_ID, DISEASE_NAME, SYMPTOMS, PREVENTION, CURE, DESCRIPTION) \n" +
+"	VALUES (NULL, 'DIARRHEA', 'STOMACH PAIN, ABDOMINAL CRAMPS, BLOATING, THIRST, WEIGHT LOSS, FEVER', 'CLEAN/SAFE DRINKING WATER,GOOD SANITATION, GOOD HYDIENE PRACTICE', 'DRINK ORS SOLUTION, HIGH SODIUM FOOD AND LIQUID.', 'ITS A CONDITION IN WHICH FAECES ARE DISCHARGED FROM THE BOWELS FREQUENTLY AND IN A LIQUID FORM')");
+            i33.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+             PreparedStatement i34;
+        try {
+            i34 = con.prepareStatement("INSERT INTO AKSH.DISEASE (DS_ID, DISEASE_NAME, SYMPTOMS, PREVENTION, CURE, DESCRIPTION) \n" +
+"	VALUES (NULL, 'ASTHMA', 'WHEEZING, COUGHING, CHEST TIGHTNESS, SHORTNESS OF BREATH', 'AVIOD TRIGGERS, SUCH AS ALLERGENS AND IRRITANS, USE INHALED CORTICOSTERIODS', 'ASTHMA IS A  LONG TERM INNFLAMMATORY DISEASE ', 'ASTHMA IS A CHRONIC DISEASE INVOLVING THE AIRWAYS IN THE LUNGS')");
+            i34.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(RestoreDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            
            //            
             flag=true;
             System.out.println("Creation Insersion Done");

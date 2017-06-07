@@ -70,11 +70,46 @@ public class DaoImpl implements UserDAO{
     }
 
     @Override
-    public boolean updateUser(int userId, User user) {
-    boolean flag=false;
-    //insert code to update
-        return flag;   
+    public boolean updateUser(User u,Patient p,String pidd) {
+        boolean flag = false;
+        
+        try {
+            PreparedStatement ps = con.prepareStatement("UPDATE PATIENT SET AGEGROUP = ? ,GENDER = ? WHERE P_ID like ?");
+            ps.setString(3, p.getPid());
+            ps.setString(1, p.getAgeGroup());
+            ps.setString(2, p.getGender());
+            int rec = ps.executeUpdate();
+            System.out.println("pid is "+p.getPid()+" pidd is "+pidd);
+            System.out.println("Patient updates : "+rec);
+            flag=true;
+            System.out.println("Update Successfull in PATIENT");
+        } catch (Exception e) {
+            flag=false;
+            System.out.println("Update Failed in PATIENT");
+            System.out.println(e.getMessage());
+        }
+        try {
+            PreparedStatement ps = con.prepareStatement("UPDATE USERDETAIL SET FNAME = ? ,LNAME = ? ,DOB = ? ,EMAIL = ? ,ADDRESS = ? ,PHONE = ? WHERE P_ID like ? ");
+            ps.setString(1, u.getFirstName());
+            ps.setString(2, u.getLastName());
+            ps.setString(3, u.getDob());
+            ps.setString(4, u.getEmailId());
+            ps.setString(5, u.getAddress());
+            ps.setString(6, u.getPhone());
+            ps.setString(7, p.getPid());
+            int rec = ps.executeUpdate();
+            System.out.println("USERDETAIL updates : "+rec);
+            flag=true;
+            System.out.println("Update Successfull in USERSDETAILS");
+        } catch (Exception e) {
+            flag=false;
+            System.out.println("Update Failed in USERSDETAILS");
+            System.out.println(e.getMessage());
+        }
+        
+        return flag;
     }
+
 
     @Override
     public boolean deleteUser(String userId) {
@@ -355,7 +390,7 @@ public class DaoImpl implements UserDAO{
              i++;
          }  
          PreparedStatement pstmt2 = con.prepareStatement("Select * from PATIENT where P_ID = ?");
-         pstmt2.setString(1, id.trim());
+         pstmt2.setString(1, id.trim().toLowerCase());
          System.out.println("Stmt2 Hogaya");
          ResultSet rs2 = pstmt2.executeQuery();
          System.out.println("Excute2 hua");
@@ -488,6 +523,43 @@ public class DaoImpl implements UserDAO{
             System.out.println("Failed To Delete \n"+ex.getMessage());
         }
         return flag;   
+    }
+
+    @Override
+    public String[] viewDrProfile(String id) {
+        String details[] = new String [10];
+        try {
+         PreparedStatement pstmt = con.prepareStatement("Select * from USERDETAIL where D_ID = ?");
+         pstmt.setString(1, id.trim().toLowerCase());
+         System.out.println("Stmt Hogaya");
+         ResultSet rs = pstmt.executeQuery();
+         System.out.println("Excute hua");
+         int i=1;
+         rs.next();
+         while(i<9)
+         {
+             details[i-1]=rs.getString(i);
+             i++;
+         }  
+         PreparedStatement pstmt2 = con.prepareStatement("Select * from DOCTOR where D_ID = ?");
+         pstmt2.setString(1, id.trim());
+         System.out.println("Stmt2 Hogaya");
+         ResultSet rs2 = pstmt2.executeQuery();
+         System.out.println("Excute2 hua");
+         rs2.next();
+         details[8]=rs2.getString(2);
+         details[9]=rs2.getString(3).toUpperCase();
+         
+         
+            System.out.println("Array data are: ");
+            for (int j = 0; j < 10; j++) {
+                System.out.println("index "+j+" "+details[j]);
+            }
+     } catch (SQLException ex) {
+         System.out.println("Errrrrrrrrr:\n"+ex.getMessage()+"Ennnnnnnnnnnnnn\n\n");
+         java.util.logging.Logger.getLogger(DaoImpl.class.getName()).log(Level.SEVERE, null, ex);
+     }
+        return details;
     }
 
 }

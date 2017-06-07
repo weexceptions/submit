@@ -72,15 +72,15 @@ body{
                     <button class="btn btn-link" type="submit">View Appointment</button> </form></li>
           <li class="dropdown">
                 
-          <li><form action="viewuser.do" target="ContentFrame" method="post" class="form" id="fileForm" role="form">
-                    <input type="hidden" value="<%out.print(request.getAttribute("auser"));%>" name="txtid" />
-                    <center><button type="submit" class="btn btn-link">My Profile</button></center> </form>
-                </li>
+          <li><form target="ContentFrame" method="post" action="viewdruser.do">  
+                    <input type="hidden" name="userId" value="<%out.print(request.getAttribute("auser"));%>">
+                    <button class="btn btn-link" type="submit">View Profile</button> </form></li>
               
-         </li>
+         
           <li><a href="disease.jsp" target="ContentFrame" >Add Disease</a></li>
          
           <li><a target="_blank" href="index.jsp" onclick=window.close()>LogOut</a></li>
+            <li class="active"><a href="searchuser.jsp" target="ContentFrame">Search</a></li>
         </ul>
       </div>
       <!--/.nav-collapse -->
