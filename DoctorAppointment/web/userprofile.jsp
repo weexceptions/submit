@@ -15,18 +15,11 @@
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
     </head>
     <body><div class="container text-center" >
-            <label class="">
-                Hello, Pleass Upload Your Profil Picture.
-            </label>
-<div class="fileinput fileinput-new" data-provides="fileinput">
-    <span class="btn btn-default btn-file"><span>Choose file</span><input type="file" /></span>
-    <span class="fileinput-filename"></span><span class="fileinput-new">No file chosen</span>
-</div>
-            <div class="btn btn-success" onclick="">Submit</div>
-    
-</div><hr>
+            <h1 class="well text-primary">
+                Hello, Doctor!
+                </h1>
+            </div><hr>
 
-        </div>
         <div class="container">
             <table class="text-justify">
                 <tr class="row">

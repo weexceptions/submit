@@ -23,7 +23,7 @@
         font-weight: bold;
     }
     body{
-        background-image: url('Images/doctorbg.jpg');
+        
         background-size: 1000px;
         background-position-y: bottom;
     }  
@@ -60,8 +60,12 @@
                 <br>
             </div>
             </form>
+            
         </div>
         </div>
     </div>
+    
+                <img class="img-responsive" src="Images/doctorbg.jpg" width="100%" height="500px" alt="doctor">
+    
     </body>
 </html>

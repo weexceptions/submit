@@ -23,7 +23,7 @@
     </head>
     <body>
         <div class="container text-center" >
-            <h1 class="well label-primary">
+            <h1 class="well text-primary">
                 Hello, Doctor!
                 </h1>
     

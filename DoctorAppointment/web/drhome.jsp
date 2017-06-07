@@ -72,7 +72,10 @@ body{
                     <button class="btn btn-link" type="submit">View Appointment</button> </form></li>
           <li class="dropdown">
                 
-          <li><a target="ContentFrame" href="drprofile.jsp">My Profile</a></li>
+          <li><form action="viewuser.do" target="ContentFrame" method="post" class="form" id="fileForm" role="form">
+                    <input type="hidden" value="<%out.print(request.getAttribute("auser"));%>" name="txtid" />
+                    <center><button type="submit" class="btn btn-link">My Profile</button></center> </form>
+                </li>
               
          </li>
           <li><a href="disease.jsp" target="ContentFrame" >Add Disease</a></li>

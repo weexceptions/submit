@@ -40,7 +40,7 @@ public class ViewUser extends HttpServlet {
             String id = request.getParameter("txtid").toLowerCase();
             String details[]=userdao.viewProfile(id);
             RequestDispatcher rd = request.getRequestDispatcher("userprofile.jsp");
-            
+            RequestDispatcher rd2 = request.getRequestDispatcher("drprofile.jsp");
             request.setAttribute("uid", id);
             request.setAttribute("fname", details[2]);
             request.setAttribute("lname", details[3]);
