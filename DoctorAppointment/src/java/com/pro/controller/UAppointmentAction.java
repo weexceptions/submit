@@ -40,7 +40,7 @@ public class UAppointmentAction extends HttpServlet {
             String action = request.getParameter("action");
             UserDAO userdao = new DaoImpl();
              if (userdao.appointAction(aId, action)) {
-                RequestDispatcher rd = request.getRequestDispatcher("userhome.jsp");
+                RequestDispatcher rd = request.getRequestDispatcher("pat_home.jsp");
                 request.setAttribute("auser", id.toLowerCase());
                 rd.forward(request, response);
                  System.out.println("if block end");
