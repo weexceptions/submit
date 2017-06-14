@@ -100,8 +100,10 @@ function myFunction() {
         </style>
         <title>JSP Page</title>
     </head>
-    <body><div class="container-fluid">
+    <body><div class="container">
     <center><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Names.."></center>
+        </div>
+    <div class="container-fluid">
     <table id="myTable">
   <tr class="header">
     <th>UID</th>

@@ -29,4 +29,5 @@ public interface UserDAO {
     boolean addDisease(Disease dis);
     boolean bookAppointment(String pid,String did,String desc,String aDate,String aTime,String loc,String status);
     boolean appointAction(int aId,String action);
+    String[] getDisease(int dsid);
 }

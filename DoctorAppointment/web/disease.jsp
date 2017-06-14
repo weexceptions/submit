@@ -18,7 +18,7 @@
         <div class="container">
             <form action="disease.do" method="post" class="form-group ">
             <div class="form-group">
-                <legend><i class="glyphicon glyphicon-alert"></i>   Facts About Disease</legend>
+                <legend><i class="glyphicon glyphicon-alert"></i> Add facts About Disease</legend>
                 </div><br>
             <div class="form-group">
                 <label for="diseasename">Disease Name :  </label>
@@ -32,7 +32,8 @@
                 <label for="preventiond">Preventions : </label>
                 <textarea type="text" class="form-control" id="txt" name="txtpreventions"></textarea>
                 </div>
-            <div class="form-group" >
+            <div class="fo
+                 rm-group" >
                 <label for="cure">Cure : </label>
                 <textarea type="text" class="form-control" id="txt" name="txtcure"></textarea>
                 </div>

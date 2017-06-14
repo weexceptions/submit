@@ -65,7 +65,7 @@ body{
       </div>
       <div id="navbar3" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-left">
-          <li class="active"><a href="#" target="ContentFrame">Home</a></li>
+          <li class="active"><a href="home.jsp" target="ContentFrame">Home</a></li>
           <li><form target="ContentFrame" method="post" action="drnotification.jsp">  
                     <input type="hidden" name="userId" value="<%out.print(request.getAttribute("auser"));%>">
                     <button class="btn btn-link" type="submit">Notification</button>  </li></form>
@@ -92,8 +92,8 @@ body{
   </nav>
             </div>
             <div class="row" id="container">
-                <IFRAME seamless="seamless" scrolling="no" src="left3.do?a=<%out.print(request.getAttribute("auser"));%>" id="frame1" scrollig="no" name="NavigationFrame" width="19%" height="800" > </IFRAME>
-            <IFRAME seamless="seamless" scrolling="yes" src="home.jsp" id="frame2" name="ContentFrame" width="80%" height="800" ><h1>Content</h1></IFRAME>
+                <IFRAME seamless="seamless" scrolling="no" src="left3.do?a=<%out.print(request.getAttribute("auser"));%>" id="frame1" scrollig="no" name="NavigationFrame" width="24%" height="800" > </IFRAME>
+            <IFRAME seamless="seamless" scrolling="yes" src="home.jsp" id="frame2" name="ContentFrame" width="75%" height="800" ><h1>Content</h1></IFRAME>
             </div>
             
         <footer>

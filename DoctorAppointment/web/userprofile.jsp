@@ -16,7 +16,7 @@
     </head>
     <body><div class="container text-center" >
             <h1 class="well text-primary">
-                Hello, Patient!
+                Patient Detail
                 </h1>
             </div><hr>
 

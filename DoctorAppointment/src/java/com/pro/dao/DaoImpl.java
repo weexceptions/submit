@@ -564,4 +564,24 @@ public class DaoImpl implements UserDAO{
         return details;
     }
 
+    @Override
+    public String[] getDisease(int dsid) {
+        String desease[] = new String [5];
+        try {
+         PreparedStatement pstmt = con.prepareStatement("Select * from DISEASE where DS_ID = ?");
+         pstmt.setInt(1, dsid);
+         ResultSet rs = pstmt.executeQuery();
+         System.out.println("Excute hua");
+         rs.next();
+            for (int i = 0; i < 5; i++) {
+                desease[i]=rs.getString(i+1).toString();
+                System.out.println(i+" is "+desease[i]);
+            }
+        }
+        catch(Exception e)
+        {
+            System.out.println(e+" Exception hua "+e.getMessage());
+        }
+        return desease;
+    }
 }

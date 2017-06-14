@@ -6,8 +6,11 @@ package com.pro.controller;
  * and open the template in the editor.
  */
 
+import com.pro.dao.DaoImpl;
+import com.pro.dao.UserDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -33,15 +36,19 @@ public class ViewDisease extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet ViewDisease</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet ViewDisease at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+            UserDAO userdao = new DaoImpl();
+            int dsid = Integer.parseInt(request.getParameter("txtid").trim());
+            System.out.println("dsid is "+dsid);
+            String dData[]=userdao.getDisease(dsid);
+            request.setAttribute("dsid", dData[0]);
+            request.setAttribute("dname", dData[1]);
+            request.setAttribute("symp", dData[2]);
+            request.setAttribute("prev", dData[3]);
+            request.setAttribute("cure", dData[4]);
+            
+ RequestDispatcher rd = request.getRequestDispatcher("viewdisease.jsp");
+            rd.forward(request, response);
+            
         }
     }
 
