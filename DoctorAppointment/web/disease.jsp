@@ -15,7 +15,7 @@
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
     </head>
     <body>
-        <div class="container">
+        <div class="well container">
             <form action="disease.do" method="post" class="form-group ">
             <div class="form-group">
                 <legend><i class="glyphicon glyphicon-alert"></i> Add facts About Disease</legend>

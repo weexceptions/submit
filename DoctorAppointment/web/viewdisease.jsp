@@ -15,7 +15,7 @@
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
     </head>
     <body>
-        <div class="container">
+        <div class="well container">
             <div class="form-group">
                 <legend><i class="glyphicon glyphicon-barcode"></i>Facts About Disease</legend>
                 </div><br>

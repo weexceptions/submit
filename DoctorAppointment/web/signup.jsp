@@ -112,7 +112,7 @@ color: red;
             
             <div class="form-group">
                 <label for="password"><span class="req">* </span> Password: </label>
-                <input required name="txtpass" type="password" class="form-control inputpass" minlength="4" maxlength="16"  id="pass1" /> </p>
+                <input required name="txtpass" type="password" class="form-control inputpass" minlength="4" maxlength="16"  id="pass1" />
 
                 <label for="password"><span class="req">* </span> Password Confirm: </label>
                 <input required name="txtpass2" type="password" class="form-control inputpass" minlength="4" maxlength="16" placeholder="Enter again to validate"  id="pass2" onkeyup="checkPass(); return false;" />
@@ -126,7 +126,7 @@ color: red;
             
             <div class="form-group">
             <label for="phonenumber"><span class="req">* </span> Phone Number: </label>
-                    <input required type="text" name="txtphone" id="phone" class="form-control phone" maxlength="28" onkeyup="validatephone(this);" placeholder="Contact number"/> 
+                    <input required type="text" name="txtphone" id="phone" class="form-control phone" maxlength="10" onkeyup="validatephone(this);" placeholder="Contact number"/> 
             </div>
                 <div class="form-group">
                     
@@ -152,7 +152,7 @@ color: red;
             </div>            
             <div class="form-group">
             <label for="password"><span class="req">* </span>Date of Birth: </label>
-                <input type="date" name="txtdob">
+            <input type="date" class="form-control" name="txtdob">
                 <hr>
                 <input type="checkbox" required name="terms" onchange="this.setCustomValidity(validity.valueMissing ? 'Please indicate that you accept the Terms and Conditions' : '');" id="field_terms">   <label for="terms">I agree with the <a href="#" title="You may read our terms and conditions by clicking on this link">terms and conditions</a> for Registration.</label><span class="req">* </span>
             </div>

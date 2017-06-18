@@ -38,7 +38,7 @@
             </div>
                  <div class="form-group">
                 <label for="contactno">*Contact Number :  </label>
-                <input type="number" class="form-control" id="mobile" name="txtphone" required>
+                <input type="text" class="form-control" maxlength="10" id="mobile" name="txtphone" required>
                 </div><br><br>
                  <button type="submit" class="btn btn-success"> SUBMIT </button>
                 <button type="reset" class="btn btn-warning"> RESET </button>

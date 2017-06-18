@@ -43,7 +43,7 @@
             <th class="col-lg-2">A_DATE</th>
             <th class="col-lg-2">A_TIME</th>
             <th class="col-lg-2">LOCATION</th>
-            <th class="col-lg-2"> ACTION </th>
+            <th class="col-lg-4"> ACTION </th>
                 
         <%
             Connection con = null;
@@ -80,14 +80,17 @@
             <td class="col-lg-2"><%out.println(atime);%> </td>
             <td class="col-lg-2"><%out.println(loc);%> </td>
             
-            <td class="col-lg-2"><form target="ContentFrame" method="post" action="action.do">  
+            <td class="col-lg-4"><form target="ContentFrame" method="post" action="action.do">  
+                    <!--Accept Button-->
                     <input type="hidden" name="aId" value="<%out.print(aid);%>"><input type="hidden" name="action" value="accept">
                     <input type="hidden" name="userId" value="<%out.print(request.getParameter("userId"));%>">
-                    <button class="btn btn-success" type="submit">Accept</button>  </form>   
+                    <button class="btn btn-success" type="submit">Accept</button> </form>   
+                    <!--Reject Button -->
                     <form target="ContentFrame" method="post" action="action.do">  
                     <input type="hidden" name="aId" value="<%out.print(aid);%>"><input type="hidden" name="action" value="reject">
                     <input type="hidden" name="userId" value="<%out.print(request.getParameter("userId"));%>">
-                    <button class="btn btn-warning" type="submit">Reject</button>  </form></td>
+                    <button class="btn btn-warning" type="submit">Reject</button> </form>
+            </td>
             </tr>
             <%
             }

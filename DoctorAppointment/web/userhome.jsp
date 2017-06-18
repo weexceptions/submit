@@ -16,13 +16,18 @@
 <!--        <link rel="stylesheet" href="css/homestylesheet.css">-->
         <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
-        
-        <style>            
-        
+        <script>
+             $(document).ready(function(){
+               $("#flip").hover(function(){
+                  $("#panel").slideToggle("slow"); 
+               }); 
+            });
+       
+        </script>
+        <style>
 .navbar-brand {
   height: 100px;
 }
-
 .nav >li >a {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -66,18 +71,23 @@ body{
       <div id="navbar3" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-left">
           <li class="active"><a href="pat_home.jsp" target="ContentFrame">Home</a></li>
-          <li><form target="ContentFrame" method="post" action="notification.jsp">  
-                    <input type="hidden" name="userId" value="<%out.print(request.getAttribute("auser"));%>">
-                    <button class="btn btn-link" type="submit">Notification</button></form></li>
                     <li><a  href="confirmid.jsp" target="ContentFrame">Make Appointment</a></li>
-          <li><form target="ContentFrame" method="post" action="viewappoint.jsp">  
+          
+                   <li id="flip" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Help Desk<span class="caret"></span></a>
+            <ul id="panel" class="dropdown-menu" role="menu">
+                <li><form target="ContentFrame" method="post" action="notification.jsp">  
                     <input type="hidden" name="userId" value="<%out.print(request.getAttribute("auser"));%>">
-                    <button class="btn btn-link" type="submit">Appointment</button></form></li>
-              <li> <form action="viewuser.do" target="ContentFrame" method="post" class="form" id="fileForm" role="form">
+                    <center><button class="btn btn-warning" type="submit">Notification</button></center></form></li>
+                <li><form target="ContentFrame" method="post" action="viewappoint.jsp">  
+                    <input type="hidden" name="userId" value="<%out.print(request.getAttribute("auser"));%>">
+                    <center><button class="btn btn-primary" type="submit">Appointment </button></center></form></li>
+                <li><form action="viewuser.do" target="ContentFrame" method="post" class="form" id="fileForm" role="form">
                     <input type="hidden" value="<%out.print(request.getAttribute("auser"));%>" name="txtid" />
                     <input type="hidden" value="edit" name="edit" />
-                    <button type="submit" class="btn btn-link">My Profile</button></form>
+                    <center><button type="submit" class="btn btn-success">My Profile</button></center></form>
                 </li>
+            </ul></li>
              
           
           <li><a target="_blank" href="index.jsp" onclick=window.close()>LogOut</a></li>

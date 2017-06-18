@@ -16,6 +16,13 @@
         <!--<link rel="stylesheet" href="css/homestylesheet.css">-->
         <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script>
+            $(document).ready(function(){
+               $("#flip").hover(function(){
+                  $("#panel").slideToggle("slow"); 
+               }); 
+            });
+        </script>
         <style>            
         
 .navbar-brand {
@@ -55,13 +62,9 @@ body{
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand">
-             
            <h1 style="float: right; color: #ffffff; font-size: xx-large;font-weight: bolder">Stay Healthy Hospital</h1>
-          
-           <img src="Images/logo2.png" width="20%" height="100%"  alt="StayHealthy" >
+          <img src="Images/logo2.png" width="20%" height="100%"  alt="StayHealthy" >
            <h4 style="; font-size: small ;color: #ffffff;">Contact No.: 9876543210 </h4>
-           
-          
         </a>
          
       </div>
@@ -70,9 +73,9 @@ body{
           <li class="active"><a href="home.jsp" target="ContentFrame">Home</a></li>
           <li><a href="aboutus.jsp" target="ContentFrame" >About Us</a></li>
           <li><a  href="contactus.jsp" target="ContentFrame">Contact Us</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Help Desk<span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
+          <li id="flip" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Help Desk<span class="caret"></span></a>
+            <ul id="panel" class="dropdown-menu" role="menu">
                 <li><a target="ContentFrame" href="faqs.jsp">FAQs</a></li>
               <li><a target="ContentFrame" href="contactus.jsp">Enquiry Desk</a></li>
               <li><a target="ContentFrame" href="d_login.jsp">Doctor's LogIn</a></li>

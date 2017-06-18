@@ -25,7 +25,10 @@
 </style>
     </head>
     <body>
-        <div class="container">
+        <br/>
+        <div class="well container">
+            <h1>Time Slot Selection & Description. </h1>
+            
               <form action="makeAppointment.do" method="post" >
                    <input type="hidden" value="<%out.print(request.getAttribute("id"));%>" name="txtpid" />
                    <input type="hidden" value="<%out.print(request.getAttribute("dr"));%>" name="txtdid" />
@@ -39,8 +42,8 @@
                       </tr>
                       <tr class="row">
                           <td class="col-lg-6"><label class="control-label" for="patientname">Doctor Name:</label></td>
-                          <!--here u insert setAtribute code in input text below -->
-                          <td class="col-lg-6"><input type="text" class="input-sm" disabled="true" value="<%
+                          <!--Doctor Name-->
+                          <td class="col-lg-6"><input type="txt" class="input-sm" disabled="true" value="<%
                         Connection con = null;
                         PreparedStatement ps = null;
                         PreparedStatement ps2 = null;
@@ -58,7 +61,7 @@
                         System.out.println(did);
                         String fname = rs.getString("fname").toUpperCase(); 
                         String lname = rs.getString("lname".toUpperCase()); 
-                        System.out.println("Id nof dr is "+request.getAttribute("dr"));
+                        System.out.println("Id of dr is "+request.getAttribute("dr"));
                         if (did.equals(request.getAttribute("dr"))) {
                         fullname= fname+" "+lname.toUpperCase(); 
                         System.out.println("Fname "+fname+" lname "+lname);
@@ -71,23 +74,18 @@
                         { 
                         out.println(sqe);
                         }
-                        %>"><br/></td>
-                      </tr>
-                      <tr class="row">
+                        %>">
+                          </td>
+                    </tr>
+                    <tr class="row">
                           <td class="col-lg-6"><label class="control-label" for="patientname">Date :</label></td>
-                          <td class="col-lg-6"><input type="date" class="input-sm" disabled="true" name="date" value="<%out.print(request.getAttribute("date"));%>"><br/></td>
-                      </tr>
-                      <tr class="row">
-                      <tr class="row">
+                          <td class="col-lg-6"><input type="date" class="input-sm" disabled="true" name="date" value="<%out.print(request.getAttribute("date"));%>"></td>
+                    </tr>
+                    <tr class="row">
+                        <td class="col-lg-6"><label for="appt timeslot">Appointment Time:</label></td>   
+                        <td class="col-lg-6">
                      
-                          <td class="col-lg-12">   
-            <div  class="form-group">
-                    <label for="appt timeslot">Appointment Time:</label>
-                    <select type="text" class="form-control" name="txttime"  required>
-                        
-                         
-                        <p>Select Name :
-                       
+                        <select type="text" class="form-control" name="txttime"  required>
                             <option disabled selected id="Time">Select Time</option>
                             <% String mDate="";
                             try{
@@ -206,8 +204,6 @@
                                                          dselect="disabled";
                                                          rs2.next();
                                                    }
-                                            
-                                        
                                          else{
                                              dselect=null;
                                              switch (i) {
@@ -253,7 +249,6 @@
                                               }
                                           }
                                         }
-                                     
                                 else{
                                     for (int i = 1; i < 9; i++) {
                                      switch (i) {
@@ -296,26 +291,21 @@
                                     <option value="<%=tval %>"><%=atime %></option>
                                     <% }
                                 }
-                                
-                                
-
                             }
                             catch(Exception sqe)
                             { 
                             out.println(sqe);
                             }
                             %>
-                           
-                  
-            </div>
-                          </td>
-                      </tr>
-                      <tr>
-                              <td class="col-lg-6"><label class="control-label"  for="patientname">Description :</label></td>
-                              <td class="col-lg-6"><textarea type="text" class="form-control input-lg" name="txtdesc" placeholder="Enter your Problem"></textarea>
-                       </tr>
-                       <tr>
-                            <td colspan="2"> <button type="submit" class="btn btn-success" >Book</button></td>
+                        </select>
+                        </td>
+                    </tr>
+                    <tr class="row">
+                        <td class="col-lg-6"><label class="control-label"  for="patientname">Description :</label></td>
+                        <td class="col-lg-6"><textarea type="text" class="form-control input-lg" name="txtdesc" placeholder="Enter your Problem"></textarea></td>
+                    </tr><br/>
+                    <tr class="row">
+                       <td colspan="2"> <center><button type="submit" class="btn form-control btn-success" >Book Appointment</button></center></td>
                         </tr>
               </table>
               </form>

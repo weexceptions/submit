@@ -79,7 +79,7 @@
             </div>
             <div class="form-group">
             <label for="phonenumber"><span class="req">* </span> Phone Number: </label>
-                    <input required type="text" name="txtphone" id="phone" class="form-control phone" maxlength="28" onkeyup="validatephone(this);" placeholder="Contact number"/> 
+                    <input required type="text" name="txtphone" id="phone" class="form-control phone" maxlength="10" onkeyup="validatephone(this);" placeholder="Contact number"/> 
             </div>
 <!--                <div class="form-group">
                     
