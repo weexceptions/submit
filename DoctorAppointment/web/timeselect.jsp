@@ -51,7 +51,7 @@
                   try
                         {
                         con = DBconnection.getConnection();
-                        String sql =  "SELECT D_ID,fname,lname FROM USERDETAIL where D_ID IS NOT NULL";           
+                        String sql =  "SELECT UID,fname,lname FROM USERDETAIL where UTYPE = 'Dr'";           
                         ps = con.prepareStatement(sql);
                         String did;
                         ResultSet rs = ps.executeQuery(); 

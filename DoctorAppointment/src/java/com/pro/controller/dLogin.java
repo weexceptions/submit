@@ -55,7 +55,7 @@ public class dLogin extends HttpServlet {
                 System.out.println("Failed to Login");  
                 out.println("<script type=\"text/javascript\">");
                 out.println("alert('User or password incorrect');");
-                out.println("location='login.jsp';");
+                out.println("location='d_login.jsp';");
                 out.println("</script>");
             }  
         }

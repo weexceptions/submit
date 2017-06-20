@@ -41,7 +41,7 @@ public class DaoImpl implements UserDAO{
             System.out.println(e.getMessage());
         }
         try {
-            PreparedStatement ps = con.prepareStatement("insert into USERDETAIL (PASSWORD,FNAME,LNAME,DOB,EMAIL,ADDRESS,PHONE,P_ID) values (?,?,?,?,?,?,?,?)");
+            PreparedStatement ps = con.prepareStatement("insert into USERDETAIL (PASSWORD,FNAME,LNAME,DOB,EMAIL,ADDRESS,PHONE,UID,UTYPE) values (?,?,?,?,?,?,?,?,'P')");
             ps.setString(1, u.getPassword());
             ps.setString(2, u.getFirstName());
             ps.setString(3, u.getLastName());
@@ -50,6 +50,44 @@ public class DaoImpl implements UserDAO{
             ps.setString(6, u.getAddress());
             ps.setString(7, u.getPhone());
             ps.setString(8, p.getPid());
+            ps.execute();
+            flag=true;
+            System.out.println("Insert Successfull in USERSDETAILS");
+        } catch (Exception e) {
+            flag=false;
+            System.out.println("Insert Failed in USERSDETAILS");
+            System.out.println(e.getMessage());
+        }
+        
+        return flag;
+    }
+    @Override
+    public boolean createDrUser(User u,Doctor d ) {
+        boolean flag = false;
+        
+        try {
+            PreparedStatement ps = con.prepareStatement("insert into DOCTOR (D_ID,LOCATION,SPECIALIST) values (?,?,?)");
+            ps.setString(1, u.getUserId());
+            ps.setString(2, d.getLocation());
+            ps.setString(3, d.getSpecialist());
+            ps.execute();
+            flag=true;
+            System.out.println("Insert Successfull in DOCTOR");
+        } catch (Exception e) {
+            flag=false;
+            System.out.println("Insert Failed in DOCTOR");
+            System.out.println(e.getMessage());
+        }
+        try {
+            PreparedStatement ps = con.prepareStatement("insert into USERDETAIL (PASSWORD,FNAME,LNAME,DOB,EMAIL,ADDRESS,PHONE,UID,UTYPE) values (?,?,?,?,?,?,?,?,'P')");
+            ps.setString(1, u.getPassword());
+            ps.setString(2, u.getFirstName());
+            ps.setString(3, u.getLastName());
+            ps.setString(4, u.getDob());
+            ps.setString(5, u.getEmailId());
+            ps.setString(6, u.getAddress());
+            ps.setString(7, u.getPhone());
+            ps.setString(8, u.getUserId());
             ps.execute();
             flag=true;
             System.out.println("Insert Successfull in USERSDETAILS");
@@ -74,7 +112,7 @@ public class DaoImpl implements UserDAO{
         boolean flag = false;
         PreparedStatement ps;
         try {
-             ps = con.prepareStatement("UPDATE PATIENT SET AGEGROUP = ? ,GENDER = ? WHERE P_ID = ?");
+             ps = con.prepareStatement("UPDATE PATIENT SET AGEGROUP = ? ,GENDER = ? WHERE UID = ?");
             ps.setString(3, p.getPid().trim());
             ps.setString(1, p.getAgeGroup().trim());
             ps.setString(2, p.getGender().trim());
@@ -90,7 +128,7 @@ public class DaoImpl implements UserDAO{
             System.out.println(e.getMessage());
         }
         try {
-            ps = con.prepareStatement("UPDATE USERDETAIL SET FNAME = ? ,LNAME = ? ,DOB = ? ,EMAIL = ? ,ADDRESS = ? ,PHONE = ? WHERE P_ID = ? ");
+            ps = con.prepareStatement("UPDATE USERDETAIL SET FNAME = ? ,LNAME = ? ,DOB = ? ,EMAIL = ? ,ADDRESS = ? ,PHONE = ? WHERE UID = ? ");
             ps.setString(1, u.getFirstName().trim());
             ps.setString(2, u.getLastName().trim());
             ps.setString(3, u.getDob().trim());
@@ -120,7 +158,7 @@ public class DaoImpl implements UserDAO{
         PreparedStatement ps2=null;
         PreparedStatement ps3=null;
         try {
-            ps = con.prepareStatement("DELETE FROM USERDETAIL WHERE P_ID = ?");
+            ps = con.prepareStatement("DELETE FROM USERDETAIL WHERE UID = ?");
             ps2 = con.prepareStatement("DELETE FROM PATIENT WHERE P_ID = ?");
             ps3 = con.prepareStatement("DELETE FROM APPOINTMENT WHERE P_ID = ?");
            
@@ -160,7 +198,7 @@ public class DaoImpl implements UserDAO{
         boolean r=false;
         id.toLowerCase();
         pass.toLowerCase();
-        String sql =("Select P_ID,password from USERDETAIL where P_ID is NOT NULL");
+        String sql =("Select UID,password from USERDETAIL where UTYPE LIKE 'P'");
         Statement statement=null;
         ResultSet resultSet=null;
         String s1;
@@ -171,7 +209,7 @@ public class DaoImpl implements UserDAO{
            resultSet = statement.executeQuery(sql);
             System.out.println("Sque Exe");
             while (resultSet.next()){
-            s1=resultSet.getString("P_ID");
+            s1=resultSet.getString("UID");
             s2=resultSet.getString("password");
             s1.toLowerCase();
             s2.toLowerCase();
@@ -189,8 +227,10 @@ public class DaoImpl implements UserDAO{
                 System.out.println("Not matchs");
             }
         }
-        } catch (SQLException ex) {
-            System.out.println("Exception ");             
+        } catch (SQLException e) {
+            System.out.println("Exception ");    
+            System.out.println(e);
+            System.out.println("\n details \n\n"+e.getMessage());
         }
         return r;
     
@@ -199,7 +239,7 @@ public class DaoImpl implements UserDAO{
     @Override
     public boolean checkPassword(String id, String email, String phone) {
         boolean r=false;
-        String sql =("Select P_ID,EMAIL,PHONE from USERDETAIL where P_ID is not null");
+        String sql =("Select UID,EMAIL,PHONE from USERDETAIL where UTYPE = 'P'");
         Statement statement=null;
         ResultSet resultSet=null;
         String s1;
@@ -211,7 +251,7 @@ public class DaoImpl implements UserDAO{
            resultSet = statement.executeQuery(sql);
             System.out.println("Sque Exe");
             while (resultSet.next()){
-                s1=resultSet.getString("P_ID");
+                s1=resultSet.getString("UID");
                 s2=resultSet.getString("EMAIL");
                 s3=resultSet.getString("PHONE");
                 System.out.println("ID "+id+"---"+s1+"\nMail "+email+"----"+s2+"\nPhone "+phone+"----"+s3);
@@ -247,7 +287,7 @@ public class DaoImpl implements UserDAO{
         try {
             System.out.println("Update wala id "+id);
             System.out.println("Update wala pass "+pass);
-            ps = con.prepareStatement("UPDATE USERDETAIL SET PASSWORD = ? WHERE P_ID like ?");
+            ps = con.prepareStatement("UPDATE USERDETAIL SET PASSWORD = ? WHERE UID like ?");
             ps.setString(2,id.trim());
             ps.setString(1, pass);
             int rec = ps.executeUpdate();
@@ -266,7 +306,7 @@ public class DaoImpl implements UserDAO{
         List<DoctorInfo> drlist = new ArrayList<DoctorInfo>();
      try {
          
-         PreparedStatement pstmt = con.prepareStatement("select D_ID from USERDETAIL where D_ID IS NOT NULL");
+         PreparedStatement pstmt = con.prepareStatement("select UID from USERDETAIL where UTYPE = 'Dr'");
          System.out.println("Stmt");
          ResultSet rs = pstmt.executeQuery();
          System.out.println("Exe hua");
@@ -275,7 +315,7 @@ public class DaoImpl implements UserDAO{
          {
              String dId=rs.getString(1);
              System.out.println("\n"+dId);
-             PreparedStatement ps1 = con.prepareStatement("SELECT FNAME,LNAME FROM USERDETAIL WHERE D_ID = ?");
+             PreparedStatement ps1 = con.prepareStatement("SELECT FNAME,LNAME FROM USERDETAIL WHERE UID = ?");
              ps1.setString(1, dId);
              ResultSet rs1 = ps1.executeQuery();
              PreparedStatement ps2 = con.prepareStatement("SELECT LOCATION,SPECIALIST FROM DOCTOR WHERE D_ID = ?");
@@ -313,7 +353,7 @@ public class DaoImpl implements UserDAO{
         boolean r=false;
         id.toLowerCase();
         pass.toLowerCase();
-        String sql =("Select D_ID,password from USERDETAIL where D_ID is NOT NULL");
+        String sql =("Select UID,password from USERDETAIL where UTYPE = 'Dr'");
         Statement statement=null;
         ResultSet resultSet=null;
         String s1;
@@ -324,7 +364,7 @@ public class DaoImpl implements UserDAO{
            resultSet = statement.executeQuery(sql);
             System.out.println("Sque Exe");
             while (resultSet.next()){
-            s1=resultSet.getString("D_ID");
+            s1=resultSet.getString("UID");
             s2=resultSet.getString("password");
             s1.toLowerCase();
             s2.toLowerCase();
@@ -354,7 +394,7 @@ public class DaoImpl implements UserDAO{
         List<AllDoctor> allDr = new ArrayList<AllDoctor>();
      try {
          
-         PreparedStatement pstmt = con.prepareStatement("select FNAME,LNAME from USERDETAIL where D_ID IS NOT NULL");
+         PreparedStatement pstmt = con.prepareStatement("select FNAME,LNAME from USERDETAIL where UTYPE = 'Dr'");
          System.out.println("Stmt");
          ResultSet rs = pstmt.executeQuery();
          System.out.println("Exe hua");
@@ -379,7 +419,7 @@ public class DaoImpl implements UserDAO{
     public String[] viewProfile( String id) {
         String details[] = new String [10];
         try {
-         PreparedStatement pstmt = con.prepareStatement("Select * from USERDETAIL where P_ID = ?");
+         PreparedStatement pstmt = con.prepareStatement("Select * from USERDETAIL where UID = ?");
          pstmt.setString(1, id.trim().toLowerCase());
          System.out.println("Stmt Hogaya");
          ResultSet rs = pstmt.executeQuery();
@@ -492,7 +532,7 @@ public class DaoImpl implements UserDAO{
         PreparedStatement ps3=null;
         System.out.println("Dr id in deleDAO is "+userId);
         try {
-            ps = con.prepareStatement("DELETE FROM USERDETAIL WHERE D_ID = ?");
+            ps = con.prepareStatement("DELETE FROM USERDETAIL WHERE UID = ?");
             ps2 = con.prepareStatement("DELETE FROM DOCTOR WHERE D_ID = ?");
             ps3 = con.prepareStatement("DELETE FROM APPOINTMENT WHERE D_ID = ?");
            
@@ -531,7 +571,7 @@ public class DaoImpl implements UserDAO{
     public String[] viewDrProfile(String id) {
         String details[] = new String [10];
         try {
-         PreparedStatement pstmt = con.prepareStatement("Select * from USERDETAIL where D_ID = ?");
+         PreparedStatement pstmt = con.prepareStatement("Select * from USERDETAIL where UID = ?");
          pstmt.setString(1, id.trim().toLowerCase());
          System.out.println("Stmt Hogaya");
          ResultSet rs = pstmt.executeQuery();

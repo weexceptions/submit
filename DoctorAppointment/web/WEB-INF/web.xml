@@ -80,6 +80,10 @@
         <servlet-name>UpdateUserServlet</servlet-name>
         <servlet-class>com.pro.controller.UpdateUser</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CreateDrUserServlet</servlet-name>
+        <servlet-class>com.pro.controller.CreateDrUser</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CreateUser</servlet-name>
         <url-pattern>/createuser.do</url-pattern>
@@ -159,6 +163,10 @@
     <servlet-mapping>
         <servlet-name>UpdateUserServlet</servlet-name>
         <url-pattern>/updateuser.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreateDrUserServlet</servlet-name>
+        <url-pattern>/createdr.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

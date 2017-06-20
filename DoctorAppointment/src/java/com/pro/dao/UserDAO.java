@@ -14,6 +14,7 @@ import java.util.List;
 public interface UserDAO {
     
     boolean createUser(User u,Patient p);
+    boolean createDrUser(User u,Doctor d);
     User getUserById(int userId);
     boolean updateUser(User u,Patient p,String pidd);
     boolean deleteUser(String userId);
