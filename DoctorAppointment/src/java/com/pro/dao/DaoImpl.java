@@ -79,7 +79,7 @@ public class DaoImpl implements UserDAO{
             System.out.println(e.getMessage());
         }
         try {
-            PreparedStatement ps = con.prepareStatement("insert into USERDETAIL (PASSWORD,FNAME,LNAME,DOB,EMAIL,ADDRESS,PHONE,UID,UTYPE) values (?,?,?,?,?,?,?,?,'P')");
+            PreparedStatement ps = con.prepareStatement("insert into USERDETAIL (PASSWORD,FNAME,LNAME,DOB,EMAIL,ADDRESS,PHONE,UID,UTYPE) values (?,?,?,?,?,?,?,?,'Dr')");
             ps.setString(1, u.getPassword());
             ps.setString(2, u.getFirstName());
             ps.setString(3, u.getLastName());

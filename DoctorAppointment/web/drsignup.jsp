@@ -81,17 +81,13 @@
             <label for="phonenumber"><span class="req">* </span> Phone Number: </label>
                     <input required type="text" name="txtphone" id="phone" class="form-control phone" maxlength="10" onkeyup="validatephone(this);" placeholder="Contact number"/> 
             </div>
-<!--                <div class="form-group">
-                    
+<!--        <div class="form-group">
             <label class="radio-inline">
-                <input type="radio" name="txtsex" id="inlineCheckbox1" value="male" />
-                Male
-            </label>
-            <label class="radio-inline">
-                <input type="radio" name="txtsex" id="inlineCheckbox2" value="female" />
-                Female
+                <input type="hidden" name="txtDr" id="inlineCheckbox1" value="Dr"  />
+                Dr
             </label>
             </div>-->
+
             <div class="form-group">
                 <label for="email"><span class="req">* </span>Location: </label> 
                 <select name="txtloc" class="form-control" >

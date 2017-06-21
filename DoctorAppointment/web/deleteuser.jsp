@@ -38,7 +38,6 @@
             <table class="table-condensed table-hover" border="0">
                 <thead class="row">
                 <th class="col-lg-2">UID</th>    
-                <th class="col-lg-2">Patient Id</th>
                 <th class="col-lg-2">Password</th>
                 <th class="col-lg-2">First Name</th>
                 <th class="col-lg-2">Last Name</th>
@@ -55,31 +54,28 @@
             try
             {
             con = DBconnection.getConnection();
-            String sql = "SELECT UID,P_ID,D_ID,FNAME,LNAME,DOB,EMAIL,ADDRESS,PHONE,PASSWORD FROM USERDETAIL WHERE P_ID IS NOT NULL ";
+            String sql = "SELECT UID,FNAME,LNAME,DOB,EMAIL,ADDRESS,PHONE,PASSWORD FROM USERDETAIL WHERE UTYPE ='P' ";
             
             ps = con.prepareStatement(sql);
             ResultSet rs = ps.executeQuery(); 
-            String pid,did,fname,lname,dob,email,addr,phone,pass;
-            int uid;
+            String uid,fname,lname,dob,email,addr,phone,pass;
+           
             %>
             <tr>
             <%
             while(rs.next())
             {
-             uid=rs.getInt(1);
-             pid=rs.getString(2);
-             did=rs.getString(3);
-             fname=rs.getString(4);
-             lname=rs.getString(5);
-             dob=rs.getString(6);
-             email=rs.getString(7);
-             addr=rs.getString(8);
-             phone=rs.getString(9);
-             pass=rs.getString(10);
+             uid=rs.getString(1);
+             fname=rs.getString(2);
+             lname=rs.getString(3);
+             dob=rs.getString(4);
+             email=rs.getString(5);
+             addr=rs.getString(6);
+             phone=rs.getString(7);
+             pass=rs.getString(8);
             %>
             
             <td class="col-lg-1"><%out.println(uid);%> </td>
-            <td class="col-lg-1"><%out.println(pid);%> </td>
             <td class="col-lg-1"><%out.println(pass);%> </td>
             <td class="col-lg-1"><%out.println(fname);%> </td>
             <td class="col-lg-1"><%out.println(lname);%> </td>
@@ -89,7 +85,7 @@
             <td class="col-lg-1"><%out.println(phone);%> </td>
             
             <td class="col-lg-1"> <form action="deleteuser.do" method="post" class="form" id="fileForm" role="form">
-                    <input type="hidden" value="<%out.println(pid.toLowerCase());%>" name="txtuid" />
+                    <input type="hidden" value="<%out.println(uid.toLowerCase());%>" name="txtuid" />
                     <button type="submit" class="btn btn-danger">Delete</button>
                 </form>
             </td>
@@ -105,8 +101,8 @@
             out.println(sqe);
             }
             %>
-                </tr>
-            </table>
+               
+           
         </div>
             
     </body>

@@ -48,7 +48,7 @@ public class CreateDrUser extends HttpServlet {
         String speclist=request.getParameter("txtspec");
         String pid=request.getParameter("txtpid").toLowerCase();
         String location= request.getParameter("txtloc");
-        
+//        String utype= request.getParameter("txtDr");
         User user = new User(pid,fname,lname,pass,dob,Phone,email,Address);
         Doctor doctor = new Doctor(0,location, speclist);
         UserDAO userdao = new DaoImpl();
@@ -56,10 +56,8 @@ public class CreateDrUser extends HttpServlet {
       //  userdao.createUser(user);
         if(userdao.createDrUser(user, doctor)){
                 System.out.println("User Record Successfully Inserted");
-                RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
-                request.setAttribute("auser", pid.toUpperCase());
-                
-                rd.forward(request, response);
+                RequestDispatcher rd = request.getRequestDispatcher("drsignup.jsp");
+                 rd.forward(request, response);
             }
             else
             {
