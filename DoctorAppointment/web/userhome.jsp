@@ -10,7 +10,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Home</title>
+        <title>Stay Healthy Hospital</title>
         
         <link rel="stylesheet" href="css/bootstrap.min.css"/>
 <!--        <link rel="stylesheet" href="css/homestylesheet.css">-->
@@ -83,7 +83,7 @@ body{
                     <input type="hidden" name="userId" value="<%out.print(request.getAttribute("auser"));%>">
                     <center><button class="btn btn-primary" type="submit">Appointment </button></center></form></li>
                 <li><form action="viewuser.do" target="ContentFrame" method="post" class="form" id="fileForm" role="form">
-                    <input type="hidden" value="<%out.print(request.getAttribute("auser"));%>" name="txtid" />
+                    <input type="hidden" value="<%out.print(request.getAttribute("auser"));%>" name="txtuid" />
                     <input type="hidden" value="edit" name="edit" />
                     <center><button type="submit" class="btn btn-success">My Profile</button></center></form>
                 </li>

@@ -46,9 +46,7 @@ public class AddDisease extends HttpServlet {
             
          if(u.addDisease(disease)){
                 System.out.println("Disease Record Successfully Inserted");
-                RequestDispatcher rd = request.getRequestDispatcher("regsuccess.jsp");
-                request.setAttribute("auser", diseaseName.toLowerCase());
-                
+                RequestDispatcher rd = request.getRequestDispatcher("home.jsp");
                 rd.forward(request, response);
             }
             else

@@ -194,11 +194,11 @@ function myFunction() {
     <div class="container">
         <aside id="sticky-social">
         <ul>
-        <li><a href="#" class="entypo-facebook " target="_blank"><span>Facebook</span></a></li>
-        <li><a href="#" class="entypo-twitter" target="_blank"><span>Twitter</span></a></li>
-        <li><a href="#" class="entypo-gplus" target="_blank"><span>Google+</span></a></li>
-        <li><a href="#" class="entypo-linkedin" target="_blank"><span>LinkedIn</span></a></li>
-        <li><a href="#" class="entypo-instagrem" target="_blank"><span>Instagram</span></a></li>
+        <li><a href="https://www.facebook.com/Stayhealthyhospital" class="entypo-facebook " target="_blank"><span>Facebook</span></a></li>
+        <li><a href="https://twitter.com/Stayhealthyhospital" class="entypo-twitter" target="_blank"><span>Twitter</span></a></li>
+        <li><a href="https://www.googleplus.com/Stayhealthyhospital" class="entypo-gplus" target="_blank"><span>Google+</span></a></li>
+        <li><a href="https://www.linked.in/Stayhealthyhospital" class="entypo-linkedin" target="_blank"><span>LinkedIn</span></a></li>
+        <li><a href="https://www.instagram.com/Stayhealthyhospital" class="entypo-instagrem" target="_blank"><span>Instagram</span></a></li>
         </ul>
         </aside>
         </div>

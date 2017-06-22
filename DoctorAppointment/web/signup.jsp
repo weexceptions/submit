@@ -89,18 +89,18 @@ color: red;
             
             <div class="form-group">
                 <label for="username"><span class="req">* </span> User name:  <small>This will be your login user name</small> </label> 
-                <input class="form-control" type="text" name="txtpid" id = "txt" onkeyup = "Validate(this)" placeholder="minimum 6 letters" required />  
+                <input class="form-control" type="text" name="txtpid" id = "txt" onkeyup = "Validate(this)" placeholder="In LowerCase letters" required />  
                 <div id="errLast"></div>
             </div>    
              <div class="form-group"> 	 
                 <label for="firstname"><span class="req">* </span> First name: </label>
-                <input class="form-control" type="text" name="txtfname" id = "txt" onkeyup = "Validate(this)" required /> 
+                <input class="form-control" type="text" name="txtfname" id = "txt" onkeyup = "Validate(this)" placeholder="Enter Name" required /> 
                 <div id="errFirst"></div>    
             </div>
 
             <div class="form-group">
                 <label for="lastname"><span class="req">* </span> Last name: </label> 
-                <input class="form-control" type="text" name="txtlname" id = "txt" onkeyup = "Validate(this)" placeholder="hyphen or single quote OK" required />  
+                <input class="form-control" type="text" name="txtlname" id = "txt" onkeyup = "Validate(this)" placeholder="Enter Surname" required />  
                 <div id="errLast"></div>
             </div>
 

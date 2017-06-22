@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Home</title>
+        <title>Stay Healthy Hospital</title>
         
         <link rel="stylesheet" href="css/bootstrap.min.css"/>
         <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>

@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Home</title>
+        <title>Admin Home</title>
         
         <link rel="stylesheet" href="css/bootstrap.min.css"/>
         <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
@@ -77,8 +77,8 @@ body{
             </IFRAME>
             </div>
             
-        <footer>
-        <div class="container-fluid" style="background-color: black">
+        <footer  class="container-fluid">
+        <div style="background-color: black">
     <div class="row">
     <div class="col-lg-12 text-danger text-center text-muted">
     <p class="pull-right">

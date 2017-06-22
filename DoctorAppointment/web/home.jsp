@@ -16,7 +16,7 @@
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <style>
             .carousel {
-  height: 500px;
+  height: 450px;
   margin-bottom: 60px;
 }
 /* Since positioning the image, we need to help out the caption */
@@ -26,7 +26,7 @@
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
-  height: 500px;
+  height: 450px;
   background-color: #777;
 }
 .carousel-inner > .item > img {
@@ -34,7 +34,7 @@
   top: 0;
   left: 0;
   min-width: 100%;
-  height: 500px;
+  height: 450px;
 }
     </style>
     </head>
@@ -129,11 +129,11 @@ Honey is the way to go not just to replace sugar, but to add nutrition and welln
         <div class="container">
         <aside id="sticky-social">
         <ul>
-        <li><a href="www.facebook.com/StayHealthy" class="entypo-facebook " target="_blank"><span>Facebook</span></a></li>
-        <li><a href="www.twitter.com/StayHealthy" class="entypo-twitter" target="_blank"><span>Twitter</span></a></li>
-        <li><a href="www.googleplus.com/StayHealthy" class="entypo-gplus" target="_blank"><span>Google+</span></a></li>
-        <li><a href="www.linked.in/StayHealthy" class="entypo-linkedin" target="_blank"><span>LinkedIn</span></a></li>
-        <li><a href="" class="entypo-instagrem" target="_blank"><span>Instagram</span></a></li>
+        <li><a href="https://www.facebook.com/Stayhealthyhospital" class="entypo-facebook " target="_blank"><span>Facebook</span></a></li>
+        <li><a href="https://twitter.com/Stayhealthyhospital" class="entypo-twitter" target="_blank"><span>Twitter</span></a></li>
+        <li><a href="https://www.googleplus.com/Stayhealthyhospital" class="entypo-gplus" target="_blank"><span>Google+</span></a></li>
+        <li><a href="https://www.linked.in/Stayhealthyhospital" class="entypo-linkedin" target="_blank"><span>LinkedIn</span></a></li>
+        <li><a href="https://www.instagram.com/Stayhealthyhospital" class="entypo-instagrem" target="_blank"><span>Instagram</span></a></li>
         </ul>
         </aside>
         </div>

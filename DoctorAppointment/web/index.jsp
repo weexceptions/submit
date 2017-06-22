@@ -13,7 +13,6 @@
         <title>Home</title>
         
         <link rel="stylesheet" href="css/bootstrap.min.css"/>
-        <!--<link rel="stylesheet" href="css/homestylesheet.css">-->
         <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <script>
@@ -44,7 +43,7 @@
  border: 1px solid black; margin-right: 1px; float:right; margin-top: 0px
 }
 body{
- background-color: #2aabd2;
+ background-color: #d4d4d4;
 }
 </style>
     </head>

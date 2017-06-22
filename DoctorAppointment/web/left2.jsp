@@ -60,7 +60,7 @@
             <%=product.getLocation().toUpperCase()%> <br/>
             <%out.print("Specialist:");%>
             <%=product.getSpecialist().toUpperCase()%> <br/><br/><br/>
-            <%}%></center>
+            <% } %></center>
             </div></h4>
         </div>
     </marquee>

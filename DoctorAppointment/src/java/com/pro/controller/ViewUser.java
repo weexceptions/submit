@@ -37,7 +37,7 @@ public class ViewUser extends HttpServlet {
             /* TODO output your page here. You may use following sample code. */
             
             UserDAO userdao = new DaoImpl();
-            String id = request.getParameter("txtid").toLowerCase();
+            String uid = request.getParameter("txtuid").toLowerCase();
             String edit;
             try{
             edit= request.getParameter("edit");
@@ -46,10 +46,10 @@ public class ViewUser extends HttpServlet {
                 edit="noedit";
             }
             System.out.println("\nEdit value is "+edit);
-            String details[]=userdao.viewProfile(id);
+            String details[]=userdao.viewProfile(uid);
             RequestDispatcher rd = request.getRequestDispatcher("userprofile.jsp");
             
-            request.setAttribute("uid", id);
+            request.setAttribute("uid", uid);
             request.setAttribute("fname", details[2]);
             request.setAttribute("lname", details[3]);
             request.setAttribute("dob", details[4]);

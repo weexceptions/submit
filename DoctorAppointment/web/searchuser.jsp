@@ -98,7 +98,7 @@ function myFunction() {
 }
 
         </style>
-        <title>JSP Page</title>
+        <title>Search page</title>
     </head>
     <body><div class="container">
     <center><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Names.."></center>
@@ -109,7 +109,6 @@ function myFunction() {
     <th>UID</th>
     <th>FNAME </th>
     <th>LNAME</th>
-    <th>P_ID</th>
     <th>VIEW</th>
   </tr>
    <%
@@ -118,10 +117,10 @@ function myFunction() {
             try
             {
             con = DBconnection.getConnection();
-            String sql = "SELECT UID,FNAME,LNAME,P_ID,DOB,EMAIL,ADDRESS,PHONE FROM USERDETAIL WHERE P_ID IS NOT NULL";
+            String sql = "SELECT UID,FNAME,LNAME,DOB,EMAIL,ADDRESS,PHONE FROM USERDETAIL WHERE UTYPE ='P'";
             ps = con.prepareStatement(sql);
             ResultSet rs = ps.executeQuery(); 
-            String uid,fname,lname,pid,dob,email,addr,phone;
+            String uid,fname,lname,dob,email,addr,phone;
             %>
             <tr>
             <%
@@ -131,20 +130,18 @@ function myFunction() {
              uid=rs.getString(1);
              fname=rs.getString(2);
              lname=rs.getString(3);
-             pid=rs.getString(4);
-             dob=rs.getString(5);
-             email=rs.getString(6);
-             addr=rs.getString(7);
-             phone=rs.getString(8);
+             dob=rs.getString(4);
+             email=rs.getString(5);
+             addr=rs.getString(6);
+             phone=rs.getString(7);
             %>
             
             <td class="col-lg-1"><%out.println(uid);%> </td>
             <td class="col-lg-1"><%out.println(fname);%> </td>
             <td class="col-lg-1"><%out.println(lname);%> </td>
-            <td class="col-lg-1"><%out.println(pid);%> </td>
             
             <td class="col-lg-1"> <form action="viewuser.do" method="post" class="form" id="fileForm" role="form">
-                    <input type="hidden" value="<%out.println(pid);%>" name="txtid" />
+                    <input type="hidden" value="<%out.println(uid);%>" name="txtuid" />
                     <input type="hidden" value="noedit" name="edit" />
                     <button type="submit" class="btn btn-info">Show</button>
                 </form>
@@ -164,11 +161,11 @@ function myFunction() {
     <div class="container">
         <aside id="sticky-social">
         <ul>
-        <li><a href="#" class="entypo-facebook " target="_blank"><span>Facebook</span></a></li>
-        <li><a href="#" class="entypo-twitter" target="_blank"><span>Twitter</span></a></li>
-        <li><a href="#" class="entypo-gplus" target="_blank"><span>Google+</span></a></li>
-        <li><a href="#" class="entypo-linkedin" target="_blank"><span>LinkedIn</span></a></li>
-        <li><a href="#" class="entypo-instagrem" target="_blank"><span>Instagram</span></a></li>
+        <li><a href="https://www.facebook.com/Stayhealthyhospital" class="entypo-facebook " target="_blank"><span>Facebook</span></a></li>
+        <li><a href="https://twitter.com/Stayhealthyhospital" class="entypo-twitter" target="_blank"><span>Twitter</span></a></li>
+        <li><a href="https://www.googleplus.com/Stayhealthyhospital" class="entypo-gplus" target="_blank"><span>Google+</span></a></li>
+        <li><a href="https://www.linked.in/Stayhealthyhospital" class="entypo-linkedin" target="_blank"><span>LinkedIn</span></a></li>
+        <li><a href="https://www.instagram.com/Stayhealthyhospital" class="entypo-instagrem" target="_blank"><span>Instagram</span></a></li>
         </ul>
         </aside>
         </div>

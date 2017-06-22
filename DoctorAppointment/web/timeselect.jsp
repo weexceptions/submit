@@ -53,18 +53,18 @@
                         con = DBconnection.getConnection();
                         String sql =  "SELECT UID,fname,lname FROM USERDETAIL where UTYPE = 'Dr'";           
                         ps = con.prepareStatement(sql);
-                        String did;
+                        String uid;
                         ResultSet rs = ps.executeQuery(); 
                         while(rs.next())
                         {
-                        did=rs.getString("D_ID");
-                        System.out.println(did);
+                        uid=rs.getString("UId");
+                        System.out.println(uid);
                         String fname = rs.getString("fname").toUpperCase(); 
                         String lname = rs.getString("lname".toUpperCase()); 
                         System.out.println("Id of dr is "+request.getAttribute("dr"));
-                        if (did.equals(request.getAttribute("dr"))) {
+                        if (uid.equals(request.getAttribute("dr"))) {
                         fullname= fname+" "+lname.toUpperCase(); 
-                        System.out.println("Fname "+fname+" lname "+lname);
+                        System.out.println("Fname "+fname+" Lname "+lname);
                         out.print(fullname);
                         break;
                         }

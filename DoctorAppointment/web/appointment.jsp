@@ -44,7 +44,7 @@
                         Connection con = null;
                         PreparedStatement ps,ps2 = null;
                         con = DBconnection.getConnection();
-                        String sql2 = "SELECT fname,lname FROM USERDETAIL where P_ID ='"+request.getAttribute("auser").toString().toLowerCase()+"'";
+                        String sql2 = "SELECT fname,lname FROM USERDETAIL where UID ='" + request.getAttribute("auser").toString().toLowerCase() + "'";
                         ps2 = con.prepareStatement(sql2);
                         ResultSet rs2 = ps2.executeQuery(); 
                         rs2.next();
@@ -58,23 +58,44 @@
                 
                 </div>
                  <div class="form-group">
-                     <label for="patient id">Patient Id:</label><label for="id" class="text-info" name="" ><%out.print(request.getAttribute("auser"));%></label>                    
+                     <label for="patient id">Patient Id:</label>&nbsp;<label for="id" class="text-info" name="" ><%out.print(request.getAttribute("auser"));%></label>                    
                 </div>
                 <input type="hidden" value="<%out.print(request.getAttribute("auser"));%>" name="txtid" />
                 <input type="hidden" value="<%out.print(f+" "+l);%>" name="txtname" />
                 <div class="form-group">
                     <label for="appt date">Appointment Date:</label>
-                    <input type="date" class="form-control" name="txtdate" placeholder="Date" required></div>
-                  
-                <div class="form-group">
+                    <input type="date" class="form-control" name="txtdate" placeholder="Date" oninput="dateValidate(this.value);" id="today" required>
+                </div>
+                    <div class="status" id="status"></div>
+                    <script>
+                     document.getElementById('today').value = new Date().toISOString().substring(0, 10);
+                     </script>
+                     <script>
+                    function dateValidate(today){
+var enteredDate = document.getElementById("today").value;
+var crrDate = new Date().toISOString().substring(0, 10);
+    if(enteredDate >= crrDate)
+    {
+    document.getElementById("status").innerHTML    = "<span class='warning'>date is valid.</span>";
+    }
+    else
+    {
+    document.getElementById("status").innerHTML	= "<span class='valid'>Sorry, you have entered a Invalid Date!</span>";	
+    }
+}
+
+                    
+                    </script>
+                   <br/>  
+                    <div class="form-group">
                     <label for="sel1">Select Doctor:</label>                                   
                         <%
                         try
                         {
                         con = DBconnection.getConnection();
-                        String sql = "SELECT D_ID,fname,lname FROM USERDETAIL where D_ID IS NOT NULL";
+                        String sql = "SELECT UID,fname,lname FROM USERDETAIL where UTYPE = 'Dr'";
                         ps = con.prepareStatement(sql);
-                        String did;
+                        String uid;
                         ResultSet rs = ps.executeQuery(); 
                         %>
                        
@@ -83,12 +104,12 @@
                         <%
                         while(rs.next())
                         {
-                        did=rs.getString("D_ID");
+                        uid=rs.getString("UID");
                         String fname = rs.getString("fname").toUpperCase(); 
                         String lname = rs.getString("lname".toUpperCase()); 
                         String fullname = fname+" "+lname.toUpperCase(); 
                         %>
-                        <option value="<%=did %>"><%=fullname %></option>
+                        <option value="<%=uid %>"><%=fullname %></option>
                         <%
                         }
 
@@ -112,8 +133,9 @@
                      <option id="loc" value="Chennai">Chennai</option>
                      </select>
                 <br/><br/>
+                    
                     <div class="form-group">
-                    <button type="submit" class="form-control btn-success" placeholder="">SUBMIT</button>
+                        <button type="submit" class="form-control btn-success">SUBMIT</button>
                 </div>
             </form>
             
