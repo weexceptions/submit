@@ -52,10 +52,10 @@ PRIMARY KEY(A_ID)
 
 create table DISEASE(
 DS_ID INT GENERATED ALWAYS AS IDENTITY,
-DISEASE_NAME VARCHAR(15),
-SYMPTOMS varchar(100),
-PREVENTION varchar(100),
-CURE varchar(50)
+DISEASE_NAME VARCHAR(150),
+SYMPTOMS varchar(1000),
+PREVENTION varchar(1000),
+CURE varchar(500)
 );
 
 --*********FORIGNKEY**********************
